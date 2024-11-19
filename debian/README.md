@@ -1,2 +1,0 @@
-# wt-zsh-pws-config
- 

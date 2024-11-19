@@ -1,0 +1,2 @@
+//$PROFILE location
+C:\Users\troja\Documents\PowerShell\Microsoft.PowerShell_profile.ps1

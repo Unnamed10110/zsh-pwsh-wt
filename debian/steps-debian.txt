@@ -1,0 +1,11 @@
+// make zsh default shell
+chsh -s $(which zsh)
+
+
+// install brew for zsh plugins
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+//install plugins
+brew install zsh-autocomplete
+brew install history-search-multi-word
+
