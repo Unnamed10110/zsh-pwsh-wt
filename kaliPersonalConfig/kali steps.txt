@@ -1,0 +1,1 @@
+// bash_history.txt contains my zsh command history, append it to .bash_history in the kali machine

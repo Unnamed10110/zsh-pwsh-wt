@@ -13,6 +13,6 @@ Write-Host -ForegroundColor Green "rm -Path ~\AppData\Local\temp\* -Recurse -For
 
 Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 
-Pause
+#Pause
 #"
 #"

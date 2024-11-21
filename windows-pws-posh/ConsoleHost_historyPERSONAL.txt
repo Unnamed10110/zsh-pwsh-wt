@@ -1,0 +1,2224 @@
+winget install JanDeDobbeleer.OhMyPosh -s winget
+oh-my-posh font install
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
+oh-my-posh.exe init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
+Set-PSReadLineOption -EditMode Vi
+Set-PSReadlineOption -ViModeIndicator Script -ViModeChangeHandler {`
+    Param($mode)`
+    $Env:SHELL_VI_MODE = $mode`
+    # go back to the beginning of the line`
+    Write-Host -NoNewLine "`e[1000D"`
+    # rewrite the prompt manually`
+    write-Host -NoNewLine (oh-my-posh --shell pwsh --config ~/.jandedobbeleer.omp.json)`
+}
+oh-my-posh.exe init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
+oh-my-posh get shell
+notepad $PROFILE
+s
+cls
+New-Item -Path $PROFILE -Type File -Force
+notepad $PROFILE
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
+notepad $PROFILE
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
+oh-my-posh init pwsh --config "~\AppData\Local\Programs\oh-my-posh\themes\paradox.omp.json" | Invoke-Expression
+cls
+oh-my-posh init pwsh --config "~\AppData\Local\Programs\oh-my-posh\themes\paradox.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
+oh-my-posh init pwsh --config "~\AppData\Local\Programs\oh-my-posh\themes\jandedobbeleer.omp.json"
+oh-my-posh init pwsh --config "~\AppData\Local\Programs\oh-my-posh\themes\jandedobbeleer.omp.json"cls
+cls
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
+(@(& 'C:/Users/troja/AppData/Local/Programs/oh-my-posh/bin/oh-my-posh.exe' init pwsh --config='C:\Users\troja\AppData\Local\Programs\oh-my-posh\themes\jandedobbeleer.omp.json' --print) -join "`n") | Invoke-Expression
+install-module -name terminal-icons -repository psgallery
+ls
+cls
+set-psreadlineoption -predictionviewstyle listview
+cls
+notepad $PROFILE
+ls
+cd f:
+cd e:
+notepad $PROFILE
+ls
+c:
+ls
+cd .\Desktop\
+cd d:
+notepad $PROFILE
+d:
+cls
+d:
+cls
+notepad $PROFILE
+d>
+ls
+d:
+cls
+ls
+cd .\repos\
+mkdir c#
+cd .\c#\
+cls
+git clone https://github.com/Unnamed10110/WebApi_NetCore
+git clone https://github.com/Unnamed10110/AppScript_Test
+git clone https://github.com/Unnamed10110/Pagination_JObject_ETC
+git clone https://github.com/Unnamed10110/Mongo_MFlix_API
+git clone https://github.com/Unnamed10110/EdgeJobs_Test
+git clone https://github.com/Unnamed10110/Utilities
+d>
+d:
+cls
+cd .\repos\
+mkdir python
+cd .\python\
+git clone https://github.com/Unnamed10110/Server_SignalRInConsole
+git clone https://github.com/Unnamed10110/Python-ProjectManager
+git clone https://github.com/Unnamed10110/AI
+git clone https://github.com/Unnamed10110/WcfService1_SOAP
+git clone https://github.com/Unnamed10110/MVCTest01
+git clone https://github.com/Unnamed10110/WebApiAutores.Test
+git clone 
+git clone https://github.com/Unnamed10110/WorkerService_Windows_CheckURLS
+git clone https://github.com/Unnamed10110/scaffolding
+git clone https://github.com/Unnamed10110/GrpcService_01
+git clone https://github.com/Unnamed10110/meet_in_the_middle_attack
+git clone https://github.com/Unnamed10110/JwtAPI-private-
+git clone https://github.com/Unnamed10110/PeliculasAPI-private-
+ls
+d:
+cd .\repos\c#\
+ls
+cd .\WebApi_NetCore\
+notepad $PROFILE
+git add .
+git commit -m "trash"
+  git config --global user.email "trojan.v6@gmail.com"
+git config --global user.name "Unnamed10110"
+git commit -m "trash"
+git push origin main
+d>
+d:
+cls
+ls
+cd .\repos\
+ls
+cls
+cls
+cd D:\repos\java\demo00\demo00
+ls
+java
+echo %JAVA_HOME%
+java --version
+cls
+echo %JAVA_HOME%
+cls`
+`
+
+mvnw package
+cls
+mvnw package
+cd D:\repos\java\demo00\demo00
+echo %JAVA_HOME%
+cls
+mvnw package
+cd D:\repos\java\demo00\demo00
+mvnw package
+mvn --version
+mvn package
+ls
+cls
+cd .\target\
+ls
+java -jar .\demo00-0.0.1-SNAPSHOT.jar
+cls
+mvn package
+cd.
+cd..
+mvn package
+cd .\target\
+java -jar .\demo00-0.0.1-SNAPSHOT.jar
+cd..
+cs
+cls
+mvn spring-boot:run
+java --verison
+java --version
+D:\repos\java\apache-maven-3.9.6\binscf /scannow
+sfc /cannow
+sfc /scannow
+cls
+pip install yt-dlp
+C:\Users\troja\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\python.exe -m pip install --upgrade pip
+yt-dlp -f 140 
+yt-dlp -f 140 https://www.youtube.com/watch?v=J0uhXPaP0KE&list=PLtZeGoU2MroOIy--0g_tXf_Ige8X8rg36&index=60
+yt-dlp -f 140 https://www.youtube.com/watch?v=J0uhXPaP0KE
+cls
+pip install yt-dlp
+yt-dlp -f 140 https://www.youtube.com/watch?v=J0uhXPaP0KE&list=PLtZeGoU2MroOIy--0g_tXf_Ige8X8rg36&index=60
+yt-dlp -f 140 https://www.youtube.com/watch?v=J0uhXPaP0KE
+yt-dlp
+cls
+pip install yt-dlp
+cd d:
+cd s
+cd .\songs\040224\
+yt-dlp
+python
+cls
+yt-dlp
+which python
+pip install yt-dlp
+yt-dlp
+cls
+cd D:\songs\040224\
+yt-dlp -f 140 
+yt-dlp -f 140 https://www.youtube.com/watch?v=J0uhXPaP0KE&list=PLtZeGoU2MroOIy--0g_tXf_Ige8X8rg36&index=59
+yt-dlp -f 140 https://www.youtube.com/watch?v=J0uhXPaP0KE
+yt-dlp -f 140 https://www.youtube.com/watch?v=brwNfoEQJcQ
+yt-dlp -f 140 https://www.youtube.com/watch?v=YaEBglkCFVc
+yt-dlp -f 140 https://www.youtube.com/watch?v=OK7HgHRwqag
+yt-dlp -f 140 https://www.youtube.com/watch?v=iDqZKVcMjZA
+yt-dlp -f 140 https://www.youtube.com/watch?v=ezlpwCLgiE8
+yt-dlp -f 140 https://www.youtube.com/watch?v=kLzICexlPzU
+yt-dlp -f 140 https://www.youtube.com/watch?v=EGZ7g-ieh8E
+yt-dlp -f 140 https://www.youtube.com/watch?v=7v00aG_r5bY
+yt-dlp -f 140 https://www.youtube.com/watch?v=glgfdqI225M
+yt-dlp -f 140 https://www.youtube.com/watch?v=3ZfK7od6jy4
+yt-dlp -f 140 https://www.youtube.com/watch?v=Ba1fzo9g2E4
+yt-dlp -f 140 https://www.youtube.com/watch?v=oGZDquSsRAU
+yt-dlp -f 140 https://www.youtube.com/watch?v=Yi-nYEUW-5M
+yt-dlp -f 140 https://www.youtube.com/watch?v=5alf3HvHecE
+yt-dlp -f 140 https://www.youtube.com/watch?v=Hli15yqjsWk
+yt-dlp -f 140 https://www.youtube.com/watch?v=H4GdT52pWUo
+yt-dlp -f 140 https://www.youtube.com/watch?v=FmjrTdTydLE
+del '.\Papa Roach - Leave A Light On (Talk Away The Dark) - (Official Live Music Video) `[FmjrTdTydLE`].m4a'
+yt-dlp -f 140 
+yt-dlp -f 140 https://www.youtube.com/watch?v=jB7i_2aaXHQ
+yt-dlp -f 140 https://www.youtube.com/watch?v=M9KLVjXmfjU
+yt-dlp -f 140 https://www.youtube.com/watch?v=lQKlfDv53TY
+cls
+cd..
+cd d
+cd d;
+cd d:
+d:
+cd..
+d:
+cd D:\songs\
+cd .\all\
+cls
+yt-dlp --help
+yt-dlp -wic -f 140 https://www.youtube.com/playlist?list=PLtZeGoU2MroNYjjdukmayJmyuEdlHOTsM
+git init
+git add .
+git commit -m "initial commit"
+git init
+git add .
+git commit -m "initial commit"
+git clone
+git clone https://github.com/xAgustin93/blog-django-tincode.git
+ python3 --version
+pip install django
+python.exe -m pip install --upgrade pip
+ls
+python3 .\manage.py runserver
+cls
+cls
+ls
+mkdir djangoRESTDemo
+cd .\djangoRESTDemo\
+cls
+python3 -m venv ./envs/testenv
+ls .\envs\testenv\
+ls .\envs\testenv\Include\
+activate .\envs\testenv\Scripts\activate
+cls
+source .\envs\testenv\Scripts\activate
+python3 source .\envs\testenv\Scripts\activate
+cls
+source .\envs\testenv\Scripts\activate
+ .\envs\testenv\Scripts\activate.bat
+ .\envs\testenv\Scripts\Activate.ps1
+cls
+pip3 install django
+django-admin startproject blogRest
+cd .\blogRest\
+python3 .\manage.py runserver
+cls
+python3 .\manage.py runserver
+pip3 install django
+cls
+python3 .\manage.py runserver
+django-admin --version
+cls
+python3 -m venv ./envs/testenv
+cd D:\repos\python\djangoRESTDemo
+python3 -m venv ./envs/testenv
+ .\envs\testenv\Scripts\Activate.ps1
+pip install django
+django-admin startproject blogRest
+cd .\blogRest\
+python .\manage.py runserver
+python .\manage.py migrate
+python .\manage.py createsuperuser
+python .\manage.py runserver
+python.exe .\manage.py startapp posts
+cls
+python.exe .\manage.py startapp posts
+cls
+python3 .\manage.py startapp posts
+ .\envs\testenv\Scripts\Activate.ps1
+ls .\envs\testenv\Scripts\
+cd..
+cls
+ls
+cd .\blogRest\
+ls
+cd D:\repos\python\djangoRESTDemo\blogRest
+D:\repos\python\djangoRESTDemo\blogRest\blogRest\envs\testenv\Scripts\Activate.ps1
+python3 .\manage.py startapp posts
+pip3 install django
+pip install django
+cls
+pip install django
+pip3 install django
+python3 .\manage.py startapp posts
+cls
+python3 .\manage.py startapp posts
+cd D:\repos\python\djangoRESTDemo
+pip install virtualenv
+mkdir ~/BlogRest
+cd blcls
+cls
+ls
+mkdir ./BlogRest
+cd .\BlogRest\
+cls
+virtualenv testENV
+.\testENV\Scripts\activate.ps1
+cls
+pip3 install django
+django-admin startproject blogRest
+ls
+cd .\blogRest\
+ls
+cls
+ls
+python3 .\manage.py runserver
+pip3 install django
+python3 .\manage.py runserver
+cls
+ls
+python3 .\manage.py runserver
+cls
+pip install django
+python manage.py runserver
+python .\manage.py migrate
+python manage.py runserver
+python .\manage.py createsuperuser
+python3 .\manage.py startapp posts
+cd..
+python3 .\manage.py startapp posts
+cls
+cd .\blogRest\
+cls
+ls
+cd python manage.py runserver
+cls`
+cd D:\repos\python\djangoRESTDemo
+cls
+python3 -m venv ./envs/myblog
+source .\envs\myblog\Scripts\activate
+.\envs\myblog\Scripts\activate.bat
+.\envs\myblog\Scripts\activate.ps1
+pip3 install django
+cls
+django-admin startproject blogRest
+ls
+cd .\blogRest\
+python3 .\manage.py runserver
+cls
+python3 .\manage.py runserver
+D:\repos\python\djangoRESTDemo\envs\myblog\Scripts\pip3.exe django
+D:\repos\python\djangoRESTDemo\envs\myblog\Scripts\pip3.exe install django
+python3 .\manage.py runserver
+cd D:\repos\python\djangoRESTDemo\blogRest
+.\envs\myblog\Scripts\activate.ps1
+cd..
+.\envs\myblog\Scripts\activate.ps1
+cd .\blogRest\
+python3 .\manage.py runserver
+`
+cd D:\repos\python\djangoRESTDemo\blogRest
+cls
+python3 .\manage.py runserver
+cls
+D:\repos\python\djangoRESTDemo\envs\myblog\Scripts\python.exe .\manage.py runserver
+D:\repos\python\djangoRESTDemo\envs\myblog\Scripts\python.exe .\manage.py migrate
+D:\repos\python\djangoRESTDemo\envs\myblog\Scripts\python.exe .\manage.py createsuperuser
+D:\repos\python\djangoRESTDemo\envs\myblog\Scripts\python.exe .\manage.py startapp posts
+cd..
+ls
+.\envs\myblog\Scripts\Activate.ps1
+python.exe .\manage.py startapp posts
+cls
+ls
+cd .\blogRest\
+python.exe .\manage.py startapp posts
+python.exe .\manage.py runserver
+python3 .\manage.py makemigrations
+python.exe .\manage.py migrate
+python.exe .\manage.py runserver
+python3 .\manage.py makemigrations
+python.exe .\manage.py migrate
+python.exe .\manage.py runserver
+taskkill /f /im explorer.exe
+start explorer.exe
+cd  D:\songs\all
+cls
+yt-dlp -f 140 
+yt-dlp -f 140 https://www.youtube.com/watch?v=zW7uIWx4dKo&list=PLtZeGoU2MroPTDYooH5Tp7fo9yJ3PY3ob&index=1&pp=gAQBiAQB8AUB
+yt-dlp --h
+yt-dlp --help
+cls
+yt-dlp -f 140 --playlist-items 1,2,3,4,5,6,7,8,9,10 https://www.youtube.com/playlist?list=PLtZeGoU2MroPTDYooH5Tp7fo9yJ3PY3ob
+yt-dlp -f 140 https://www.youtube.com/watch?v=tqckS9C5PNw
+yt-dlp -f 140 https://www.youtube.com/watch?v=kdiMrCMc2js
+yt-dlp -f 140 https://www.youtube.com/watch?v=fGl_2MQNe68
+   alias python3 p3
+   alias python3
+doskey p3=python3
+p3
+doskey p3= python3.exe
+p3
+doskey p3= python3 $*
+p3
+doskey p3= python3.exe $*
+p3
+cls
+wsl --install
+which python3
+cls
+which python3
+cls
+where python3
+where python
+where notepad
+doskey p3=C:\Users\troja\AppData\Local\Microsoft\WindowsApps\python3.exe
+p3
+doskey p3="C:\Users\troja\AppData\Local\Microsoft\WindowsApps\python3.exe"
+p3
+doskey note = "C:\Windows\System32\notepad.exe"
+note
+doskey note = "C:\Windows\System32\notepad.exe"
+note
+Remove-Module PSReadLine
+doskey p3=python3
+p3
+doskey p3="C:\Users\troja\AppData\Local\Microsoft\WindowsApps\python3.exe"
+p3
+doskey p3=python3
+p3
+doskey p3="C:\Users\troja\AppData\Local\Microsoft\WindowsApps\python3.exe"
+p3
+doskey /exename=powershell.exe g=Get-Location
+g
+Remove-Module PSReadLine
+doskey p3="C:\Users\troja\AppData\Local\Microsoft\WindowsApps\python3.exe"
+p3
+set-alias -name=p3 -value="C:\Users\troja\AppData\Local\Microsoft\WindowsApps\python3.exe"
+set-alias -Name=p3 -value="C:\Users\troja\AppData\Local\Microsoft\WindowsApps\python3.exe"
+set-alias -Name p3 -value="C:\Users\troja\AppData\Local\Microsoft\WindowsApps\python3.exe"
+p3
+set-alias -Name p3 -value "C:\Users\troja\AppData\Local\Microsoft\WindowsApps\python3.exe"
+p3
+alias
+alias main="cd d:\"
+cls
+set-alias -name p3 -value python3
+p3
+set-alias -name p4 -value python3
+p4
+remove-alias -name p4
+p4
+p3
+cls
+remove-alias -name p3
+p3
+alias p3='python3'
+d:
+cls
+ls
+yt-dlp https://www.youtube.com/watch?v=rXPFBTLErXE&list=WL&index=4
+yt-dlp https://www.youtube.com/watch?v=rXPFBTLErXE
+sudo ls
+wsl --install
+taskkill /f /im explorer.exe
+start explorer.exe
+yt-dl --help
+yt-dlp --help
+yt-dlp --help find "skip"
+cls
+yt-dlp -f 140 -i -c https://www.youtube.com/playlist?list=PLtZeGoU2MroPTDYooH5Tp7fo9yJ3PY3ob
+cd,,
+cd..
+ls
+cd all
+cls
+yt-dlp -f 140 https://www.youtube.com/watch?v=vldYYjCQ7jc
+yt-dlp -f 140 https://www.youtube.com/watch?v=g4Sp0pjrnuU
+yt-dlp -f 140 -i -c https://www.youtube.com/playlist?list=PLtZeGoU2MroNYjjdukmayJmyuEdlHOTsM
+pip install yt-dlp --upgrade
+yt-dlp -f 140 https://www.youtube.com/watch?v=OKpzkI08ElI
+cd..
+yt-dlp https://www.youtube.com/watch?v=zzHu8ngScWg
+yt-dlp https://www.youtube.com/watch?v=zzHu8ngScWg&ab_channel=Frases-Simpson_Latino
+yt-dlp https://www.youtube.com/watch?v=zzHu8ngScWg
+pip install yt-dlp --upgrade
+yt-dlp https://www.youtube.com/watch?v=zzHu8ngScWg
+python.exe -m pip install --upgrade pip
+pip installl ffmpeg
+cls
+pip install ffmpeg
+ls
+dir
+dir name
+cls
+cd..
+cd .\songs\
+cd .\all\
+cls
+yt-dlp -f 140 
+yt-dlp -f 140 https://www.youtube.com/watch?v=eLJ6r8mBPJc
+yt-dlp -f 140 https://www.youtube.com/watch?v=wGmDu5iDB34
+yt-dlp -f 140 https://www.youtube.com/watch?v=LjF9IqvXDjY
+yt-dlp -f 140 https://www.youtube.com/watch?v=jXTMgJlaDXU
+pip install ffmpeg
+pip install ffmpeg --upgrade
+cls
+yt-dlp -f 140 https://www.youtube.com/watch?v=K4ZSmMHOH6o&list=PLtZeGoU2MroNYjjdukmayJmyuEdlHOTsM&index=2&pp=gAQBiAQB
+yt-dlp -f 140 https://www.youtube.com/watch?v=K4ZSmMHOH6o
+ls
+d:
+cls
+ls
+cls
+pip install yt-dlp --upgrade
+yt-dlp https://www.tiktok.com/@live.your.life2020/video/7406381115189103905
+cls
+ls
+cd .\debian\
+nmap
+pip install nmap
+cls
+taskkill /f /im explorer.exe
+start explorer.exe
+taskkill /f /im explorer.exe
+start explorer.exe
+cls
+cd D:\cybersecurity\tarea 1 - bash
+cd "D:\cybersecurity\tarea 1 - bash"
+cls
+sh 1.sh
+cat .\1.sh
+nano .\1.sh
+clear
+cat .\4.sh
+apt-get install nano
+apt get install nano
+clear
+pwd
+d:
+ls
+cat '.\Untitled 1_rotated.pdf'
+cls
+dir
+which cls
+clear
+ls
+cd .\repos\
+ls
+cd .\python\
+ls
+cd .\meet_in_the_middle_attack\
+ls
+cat .\bin-search.py
+sh .\4.sh
+cls
+cat .\4.sh
+cls
+wmic
+winsat disk -drive C
+taskkill /f /im wsl.exe
+winget search kali
+wintet install OffSec.KaliLinux
+clear
+winget search kali
+winget install OffSec.KaliLinux
+winget install 9PKR34TNCV07
+winget upgrade 9PKR34TNCV07
+winget unninstall 9PKR34TNCV07
+winget uninstall 9PKR34TNCV07
+wsl
+kali
+wsl kali
+bash
+cd..
+clear
+c:
+ls
+pwd
+cd..
+cls
+clear
+winsat disk -drive C
+winsat disk -drive c
+clear
+d:
+cd..
+clear
+winsat disk -drive c
+winsat disk -drive c -ran -read
+winsat disk -drive c
+winsat disk -drive d
+taskkill /f /im explorer.exe
+start explorer.exe
+winsat disk -drive d
+winset disk -drive c
+winget-version
+winget
+clear
+winget search kali
+winsat disk -drive c
+winsat disk -drive c
+$profile
+car $profile
+clear
+cat $profile
+*del /q/f/s %TEMP%\*
+clear
+del /q/f/s %TEMP%\*
+del /q/f/s %TEMP%\
+clear
+del /q/f/s %TEMP%\
+del /q/f/s %TEMP%
+del --help
+clear
+del /?
+del -h
+man del
+clear
+del -h
+del --help
+del -help
+del --h
+clear
+del /?
+man del
+del /sq D:\pepe\*
+del /s /q D:\pepe\*
+del /s /q D:/pepe/*
+del /s /q %temp%\*
+rmdir /s /q %temp%\*
+rmdir  %temp%\*
+rmdir  %temp%\*clear
+clar
+clear
+del D:\pepe\tiredpepe.avi
+pwd
+d:
+del D:\pepe\tiredpepe.avi
+ls
+clear
+del D:\pepe\tiredpepe.avi
+cd D:\pepe\
+clear
+cd..
+cd -
+..
+clear
+c:
+del /f /s /q D:\pepe\*
+clear
+rm /?
+man rm
+clear
+rm -Force -Recurse D:\pepe
+rm -Force  D:\pepe
+man rm
+cls
+rm -Force -Confirm yes D:\pepe
+rm -Force -Confirm D:\pepe
+rm -help
+rm --help
+rm -h
+rm /?
+clear
+Remove-Item -Path "D\pepe\*" -Recurse -Force
+Remove-Item -Path "D:\pepe\*" -Recurse -Force
+rm -Path "D:\pepe\*" -Recurse -Force
+rm -Path "~\%temp%\*" -Recurse -Force
+rm -Path "~\%TEMP%\*" -Recurse -Force
+rm -Path "%TEMP%\*" -Recurse -Force
+rm -Path "~\AppData\Local\Temp\%TEMP%\*" -Recurse -Force
+rm -Path "%TEMP%\*" -Recurse -Force
+rm -Path "~\AppData\Local\%TEMP%\*" -Recurse -Force
+rm -Path "~\AppData\Local\temp\*" -Recurse -Force
+clear
+rm -Path "~\AppData\Local\temp\*" -Recurse -Force
+echo "rm -Path "~\AppData\Local\temp\*" -Recurse -Force"
+pause
+d:
+ls
+Powershell.exe -File removeTemp.ps1
+cls
+Powershell.exe -File removeTemp.ps1
+clear
+Powershell.exe -File removeTemp.ps1
+clear
+Powershell.exe -File removeTemp.ps1
+clear
+Powershell.exe -File removeTemp.ps1
+clear
+Powershell.exe -File removeTemp.ps1
+[enum]::GetValues([System.ConsoleColor]) | Foreach-Object {Write-Host $_ -ForegroundColor $_ }
+Write-Color -color cian "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+Write-Color -text -color red cian "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+Write-Color -text -color red Blue "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+Write-Color -Text -Color red Blue "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+Write-Color -Text "This is text in Green ",`
+                "followed by red ",`
+                "and then we have Magenta... ",`
+                "isn't it fun? ",`
+                "Here goes DarkCyan" -Color Green,Red,Magenta,White,DarkCyan -StartTab 3 -LinesBefore 1 -LinesAfter 1
+`
+Write-Host "Whole text is in green" -ForegroundColor Green
+Write-Host -ForegroundColor Green
+ "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+Write-Host -ForegroundColor Green "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+[enum]::GetValues([System.ConsoleColor]) | Foreach-Object {Write-Host $_ -ForegroundColor $_ }
+Write-Host -ForegroundColor Green "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" LogPixels -Value 96
+Write-Host -ForegroundColor Green "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" LogPixels -Value 200
+Write-Host -ForegroundColor Green "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" LogPixels -Value 10
+Powershell.exe -script "`
+Set-PSDebug -Off`
+`
+`
+rm -Path "~\AppData\Local\temp\*" -Recurse -Force`
+`
+Add-Type -AssemblyName System.Windows.Forms | Out-Null`
+[System.Windows.Forms.MessageBox]::Show("Unused temporary files deleted!")`
+`
+echo "`n"`
+echo "`n"`
+Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"`
+`
+Write-Host -ForegroundColor Green "rm -Path ~\AppData\Local\temp\* -Recurse -Force"`
+`
+Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"`
+`
+`
+`
+Pause`
+`
+`
+"
+clear
+Powershell.exe -command "`
+Set-PSDebug -Off`
+`
+`
+rm -Path "~\AppData\Local\temp\*" -Recurse -Force`
+`
+Add-Type -AssemblyName System.Windows.Forms | Out-Null`
+[System.Windows.Forms.MessageBox]::Show("Unused temporary files deleted!")`
+`
+echo "`n"`
+echo "`n"`
+Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"`
+`
+Write-Host -ForegroundColor Green "rm -Path ~\AppData\Local\temp\* -Recurse -Force"`
+`
+Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"`
+`
+`
+`
+Pause`
+`
+`
+"
+Powershell.exe -Command "`
+Set-PSDebug -Off`
+`
+`
+rm -Path "~\AppData\Local\temp\*" -Recurse -Force`
+`
+Add-Type -AssemblyName System.Windows.Forms | Out-Null`
+[System.Windows.Forms.MessageBox]::Show("Unused temporary files deleted!")`
+`
+echo "`n"`
+echo "`n"`
+Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"`
+`
+Write-Host -ForegroundColor Green "rm -Path ~\AppData\Local\temp\* -Recurse -Force"`
+`
+Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"`
+`
+`
+`
+Pause`
+`
+`
+"
+powershell
+exit
+powershell -command ls
+powershell -command "ls"
+powershell -script "ls"
+powershell -command "ls"
+clear
+Powershell.exe -script "`
+Set-PSDebug -Off`
+`
+`
+rm -Path "~\AppData\Local\temp\*" -Recurse -Force`
+echo "`n"`
+echo "`n"`
+Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"`
+`
+Write-Host -ForegroundColor Green "rm -Path ~\AppData\Local\temp\* -Recurse -Force"`
+`
+Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"`
+`
+`
+`
+Pause`
+`
+`
+"
+shell
+clear
+powershell
+exit
+which powershell
+where powershell
+Powershell.exe -script "`
+Set-PSDebug -Off`
+`
+`
+rm -Path "~\AppData\Local\temp\*" -Recurse -Force`
+`
+Add-Type -AssemblyName System.Windows.Forms | Out-Null`
+[System.Windows.Forms.MessageBox]::Show("Unused temporary files deleted!")`
+`
+echo "`n"`
+echo "`n"`
+echo ^<ESC^>[96m [96m"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"[0m`
+`
+`
+Write-Host -ForegroundColor Green "rm -Path ~\AppData\Local\temp\* -Recurse -Force"`
+`
+Write-Host -ForegroundColor Cyan echo ^<ESC^>[96m [96m"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"[0m`
+`
+`
+`
+`
+Pause`
+`
+`
+"
+pause
+echo $0
+ps -ef | grep $$ | grep -v grep
+echo $SHELL
+clear
+powershell
+(dir 2>&1 *`|echo CMD);&<# rem #>echo PowerShell
+(dir 2>&1 *`|echo CMD);&<# rem #>echo PowerShell
+cls
+powershell -command "ls"
+pwsh -command "ls"
+cls
+pwsh -command "Powershell.exe -script "`
+Set-PSDebug -Off`
+`
+`
+rm -Path "~\AppData\Local\temp\*" -Recurse -Force`
+`
+Add-Type -AssemblyName System.Windows.Forms | Out-Null`
+[System.Windows.Forms.MessageBox]::Show("Unused temporary files deleted!")`
+`
+echo "`n"`
+echo "`n"`
+echo ^<ESC^>[96m [96m"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"[0m`
+`
+`
+Write-Host -ForegroundColor Green "rm -Path ~\AppData\Local\temp\* -Recurse -Force"`
+`
+echo ^<ESC^>[96m [96m"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"[0m`
+`
+`
+Pause`
+`
+`
+""
+clear
+pwsh -command "`
+Set-PSDebug -Off`
+`
+`
+rm -Path "~\AppData\Local\temp\*" -Recurse -Force`
+`
+Add-Type -AssemblyName System.Windows.Forms | Out-Null`
+[System.Windows.Forms.MessageBox]::Show("Unused temporary files deleted!")`
+`
+echo "`n"`
+echo "`n"`
+echo ^<ESC^>[96m [96m"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"[0m`
+`
+`
+Write-Host -ForegroundColor Green "rm -Path ~\AppData\Local\temp\* -Recurse -Force"`
+`
+echo ^<ESC^>[96m [96m"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"[0m`
+`
+`
+Pause`
+`
+`
+"
+pwsh -command "Powershell.exe -script "`
+Set-PSDebug -Off`
+`
+`
+rm -Path "~\AppData\Local\temp\*" -Recurse -Force`
+`
+Add-Type -AssemblyName System.Windows.Forms | Out-Null`
+[System.Windows.Forms.MessageBox]::Show("Unused temporary files deleted!")`
+`
+echo "`n"`
+echo "`n"`
+echo ^<ESC^>[96m [96m"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"[0m`
+`
+`
+Write-Host -ForegroundColor Green "rm -Path ~\AppData\Local\temp\* -Recurse -Force"`
+`
+echo ^<ESC^>[96m [96m"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"[0m`
+`
+`
+Pause`
+`
+`
+""
+clear
+pwsh -command "Set-PSDebug -Off`
+`
+`
+rm -Path "~\AppData\Local\temp\*" -Recurse -Force`
+`
+Add-Type -AssemblyName System.Windows.Forms | Out-Null`
+[System.Windows.Forms.MessageBox]::Show("Unused temporary files deleted!")`
+`
+echo "`n"`
+echo "`n"`
+echo ^<ESC^>[96m [96m"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"[0m`
+`
+`
+Write-Host -ForegroundColor Green "rm -Path ~\AppData\Local\temp\* -Recurse -Force"`
+`
+echo ^<ESC^>[96m [96m"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"[0m`
+`
+`
+Pause`
+`
+`
+"
+lcear
+clear
+pwsh -command "Set-PSDebug -Off`
+`
+`
+rm -Path "~\AppData\Local\temp\*" -Recurse -Force`
+`
+Add-Type -AssemblyName System.Windows.Forms | Out-Null`
+[System.Windows.Forms.MessageBox]::Show("Unused temporary files deleted!")`
+`
+echo "`n"`
+echo "`n"`
+echo ^<ESC^>[96m [96m"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"[0m`
+`
+`
+Write-Host -ForegroundColor Green "rm -Path ~\AppData\Local\temp\* -Recurse -Force"`
+`
+echo ^<ESC^>[96m [96m"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"[0m`
+`
+`
+Pause`
+`
+`
+"
+echo ^<ESC^>[96m [96m"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"[0m
+clear
+pwsh -command "Set-PSDebug -Off`
+`
+`
+rm -Path "~\AppData\Local\temp\*" -Recurse -Force`
+`
+Add-Type -AssemblyName System.Windows.Forms | Out-Null`
+[System.Windows.Forms.MessageBox]::Show("Unused temporary files deleted!")`
+`
+echo "`n"`
+echo "`n"`
+Write-Host -ForegroundColor Cyan"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"`
+`
+Write-Host -ForegroundColor Green "rm -Path ~\AppData\Local\temp\* -Recurse -Force"`
+`
+Write-Host -ForegroundColor Cyan"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"`
+`
+`
+Pause`
+`
+`
+"
+clear
+pwsh -command "Set-PSDebug -Off`
+`
+`
+rm -Path "~\AppData\Local\temp\*" -Recurse -Force`
+`
+Add-Type -AssemblyName System.Windows.Forms | Out-Null`
+[System.Windows.Forms.MessageBox]::Show("Unused temporary files deleted!"))`
+`
+echo "`n"`
+echo "`n"`
+Write-Host -ForegroundColor Cyan"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"`
+`
+Write-Host -ForegroundColor Green "rm -Path ~\AppData\Local\temp\* -Recurse -Force"`
+`
+Write-Host -ForegroundColor Cyan"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"`
+`
+`
+Pause`
+`
+`
+"
+alias cc="clear"
+clear
+clear
+exit
+alias cc='clear'
+set-alias clear cc
+cc
+set-alias cc clear
+cc
+Set-Alias cc clear
+cc
+set-alias cc cls
+cc
+pwsh -command ""Set-PSDebug -Off
+rm -Path "~\AppData\Local\temp\*" -Recurse -Force
+Add-Type -AssemblyName System.Windows.Forms | Out-Null
+[System.Windows.Forms.MessageBox]::Show("Unused temporary files deleted!")
+echo "`n"
+Write-Host -ForegroundColor Cyan"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+Write-Host -ForegroundColor Green "rm -Path ~\AppData\Local\temp\* -Recurse -Force"
+Write-Host -ForegroundColor Cyan"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+Pause
+""
+Write-Host -ForegroundColor Cyan"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+Write-Host -ForegroundColor Red "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+clear
+pwsh -command ""Set-PSDebug -Off
+rm -Path "~\AppData\Local\temp\*" -Recurse -Force
+Add-Type -AssemblyName System.Windows.Forms | Out-Null
+[System.Windows.Forms.MessageBox]::Show("Unused temporary files deleted!")
+echo "`n"
+Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+Write-Host -ForegroundColor Green "rm -Path ~\AppData\Local\temp\* -Recurse -Force"
+Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+Pause
+""
+pwsh -command ""Set-PSDebug -Off
+rm -Path "~\AppData\Local\temp\*" -Recurse -Force
+Add-Type -AssemblyName System.Windows.Forms | Out-Null
+[System.Windows.Forms.MessageBox]::Show("Unused temporary files deleted!")
+echo "`n"
+Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+Write-Host -ForegroundColor Green "rm -Path ~\AppData\Local\temp\* -Recurse -Force"
+Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+Pause
+""
+cc
+pwsh -command  "Set-PSDebug -Off`
+`
+`
+rm -Path "~\AppData\Local\temp\*" -Recurse -Force`
+`
+Add-Type -AssemblyName System.Windows.Forms | Out-Null`
+[System.Windows.Forms.MessageBox]::Show("Unused temporary files deleted!")`
+`
+echo "`n"`
+echo "`n"`
+Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"`
+`
+Write-Host -ForegroundColor Green "rm -Path ~\AppData\Local\temp\* -Recurse -Force"`
+`
+Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"`
+`
+`
+Pause`
+`
+`
+"
+cc
+pwsh -command  "pwsh -command "Set-PSDebug -Off
+rm -Path "~\AppData\Local\temp\*" -Recurse -Force
+Add-Type -AssemblyName System.Windows.Forms | Out-Null
+[System.Windows.Forms.MessageBox]::Show("Unused temporary files deleted!")
+echo "`n"
+Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+Write-Host -ForegroundColor Green "rm -Path ~\AppData\Local\temp\* -Recurse -Force"
+Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+Pause
+""
+cc
+pwsh -command  "pwsh -command "
+Set-PSDebug -Off
+rm -Path "~\AppData\Local\temp\*" -Recurse -Force
+Add-Type -AssemblyName System.Windows.Forms | Out-Null
+[System.Windows.Forms.MessageBox]::Show("Unused temporary files deleted!")
+echo "`n"
+Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+Write-Host -ForegroundColor Green "rm -Path ~\AppData\Local\temp\* -Recurse -Force"
+Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+Pause
+""
+cc
+.\removeTempStarter.cmd
+ps
+cc
+powershell .\removeTempStarter.cmd
+cc
+powershell -command "Set-PSDebug -Off"
+rm -Path "~\AppData\Local\temp\*" -Recurse -Force
+Add-Type -AssemblyName System.Windows.Forms | Out-Null
+[System.Windows.Forms.MessageBox]::Show("Unused temporary files deleted!")
+echo "`n"
+Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+Write-Host -ForegroundColor Green "rm -Path ~\AppData\Local\temp\* -Recurse -Force"
+Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+Pause
+cc
+pwsh .\removeTempStarter.cmd
+pwsh .\removeTempStarter.pwsh
+pwsh .\removeTempStarter.ps1
+c:
+pwd
+cd-
+cd -
+pwd
+..
+cd ..
+find setting.json
+`
+locate setting.json
+cc
+locate setting.json
+cls
+dit setting.json
+cc
+dir setting.json
+dir /s setting.json
+dir /s c:/* setting.json
+dir /s c:/* */setting.json
+dir /s c:/* ~/setting.json
+cc
+C:\Users\troja\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
+cd C:\Users\troja\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
+ls
+nano .\settings.json
+notepad .\settings.json
+d:
+pwsh .\removeTempStarter.ps1
+cc
+alias cc="clear"
+alias cc='clear'
+cc
+set-alias cc cls
+cc
+pwsh .\removeTempStarter.ps1
+cc
+pwsh .\removeTempStarter.ps1
+cls
+pwsh -file .\removeTempStarter.ps1
+cc
+pwsh -command -file .\removeTempStarter.ps1
+cls
+pwsh -Command -File .\removeTempStarter.ps1
+pwsh -command -file .\removeTempStarter.ps1
+pwsh .\removeTempStarter.ps1
+pwsh -command .\removeTempStarter.ps1
+cc
+pwsh -command .\removeTempStarter.ps1
+cc
+pwsh .\removeTempStarter.ps1
+cc
+pwsh .\removeTempStarter.ps1
+cc
+pwsh .\removeTempStarter.ps1
+Install-Module ps2exe
+ps2exe .\removeTempStarter.ps1 .\removeTempStarter.exe
+cls
+Install-Module ps2exe
+ps2exe .\removeTempStarter.ps1 .\removeTempStarter.exe
+powershell
+ps2.exe .\removeTempStarter.ps1 .\removeTempStarter.exe
+d:
+ps2exe .\removeTempStarter.ps1 .\removeTempStarter.exe
+invoke-ps2exe .\removeTempStarter.ps1 .\removeTempStarter.exe
+ps2exe
+Install-Module ps2exe
+ps2exe .\removeTempStarter.ps1 .\removeTempStarter.exe
+cls
+exit
+exit
+cls
+dir
+dir .\removeTempStarter.ps1
+dir .\removeTempStarter.ps1 >> find r
+dir .\removeTempStarter.ps1
+cls
+cc
+dir .\removeTempStarter.ps1
+dir .\removeTempStarter.ps1 | findstr remo*
+cc
+dir .\removeTempStarter.ps1
+dir "\example file*" /s
+dir "\remove*" /s
+cc
+dir "\remove*" /s
+cd .\removeTempStarter.ps1
+cls
+echo %~dp0
+powershell
+echo %~dp0
+exit
+cls
+SET var=%cd%`
+ECHO %var%
+SET var=cd`
+ECHO var
+cls
+cd
+ñs
+dir
+pwd
+echo %cd% | clip
+cls
+d:
+cls
+dir .\removeTempStarter.ps1
+dir .\removeTempStarter.ps1 /s/b
+dir /s/b .\removeTempStarter.ps1
+dir /s /b .\removeTempStarter.ps1
+cls
+dir /b .\removeTempStarter.ps1
+cls
+dir .\removeTempStarter.ps1 /b
+dir .\removeTempStarter.ps1 /s
+dir .\removeTempStarter.ps1 /s/b
+dir .\removeTempStarter.ps1 /s/b | findstr "Directory:"
+cls
+man findstr
+findstr -h
+findstr /?
+cls
+dir .\removeTempStarter.ps1 /s/b | findstr "Directory:"
+dir .\removeTempStarter.ps1 /s/b | findstr "Directory:" | ~%1%!
+dir .\removeTempStarter.ps1 /s/b | findstr "Directory:" ~%1%!
+dir .\removeTempStarter.ps1 /s/b | findstr "Directory:" | :~%1%!
+cls
+dir .\removeTempStarter.ps1 /s/b | set "ruta=findstr "Directory:"" | :~%1%!
+cc
+for %F in ("pepe.txt") do @echo %~fF
+powershell
+for %F in ("pepe.txt") do @echo %~fF
+cls
+for %F in ("pepe.txt") do @if exist "%~F" echo %~fF`
+
+cls
+for %F in ("pepe.txt") do @if exist "%~F" echo %~fF
+for %F in ("removeTempStarter.ps1") do @echo %~fF
+exit
+for %F in ("removeTempStarter.ps1") do @echo %~fF
+cmd for %F in ("removeTempStarter.ps1") do @echo %~fF
+d:
+dir
+cat .\removeTempStarter.ps1
+pwd
+pwd >>a.txt
+pwd | findstr "D"
+pwd | findstr "[A-Z]"
+pwd | findstr /V "Path"
+pwd | findstr /V "Path","----"
+pwd | findstr /V "Path" and "----"
+cls
+pwd
+dir | findstr ":\"
+dir
+cls
+findstr ":\"
+cls
+cc
+set-alias cc cls
+cc
+pwd | findstr ":\\"
+%temp%
+\%temp%
+~\%temp%
+cd ~\%temp%
+~\AppData\Local\temp\
+cd ~\AppData\Local\temp\
+cc
+ls -ñ
+cls
+ls -l
+ls
+rm -path "C:\Users\*\AppData\Local\Temp" -force -recurse
+runas /user:admin pwsh
+cc
+netuser
+net user
+net user Administrator
+net user Administrator *
+runas /user:admin pwsh
+net user admin
+cls
+cc
+net user admin
+runas /user:Unnamed10110 pwsh
+net user
+runas /user:Administrator pwsh
+net user Administrator
+runas /user:troja pwsh
+rm -path "C:\Users\*\AppData\Local\Temp" -force -recurse
+cc
+del -path "C:\Users\*\AppData\Local\Temp" -force -recurse
+delete -path "C:\Users\*\AppData\Local\Temp" -force -recurse
+cc
+ls -l Takeown /F "~\AppData\Local\temp\*"
+Takeown /F "~\AppData\Local\temp\*"
+Takeown /F "~\AppData\Local\temp\"
+d>
+d:
+Takeown /F "~\AppData\Local\temp\"
+Takeown /F ~\AppData\Local\temp\
+cc
+~\AppData\Local\temp\
+"~\AppData\Local\temp\"
+Takeown /F ~\AppData\Local\%temp%\
+Takeown /F %temp%
+Takeown /F %TEMP%
+cc
+cd "~\AppData\Local\temp\"
+cls
+ls
+Takeown /F f2adb7af-039c-4b0c-829c-8cfcfa17ef03.tmp /A
+ls
+Takeown /F ~\AppData\Local\Temp\f2adb7af-039c-4b0c-829c-8cfcfa17ef03.tmp /A
+Takeown /F .\AppData\Local\Temp\f2adb7af-039c-4b0c-829c-8cfcfa17ef03.tmp /A
+pwd
+Takeown /F C:\Users\troja\AppData\Local\Temp /A
+Takeown /F C:\Users\*\AppData\Local\Temp /A
+Takeown /F C:\Users\~\AppData\Local\Temp /A
+Takeown /F C:\Users\.\AppData\Local\Temp /A
+Takeown /F C:\Users\..\AppData\Local\Temp /A
+Takeown -help
+Takeown /help
+Takeown /?
+Takeown /F C:\Users\troja\AppData\Local\Temp\* /A
+rm -Path "~\AppData\Local\temp\*" -Recurse -Force
+ls
+Takeown /F C:\Users\*\AppData\Local\Temp /A
+C:\Users\*\AppData\Local\Temp
+"C:\Users\*\AppData\Local\Temp"
+Takeown /F "C:\Users\*\AppData\Local\Temp" /A
+cd "C:\Users\*\AppData\Local\Temp"
+rm -Path "%temp%\*" -Recurse -Force
+rm -Path "~\%temp%\*" -Recurse -Force
+# Define the registry path for desktop settings
+$regPath = "HKCU:\Control Panel\Desktop"
+# Ensure the Wallpaper value points to a valid file
+$wallpaperPath = "C:\Windows\Web\Wallpaper\Windows\img0.jpg" # Default Windows wallpaper
+Set-ItemProperty -Path $regPath -Name Wallpaper -Value $wallpaperPath
+# Set additional settings to ensure the wallpaper displays correctly
+Set-ItemProperty -Path $regPath -Name WallpaperStyle -Value "10"    # 10 = Fill
+Set-ItemProperty -Path $regPath -Name TileWallpaper -Value "0"     # 0 = No tiling
+# Refresh the desktop to apply changes
+RUNDLL32.EXE USER32.DLL,UpdatePerUserSystemParameters
+# Define the registry path for desktop settings`
+$regPath = "HKCU:\Control Panel\Desktop"`
+`
+# Ensure the Wallpaper value points to a valid file`
+$wallpaperPath = "C:\Windows\Web\Wallpaper\Windows\img0.jpg" # Default Windows wallpaper`
+Set-ItemProperty -Path $regPath -Name Wallpaper -Value $wallpaperPath`
+`
+# Set additional settings to ensure the wallpaper displays correctly`
+Set-ItemProperty -Path $regPath -Name WallpaperStyle -Value "10"    # 10 = Fill`
+Set-ItemProperty -Path $regPath -Name TileWallpaper -Value "0"     # 0 = No tiling`
+`
+# Refresh the desktop to apply changes`
+RUNDLL32.EXE USER32.DLL,UpdatePerUserSystemParameters`
+
+# Define the registry path for desktop settings`
+$regPath = "HKCU:\Control Panel\Desktop"`
+`
+# Ensure the Wallpaper value points to a valid file`
+$wallpaperPath = "D:\pictures\pillars_of_creation.webp.png" # Default Windows wallpaper`
+Set-ItemProperty -Path $regPath -Name Wallpaper -Value $wallpaperPath`
+`
+# Set additional settings to ensure the wallpaper displays correctly`
+Set-ItemProperty -Path $regPath -Name WallpaperStyle -Value "10"    # 10 = Fill`
+Set-ItemProperty -Path $regPath -Name TileWallpaper -Value "0"     # 0 = No tiling`
+`
+# Refresh the desktop to apply changes`
+RUNDLL32.EXE USER32.DLL,UpdatePerUserSystemParameters`
+
+# Define the registry path for desktop settings`
+$regPath = "HKCU:\Control Panel\Desktop"`
+`
+# Ensure the Wallpaper value points to a valid file`
+$wallpaperPath = "D:\pictures\pillars_of_creation.webp.png" # Default Windows wallpaper`
+Set-ItemProperty -Path $regPath -Name Wallpaper -Value $wallpaperPath`
+`
+# Set additional settings to ensure the wallpaper displays correctly`
+Set-ItemProperty -Path $regPath -Name WallpaperStyle -Value "10"    # 10 = Fill`
+Set-ItemProperty -Path $regPath -Name TileWallpaper -Value "0"     # 0 = No tiling`
+`
+# Refresh the desktop to apply changes`
+RUNDLL32.EXE USER32.DLL,UpdatePerUserSystemParameters`
+`
+
+taskkill /f /im rendll32.exe
+taskkill /f /im rundll32.exe
+taskkill /f /im RUNDLL32.EXE
+taskkill USER32.DLL
+taskkill /f /im USER32.DLL
+rundll32.exe
+user32.dll
+rundll32.exe user32.dll
+rundll32.exe user32.dll #refresh desktop
+# Define the registry path for desktop settings``
+$regPath = "HKCU:\Control Panel\Desktop"``
+``
+# Ensure the Wallpaper value points to a valid file``
+$wallpaperPath = "D:\pictures\pillars_of_creation.webp.png" # Default Windows wallpaper``
+Set-ItemProperty -Path $regPath -Name Wallpaper -Value $wallpaperPath``
+``
+# Set additional settings to ensure the wallpaper displays correctly``
+Set-ItemProperty -Path $regPath -Name WallpaperStyle -Value "10"    # 10 = Fill``
+Set-ItemProperty -Path $regPath -Name TileWallpaper -Value "0"     # 0 = No tiling``
+``
+# Refresh the desktop to apply changes``
+RUNDLL32.EXE USER32.DLL,UpdatePerUserSystemParameters``
+``
+`
+Set-ItemProperty -Path $regPath -Name TileWallpaper -Value "0"     # 0 = No tiling`
+
+# Define the registry path for desktop settings`
+$regPath = "HKCU:\Control Panel\Desktop"`
+`
+# Ensure the Wallpaper value points to a valid file`
+$wallpaperPath = "D:\pictures\pillars_of_creation.webp.png" # Default Windows wallpaper`
+Set-ItemProperty -Path $regPath -Name Wallpaper -Value $wallpaperPath`
+`
+# Set additional settings to ensure the wallpaper displays correctly`
+Set-ItemProperty -Path $regPath -Name WallpaperStyle -Value "10"    # 10 = Fill`
+Set-ItemProperty -Path $regPath -Name TileWallpaper -Value "0"     # 0 = No tiling`
+`
+# Refresh the desktop to apply changes`
+RUNDLL32.EXE USER32.DLL,UpdatePerUserSystemParameters`
+
+taskkill /f /im wsl*
+pwd
+bash
+cd bas
+cd bash
+Set-ItemProperty -Path $regPath -Name WallpaperStyle -Value "10"    # 10 = Fill
+$wallpaperPath = "C:\Windows\Web\Wallpaper\Windows\img0.jpg" # Default Windows wallpaper
+# Define the registry path for desktop settings`
+$regPath = "HKCU:\Control Panel\Desktop"`
+`
+# Ensure the Wallpaper value points to a valid file`
+$wallpaperPath = "D:\pictures\pillars_of_creation.webp.png" # Default Windows wallpaper`
+Set-ItemProperty -Path $regPath -Name Wallpaper -Value $wallpaperPath`
+`
+# Set additional settings to ensure the wallpaper displays correctly`
+Set-ItemProperty -Path $regPath -Name WallpaperStyle -Value "10"    # 10 = Fill`
+Set-ItemProperty -Path $regPath -Name TileWallpaper -Value "0"     # 0 = No tiling`
+`
+# Refresh the desktop to apply changes`
+RUNDLL32.EXE USER32.DLL,UpdatePerUserSystemParameters`
+
+RUNDLL32.EXE USER32.DLL,UpdatePerUserSystemParameters
+# Define the registry path for desktop settings`
+$regPath = "HKCU:\Control Panel\Desktop"`
+`
+# Ensure the Wallpaper value points to a valid file`
+$wallpaperPath = "D:\pictures\pillars_of_creation.webp.png" # Default Windows wallpaper`
+Set-ItemProperty -Path $regPath -Name Wallpaper -Value $wallpaperPath`
+`
+# Set additional settings to ensure the wallpaper displays correctly`
+Set-ItemProperty -Path $regPath -Name WallpaperStyle -Value "10"    # 10 = Fill`
+Set-ItemProperty -Path $regPath -Name TileWallpaper -Value "0"     # 0 = No tiling`
+`
+# Refresh the desktop to apply changes`
+RUNDLL32.EXE USER32.DLL,UpdatePerUserSystemParameters`
+
+rundll32.exe user32.dll #refresh desktop
+taskkill /f /im overlay*
+taskkill /f /im pytho*
+pip install win32gui
+python.exe -m pip install --upgrade pip
+pip install win32gui
+pip install pywin32
+pip install win32gui
+python -m pywin32_postinstall -install
+python -c "import win32gui; print('pywin32 is working')"
+cc
+set-alias cc cls
+cc
+taskkill /f /im pytho*
+d:
+python .\overlayPY.py
+taskkill /f /im pytho*
+cls
+cc
+set-alias cc cls
+cc
+d:
+python .\overlayPY.py
+cls
+cc
+python .\overlayPY.py
+cc
+python .\overlayPY.py
+cc
+python .\overlayPY.py
+text="`
+alt + 96   = \``
+`
+alt + 0180 = \´`
+`
+alt + 39   = \'`
+`
+alt + 168  = \¿`
+`
+alt + 47   = \/`
+`
+alt + 92   = \\`
+`
+alt + 173  = \¡`
+`
+alt + 179  = \│`
+`
+alt + 60   = \<`
+`
+alt + 62   = \>`
+`
+alt + 126  = \~`
+`
+alt + 0176 = \°`
+`
+alt + 39 = \'`
+`
+`
+"
+print(text="`
+alt + 96   = \``
+`
+alt + 0180 = \´`
+`
+alt + 39   = \'`
+`
+alt + 168  = \¿`
+`
+alt + 47   = \/`
+`
+alt + 92   = \\`
+`
+alt + 173  = \¡`
+`
+alt + 179  = \│`
+`
+alt + 60   = \<`
+`
+alt + 62   = \>`
+`
+alt + 126  = \~`
+`
+alt + 0176 = \°`
+`
+alt + 39 = \'`
+`
+`
+")
+cc
+print(text="`
+alt + 96   = \``
+`
+alt + 0180 = \´`
+`
+alt + 39   = \'`
+`
+alt + 168  = \¿`
+`
+alt + 47   = \/`
+`
+alt + 92   = \\`
+`
+alt + 173  = \¡`
+`
+alt + 179  = \│`
+`
+alt + 60   = \<`
+`
+alt + 62   = \>`
+`
+alt + 126  = \~`
+`
+alt + 0176 = \°`
+`
+alt + 39 = \'`
+`
+`
+")
+cls
+python .\overlayPY.py
+cc
+python .\overlayPY.py
+cc
+python .\overlayPY.py
+taskkill /f /im wsl*
+env
+cmd & env
+cls
+%path%
+echo %path%
+$env
+$env:path
+cat $env:path
+nano a.txt
+notepad $env:path
+pathman /au
+$env:Path += ';C:\foo'                # attach to the end
+$env:path
+$env:path | findstr "python"
+$env:path | findstr "py"
+$env:path | findstr "Py"
+$env:path | findstr "Py" -l
+$env:path | findstr "Py" -w
+chsh -s /bin/zsh
+bash 
+cd %localappdata%\Microsoft\Windows Terminal\settings.json
+cd "%localappdata%\Microsoft\Windows Terminal\settings.json"
+cd ".\%localappdata%\Microsoft\Windows Terminal\settings.json"
+cd "..\%localappdata%\Microsoft\Windows Terminal\settings.json"
+cd "~\%localappdata%\Microsoft\Windows Terminal\settings.json"
+cd "~\%localappdata%\Microsoft\Windows Terminal\"
+cd "%localappdata%\Microsoft\Windows Terminal\"
+python .\overlayPY.py
+echo %path%
+$env:path
+cls
+mkdir terminalMods
+cd .\terminalMods\
+cls
+cd /
+Set-PSReadlineKeyHandler -Key Tab -Function Complete
+Set-PSReadLineKeyHandler -Chord "Ctrl+f" -Function ForwardWord
+
+powershell
+exit`
+
+Get-History |Get-Member -MemberType Property
+ghy |ft id,endexecutiontime,commandline -auto
+ls
+cd ..
+rmdir .\terminalMods\
+ls
+python
+set-alias py python
+py
+py .\overlayPY.py
+py
+cc
+py .\overlayPY.py
+RUNDLL32.EXE USER32.DLL,UpdatePerUserSystemParameters
+py .\overlayPY.py
+winget install windhawk
+py .\overlayPY.py
+Get-AppxPackage *Microsoft.WindowsTaskbar* | Remove-AppxPackage
+taskkill /f /im explorer.exe
+start explorer.exe
+winget chocolatey
+winget install chocolatey
+sudo cmd
+chocolatey install sudo
+choco
+chocolatey
+cd D:\repos\
+ls
+cd .\zsh-pwsh-wt\
+git add *
+git commit -m "updates"
+git push origin main
+cls
+git push origin main
+git add *
+git commit -m "updates"
+git init
+git add *
+git commit -m "updates"
+git push origin main
+git set origin 
+( find . -type d -name ".git" \`
+  && find . -name ".gitignore" \
+  && find . -name ".gitmodules" ) | xargs rm -rf
+( find . -type d -name ".git" \`
+  && find . -name ".gitignore" \
+cls
+find . -name ".git*" -exec rm -R {} \;
+find  -name ".git*" -exec rm -R {} \;
+findstr . -name ".git*" -exec rm -R {} \;
+where $PROFILE.txt
+where $PROFILE
+echo where $PROFILE
+cat C:\Users\troja\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+echo where pwsh
+where $PROFILE
+echo pwsh
+eco $PROFILE
+echo $profile
+cmd
+cc
+set-alias cc cls
+cc
+echo $profile
+cat $profile
+cmd
+get-command pwsh
+get-command pwsh │ .path
+get-command pwsh 
+get-command --help
+get-command 
+get-command -help
+get-command -h
+get-command --h
+man get-command
+get-command pwsh /all
+get-command pwsh -all
+get-command pwsh │ . PATH
+get-command pwsh │ . source
+cc
+ (get-command notepad.exe).Path
+dir notepad.exe
+cc
+ (get-command pwsh).Path
+cmd -command "where pwsh"
+cc
+ (get-command pwsh).Path
+gedit
+pwsh
+set-alias cc cls
+cc
+cd /
+py .\overlayPY.py
+taskkill /f /im pytho*
+py .\overlayPY.py
+taskkill /f /im pytho*
+py .\overlayPY.py
+taskkill /f /im pytho*
+py .\overlayPY.py
+taskkill /f /im pytho*
+apt install nano
+cc
+winget install nano
+winget install GNU.Nano
+nano
+d>
+cls
+set-alias cc cls
+d:
+ls
+nano
+cc
+set-alias cc cls
+cc
+py .\overlayPY.py
+taskkill /f /im pytho*
+py .\overlayPY.py
+taskkill /f /im pytho*
+py .\overlayPY.py
+taskkill /f /im pytho*
+py .\overlayPY.py
+taskkill /f /im pytho*
+py .\overlayPY.py
+taskkill /f /im pytho*
+py .\overlayPY.py
+cc
+py .\overlayPY.py
+
+cc
+py .\overlayPY.py
+taskkill /f /im pytho*
+
+py .\overlayPY.py
+taskkill /f /im pytho*
+py .\overlayPY.py
+.\FreeSpace.lnk
+py .\overlayPY.py
+taskkill /f /im pytho*
+py .\overlayPY.py
+taskkill /f /im pytho*
+py .\overlayPY.py
+taskkill /f /im pytho*
+py .\overlayPY.py
+taskkill /f /im pytho*
+py .\overlayPY.py
+pip install tkinter
+pip install tk
+pip install tk --upgrade
+pip install pywin32
+py .\overlayPY.py
+pip install screeninfo
+py .\overlayPY.py
+cls
+pepe
+echo $pepe
+$pepe
+$profile 
+$pepe
+echo $pepe
+setx pepe=lavin
+$env:pep="lavin"
+$pep
+echo $pep
+$Env:pep="lavin"
+echo $pep
+py .\overlayPY.py
+py
+cñs
+cc
+hf -h
+hs
+cls
+cat "~\content.txt"
+cat "content.txt"
+py
+cls
+py
+cls
+py2exe
+cls
+pip install py2exe
+set PATH=%PATH%;D:\FreeSpace.lnk
+echo $path
+$path
+cat $path
+cls
+$PATH
+echo $PATH
+$env:$path
+echo $env:$path
+cls
+echo $env:$PATH
+cls
+`
+echo $env:path
+`
+echo $env:path notepad
+notepad
+cls
+freespace 
+cls
+echo $env:PATH
+c:
+ls
+cls
+pwd
+FreeSpace.lnk
+freespace
+.\FreeSpace.lnk
+~\FreeSpace.lnk
+removeTempStarter.ps1
+removeTempStarter
+cls
+cc
+set-alias cc cls
+cc
+d:
+ls
+set-alias py python
+cls
+py .\freespacepy.py
+cls
+py .\freespacepy.py
+cls
+py .\freespacepy.py
+cls
+Add-Type -AssemblyName System.Windows.Forms | Out-Null
+try {`
+    rm -Path "~\\AppData\\Local\\temp\\*" -Recurse -Force`
+    Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" | Out-Host`
+    Write-Host -ForegroundColor Green "rm -Path ~\\AppData\\Local\\temp\\* -Recurse -Force" | Out-Host`
+    Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" | Out-Host`
+`
+    # Ensure console output is flushed before finishing`
+    [System.Console]::Out.Flush()`
+} catch {`
+    Write-Host -ForegroundColor Red "An error occurred: $($_.Exception.Message)"`
+    exit 1`
+}
+#Pause
+CLS
+py .\freespacepy.py
+Set-PSDebug -Off
+Add-Type -AssemblyName System.Windows.Forms | Out-Null
+try {`
+    rm -Path "~\\AppData\\Local\\temp\\*" -Recurse -Force`
+    Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" | Out-Host`
+    Write-Host -ForegroundColor Green "rm -Path ~\\AppData\\Local\\temp\\* -Recurse -Force" | Out-Host`
+    Write-Host -ForegroundColor Cyan "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" | Out-Host`
+`
+    # Ensure console output is flushed before finishing`
+    [System.Console]::Out.Flush()`
+} catch {`
+    Write-Host -ForegroundColor Red "An error occurred: $($_.Exception.Message)"`
+    exit 1`
+}
+cc
+py .\freespacepy.py
+pip install pyinstaller
+pyinstaller --onefile .\freed.py
+cls
+py .\freed.py
+cls
+py .\freed.py
+pyinstaller
+mkdir HomeMadeFreeTemp
+cd .\HomeMadeFreeTemp\
+ls
+pyinstaller --onefile .\freed.py
+echo %freespace%
+%freespace%
+cls
+echo $env:%freespace%
+cls
+echo $env:freespace
+echo $env:path
+echo $env:freespace
+cat $env:freespace
+echo $env:freespace
+Get-ChildItem $env:freespace
+Get-ChildItem freespace
+Get-ChildItem env:freespace
+cls
+cmd echo %freespace%
+gci env:
+gci sys:
+$env:temp
+$env:freespace
+d:
+set-alias cc cls
+set-alias py python
+cc
+py .\overlayPY.py
+cd .\repos\
+ls
+cd .\zsh-pwsh-wt\
+new-item updateConfigsBackup.py
+ccls
+cc
+cls
+        zsh -command " ls -a \| grep "\.zshrc" \| xargs cp -t \/mnt\/d\/repos\/zsh-pwsh-wt\/debian\/Home & apt list --installed \| cut -d/ -f1 > \/mnt\/d\/repos\/zsh-pwsh-wt\/debian\/installed_packages.txt\"
+cls
+py
+py  .\updateConfigsBackup.py
+ls -a | grep ".zshrc" | xargs cp -t /mnt/d/repos/zsh-pwsh-wt/debian/Home && apt list --installed | cut -d/ -f1 > /mnt/d/repos/zsh-pwsh-wt/debian/installed_packages.txt
+cls
+zsh -command "ls -a | grep ".zshrc" | xargs cp -t /mnt/d/repos/zsh-pwsh-wt/debian/Home && apt list --installed | cut -d/ -f1 > /mnt/d/repos/zsh-pwsh-wt/debian/installed_packages.txt"
+zsh
+sh
+pwsh
+zsh
+winget install zsh
+sh
+bash
+zsh
+wsl zsh
+wsl -l
+wsl --unregister Ubuntu (Default)
+wsl --unregister Ubuntu
+zsh
+wsl zsh
+set-alias cc cls
+set-alias py python
+cls
+cc
+py  .\updateConfigsBackup.py
+d:
+py  .\updateConfigsBackup.py
+cd .\repos\zsh-pwsh-wt\
+ls
+py .\updateConfigsBackup.py
+zsh
+wsl zsh
+cls
+py .\updateConfigsBackup.py
+cd ~ && ls -a | grep ".zshrc" | xargs cp -t /mnt/d/repos/zsh-pwsh-wt/debian/Home && apt list --installed | cut -d/ -f1 > /mnt/d/repos/zsh-pwsh-wt/debian/installed_packages.txt
+py .\updateConfigsBackup.py
+cd D:\repos\zsh-pwsh-wt
+ls
+py .\updateConfigsBackup.py
+cd .\kaliPersonalConfig\
+ls
+cls
+py
+py .\updateConfigsBackup.py
+cd ~ && ls -a | grep ".zshrc" | xargs cp -t /mnt/d/reposzsh-pwsh-wt/kaliPersonalConfig/debian/Home && apt list --installed | cut -d/ -f1 > mnt/d/reposzsh-pwsh-wt/kaliPersonalConfig/debian/installed_packages.txt
+cls
+py .\updateConfigsBackup.py
+cd D:\repos\zsh-pwsh-wt\kaliPerso*
+ls
+py .\updateConfigsBackup.py
+cat .\updateConfigsBackup.py
+cls
+cat .\updateConfigsBackup.py
+ls
+py .\updateConfigsBackup.py
+cls
+py .\updateConfigsBackup.py
+cls
+wsl zsh -c 'cd ~ && ls -a | grep ".zshrc" | xargs cp -t /mnt/d/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/Home && apt list --installed | cut -d/ -f1 > /mnt/d/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/installed_packages.txt'
+py .\updateConfigsBackup.py
+wsl zsh -c "cd ~ && ls -a | grep ".zshrc" | xargs cp -t /mnt/d/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/Home && apt list --installed | cut -d/ -f1 > /mnt/d/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/installed_packages.txt && pause"
+py .\updateConfigsBackup.py
+cls
+wsl zsh -c "cd ~ && ls -a | grep ".zshrc" | xargs cp -t /mnt/d/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/Home && apt list --installed | cut -d/ -f1 > /mnt/d/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/installed_packages.txt&&echo 'Configurations from zsh UPDATED!\nPress any key to continue...'; read -k1 -s"
+py .\updateConfigsBackup.py
+tratamiento de tty bash
+pwsh.exe -Command "& { Set-Location -Path \"$PWD\"; .\removeTempStarter.ps1 }"
+--------------------------`
+# Define the registry path for desktop settings
+$regPath = "HKCU:\Control Panel\Desktop"
+# Ensure the Wallpaper value points to a valid file
+$wallpaperPath = "D:\pictures\pillars_of_creation.webp.png" # Default Windows wallpaper
+Set-ItemProperty -Path $regPath -Name Wallpaper -Value $wallpaperPath
+# Set additional settings to ensure the wallpaper displays correctly
+Set-ItemProperty -Path $regPath -Name WallpaperStyle -Value "10"    # 10 = Fill
+Set-ItemProperty -Path $regPath -Name TileWallpaper -Value "0"     # 0 = No tiling
+# Refresh the desktop to apply changes
+RUNDLL32.EXE USER32.DLL,UpdatePerUserSystemParameters
+----------------------------`
+
++++++++++++++++++++++++++++++++++++++++++++`
+
+# Set the path to the wallpaper image
+$imagePath = "D:\pictures\space-travel-to-the-eagle-nebula-galaxy-free-video.jpg"
+# Function to update the wallpaper for all monitors
+function Set-Wallpaper {`
+    param (`
+        [string]$ImagePath`
+    )`
+    `
+    # Import required .NET types for system wallpaper`
+    Add-Type -TypeDefinition @"`
+    using System;`
+    using System.Runtime.InteropServices;`
+    public class Wallpaper {`
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]`
+        public static extern int SystemParametersInfo(int uAction, int uParam, string lpvParam, int fuWinIni);`
+    }`
+"@`
+`
+    # SPI_SETDESKWALLPAPER = 20, SPIF_UPDATEINIFILE = 0x01, SPIF_SENDCHANGE = 0x02`
+    $SPI_SETDESKWALLPAPER = 20`
+    $SPIF_UPDATEINIFILE = 0x01`
+    $SPIF_SENDCHANGE = 0x02`
+`
+    # Call the SystemParametersInfo API to set the wallpaper`
+    [Wallpaper]::SystemParametersInfo($SPI_SETDESKWALLPAPER, 0, $ImagePath, $SPIF_UPDATEINIFILE -bor $SPIF_SENDCHANGE)`
+}
+# Set wallpaper for all screens by calling the function for each monitor
+$monitors = Get-WmiObject -Class Win32_DesktopMonitor
+foreach ($monitor in $monitors) {`
+    Set-Wallpaper -ImagePath $imagePath`
+}
+Write-Host "Wallpaper updated for all monitors."
++++++++++++++++++++++++++++++++++++++`
+
+cd D:\repos\zsh-pwsh-wt
+ls
+.\wallpapers-update.ps1
+pwsh -command .\wallpapers-update.ps1
+.\wallpapers-update.ps1
+$env:profile
+echo $env:profile
+%profile%
+%PROFILE%
+$PROFILE
+copy
+cd ~
+pws
+pwd
+copy .\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 
+cat .\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 
+cat .\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 D:\repos\zsh-pwsh-wt\windows-pws-posh
+copy .\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 D:\repos\zsh-pwsh-wt\windows-pws-posh
+copy .\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 D:\repos\zsh-pwsh-wt\windows-pws-posh\PROFILE.txt
+cls
+pwsh.exe -Command "copy ./Documents/PowerShell/Microsoft.PowerShell_profile.ps1 D:/repos/zsh-pwsh-wt/windows-pws-posh/PROFILE.txt && copy ./Documents/PowerShell/Microsoft.PowerShell_profile.ps1 D:/repos/zsh-pwsh-wt/windows-pws-posh"
+$PROFILE
+cd c:
+pwd
+cd..
+pws
+pwd
+Get-Item /Documents/PowerShell/Microsoft.PowerShell_profile.ps1
+Get-Item ./Documents/PowerShell/Microsoft.PowerShell_profile.ps1
+Get-Item ../Documents/PowerShell/Microsoft.PowerShell_profile.ps1
+Get-Item ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1
+~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1
+notepd ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1
+notepad ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1
+vld
+\cls
+cls
+whoami
+$PROFILE
+pwsh.exe -Command "cd c:/ && copy ../Documents/PowerShell/Microsoft.PowerShell_profile.ps1 D:/repos/zsh-pwsh-wt/windows-pws-posh/PROFILE.txt"
+pwsh.exe -Command "cd c:/ && copy c>/../Documents/PowerShell/Microsoft.PowerShell_profile.ps1 D:/repos/zsh-pwsh-wt/windows-pws-posh/PROFILE.txt"
+pwsh.exe -Command "cd c:/ && copy c:/../Documents/PowerShell/Microsoft.PowerShell_profile.ps1 D:/repos/zsh-pwsh-wt/windows-pws-posh/PROFILE.txt"
+pwsh.exe -Command "cd c:/ && copy c:/users/../Documents/PowerShell/Microsoft.PowerShell_profile.ps1 D:/repos/zsh-pwsh-wt/windows-pws-posh/PROFILE.txt"
+$env:username
+pwsh.exe -Command "cd c:/ && copy c:/users/{$env:username}/Documents/PowerShell/Microsoft.PowerShell_profile.ps1 D:/repos/zsh-pwsh-wt/windows-pws-posh/PROFILE.txt"
+pwsh.exe -Command "cd c:/ && copy c:/users/$($env:username)/Documents/PowerShell/Microsoft.PowerShell_profile.ps1 D:/repos/zsh-pwsh-wt/windows-pws-posh/PROFILE.txt"
+cls
+copy c:/users/$($env:username)/Documents/PowerShell/Microsoft.PowerShell_profile.ps1 D:/repos/zsh-pwsh-wt/windows-pws-posh
+pwsh -Command "cd c:/ && copy c:/users/$($env:username)/Documents/PowerShell/Microsoft.PowerShell_profile.ps1 D:/repos/zsh-pwsh-wt/windows-pws-posh/PROFILE.txt"
+         pwsh -Command "cd c:/ && copy c:/users/$($env:username)/Documents/PowerShell/Microsoft.PowerShell_profile.ps1 D:/repos/zsh-pwsh-wt/windows-pws-posh/PROFILE.txt && copy c:/users/$($env:username)/Documents/PowerShell/Microsoft.PowerShell_profile.ps1 D:/repos/zsh-pwsh-wt/windows-pws-posh"
+winget install oh-my-posh
+ wsl zsh -c "cd ~ && ls -a | grep ".zshrc" | xargs cp -t /mnt/d/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/Home && apt list --installed | cut -d/ -f1 > /mnt/d/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/installed_packages.txt && sudo cp ~/zsh-pwsh-wt/kaliPersonalConfig/debian/installed_packages.txt /mnt/d/repos/zsh-pwsh-`
+wt/kaliPersonalConfig/debian"
+ wsl zsh -c "cd ~ && ls -a | grep ".zshrc" | xargs cp -t /mnt/d/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/Home && apt list --installed | cut -d/ -f1 > /mnt/d/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/installed_packages.txt && sudo cp ~/zsh-pwsh-wt/kaliPersonalConfig/debian/installed_packages.txt /mnt/d/repos/zsh-pwsh-`
+wt/kaliPersonalConfig/debian"
+cls
+subl
+ls
+wsl zsh cat '.\SHIRLEY BRITOS GB4165 8578 NW 70TH .txt'
+wsl zsh -command "cat '.\SHIRLEY BRITOS GB4165 8578 NW 70TH .txt'"
+wsl zsh -command "cat .\SHIRLEY BRITOS GB4165 8578 NW 70TH .txt"
+cls
+wsl.exe zsh.exe -command "cat .\SHIRLEY BRITOS GB4165 8578 NW 70TH .txt"
+wsl.exe zsh -command "cat .\SHIRLEY BRITOS GB4165 8578 NW 70TH .txt"
+wsl.exe zsh -c "cat .\SHIRLEY BRITOS GB4165 8578 NW 70TH .txt"
+wsl.exe zsh -c "cat ."SHIRLEY BRITOS GB4165 8578 NW 70TH ".txt"
+wsl.exe zsh -c "cat "SHIRLEY BRITOS GB4165 8578 NW 70TH ".txt"
+wsl.exe zsh -c "cat "ls""
+wsl.exe zsh -c "ls"
+wsl.exe zsh -c "cat SHIRLEY BRITOS GB4165 8578 NW 70TH .txt"
+wsl.exe zsh -c "cat "SHIRLEY BRITOS GB4165 8578 NW 70TH .txt""
+cls
+ pwsh -Command "cd c:/ && copy c:/users/$($env:username)/Documents/PowerShell/Microsoft.PowerShell_profile.ps1 D:/repos/zsh-pwsh-wt/windows-pws-posh/PROFILE.txt && cp && D:/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/confgSSHScriptINIT.sh /mnt/d/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/"
+ pwsh -Command "cd c:/ && copy c:/users/$($env:username)/Documents/PowerShell/Microsoft.PowerShell_profile.ps1 D:/repos/zsh-pwsh-wt/windows-pws-posh/PROFILE.txt && cp && D:/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/confgZSHScriptINIT.sh /mnt/d/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/confgZSHScriptINIT"
+ pwsh -Command "cd c:/ && copy c:/users/$($env:username)/Documents/PowerShell/Microsoft.PowerShell_profile.ps1 D:/repos/zsh-pwsh-wt/windows-pws-posh/PROFILE.txt && cp D:/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/confgZSHScriptINIT.sh /mnt/d/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/confgZSHScriptINIT"
+ pwsh -Command "cd c:/ && copy c:/users/$($env:username)/Documents/PowerShell/Microsoft.PowerShell_profile.ps1 D:/repos/zsh-pwsh-wt/windows-pws-posh/PROFILE.txt && cp && D:/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/confgZSHScriptINIT.sh wslpath -w //wsl.localhost/kali-linux/mnt/d/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/confgZSHScriptINIT"
+//wsl.localhost/kali-linux/mnt/d/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/
+ pwsh -Command "cd c:/ && copy c:/users/$($env:username)/Documents/PowerShell/Microsoft.PowerShell_profile.ps1 D:/repos/zsh-pwsh-wt/windows-pws-posh/PROFILE.txt && copy-item D:/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/confgZSHScriptINIT.sh /mnt/d/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/confgZSHScriptINIT"
+ls
+cd ..
+ls
+cd .\zsh-pwsh-wt\
+ls
+cd .\kaliPersonalConfig\
+ls
+cd debian
+ls
+exit
+cls
+cls
+Copy-Item "D:\repos\zsh-pwsh-wt\kaliPersonalConfig\confgZSHScriptINIT.sh" /homeunnamed10110 -ToSession $s
+Copy-Item "D:\repos\zsh-pwsh-wt\kaliPersonalConfig\confgZSHScriptINIT.sh" /homeunnamed10110 
+ls
+Copy-Item "D:\repos\zsh-pwsh-wt\kaliPersonalConfig\confgZSHScriptINIT.sh" /home/unnamed10110 
+Copy-Item "D:\repos\zsh-pwsh-wt\kaliPersonalConfig\confgZSHScriptINIT.sh" ./home/unnamed10110 
+cls
+D:\fun\
+set-alias py python &&set-alias cc cls
+c
+cc
+cd D:\fun\
+yt-dlp -ss 00:00:33.00 -t 00:00:20.00 https://www.youtube.com/watch?v=6X6HqL67YmU
+yt-dlp https://www.youtube.com/watch?v=6X6HqL67YmU -ss 00:00:33.00 -t 00:00:20.00 
+yt-dlp --external-downloader ffmpeg --external-downloader-args ffmpeg_i:-ss 00:00:33.00 -to 00:00:53.50 https://www.youtube.com/watch?v=6X6HqL67YmU
+winget install -e --id yt-dlg.yt-dlg
+yt-dlp.exe --newline -i -k -o "D:\fun\%(title)s.%(ext)s" -f 38 --ignore-config --hls-prefer-native --embed-thumbnail --add-metadata "https://www.youtube.com/watch?v=6X6HqL67YmU"
+yt-dlp.exe --newline -i -k -o "D:\fun\%(title)s.%(ext)s" -f mp4 --ignore-config --hls-prefer-native --embed-thumbnail --add-metadata --external-downloader ffmpeg --external-downloader-args "-ss 33 -to 53" "https://www.youtube.com/watch?v=6X6HqL67YmU"
+pip install ffmpeg
+ffmpeg
+ffmpeg.exe
+ffmpeg.py
+pip install ffmpeg --upgrade
+ffmpeg
+winget install python
+cmd -c "where python"
+cd D:\fun\
+cc
+set-alias py python &&set-alias cc cls
+cc
+ffmpeg
+cd D:\fun\
+ffmpeg
+c:
+pwd
+cd ..
+pwd
+cd 'C:/../ffmpeg'
+cd './ffmpeg'
+pip show ffmpeg
+cd C:\Users\troja\AppData\Local\Programs\Python\Python312\Lib\site-packages
+ls
+cd .\ffmpeg\
+ls
+pwd
+ffmpeg
+yt-dlp.exe --newline -i -k -o "D:\fun\%(title)s.%(ext)s" -f mp4 --ignore-config --hls-prefer-native --embed-thumbnail --add-metadata --external-downloader ffmpeg --external-downloader-args "-ss 33 -to 53" "https://www.youtube.com/watch?v=6X6HqL67YmU"
+ffmpeg
+python -c "import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())"
+& "C:\Users\<YourUser>\AppData\Local\Programs\Python\Python<version>\Lib\site-packages\imageio_ffmpeg\binaries\ffmpeg-win64-vX.X.exe" -version
+& "C:\Users\troja\AppData\Local\Programs\Python\Python<version>\Lib\site-packages\imageio_ffmpeg\binaries\ffmpeg-win64-vX.X.exe" -version
+& "C:\Users\troja\AppData\Local\Programs\Python\Python312\Lib\site-packages\imageio_ffmpeg\binaries\ffmpeg-win64-vX.X.exe" -version
+& "C:\Users\troja\AppData\Local\Programs\Python\Python312\Lib\site-packages\imageio_ffmpeg\binaries\ffmpeg-win64-v*" -version
+& "pwsh" -version
+& "C:\Users\troja\AppData\Local\Programs\Python\Python312\Lib\site-packages\imageio_ffmpeg\binaries\ffmpeg-win64-v*" -version
+cd C:\Users\troja\AppData\Local\Programs\Python\Python312\Lib\site-packages
+ls
+cd .\ffmpeg\
+ls
+pip show ffmpeg
+ffmpeg
+cc
+set-alias py python &&set-alias cc cls
+cc
+pip show ffmpeg
+winget install ffmpeg
+ffmpeg
+clear
+cd d:fun
+cls
+ls
+cls
+Get-ChildItem -Path "$env:USERPROFILE\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine" | `
+Format-Table -AutoSize

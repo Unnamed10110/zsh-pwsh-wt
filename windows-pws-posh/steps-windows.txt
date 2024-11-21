@@ -1,2 +1,9 @@
 //$PROFILE location
 C:\Users\troja\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+
+// command history location
+ C:\Users\troja\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine
+
+
+// my personal pwsh command history  (append its content to the local machine)
+ConsoleHost_historyPERSONAL.txt
