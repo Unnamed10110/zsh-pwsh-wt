@@ -727,6 +727,7 @@ libxdmcp-dev
 libxdmcp6
 libxext6
 libxfixes3
+libxfont2
 libxft2
 libxi6
 libxinerama1
@@ -889,6 +890,7 @@ whiptail
 whois
 x11-common
 x11-utils
+x11-xkb-utils
 x11-xserver-utils
 x11proto-dev
 xauth
@@ -898,13 +900,18 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal
 xdg-user-dirs
 xdg-utils
+xfonts-100dpi
+xfonts-75dpi
+xfonts-base
 xfonts-encodings
 xfonts-utils
 xkb-data
 xml-core
 xorg-sgml-doctools
+xserver-common
 xsltproc
 xtrans-dev
+xvfb
 xz-utils
 yelp-xsl
 yelp
