@@ -2222,3 +2222,26 @@ ls
 cls
 Get-ChildItem -Path "$env:USERPROFILE\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine" | `
 Format-Table -AutoSize
+cc
+cmd
+winget
+winget install terminal
+winget upgrade terminal
+cd D:\fun\
+yt-dlp.exe --newline -i -k -o "D:\fun\%(title)s.%(ext)s" -f mp4 --ignore-config --hls-prefer-native --embed-thumbnail --add-metadata --external-downloader ffmpeg --external-downloader-args "-ss 33 -to 53" "https://www.youtube.com/watch?v=6X6HqL67YmU"
+winget install lossless-cut
+yt-dlp https://www.youtube.com/watch?v=6X6HqL67YmU
+yt-dlp https://www.youtube.com/watch?v=6X6HqL67YmU
+history 0
+cls
+$PROFILE
+cat C:\Users\troja\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+notepad C:\Users\troja\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+cat C:\Users\troja\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+$(env:username)
+$($env:username)
+cd ./AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLin
+cd /
+cd /AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLin
+cd ../AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLin
+cd ~/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLin

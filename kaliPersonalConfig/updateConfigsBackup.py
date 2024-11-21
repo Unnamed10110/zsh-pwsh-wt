@@ -5,7 +5,7 @@ def execute_zsh_command():
     # Execute the command
     result2= os.system(
         """
-         pwsh -Command "cd c:/ && copy c:/users/$($env:username)/Documents/PowerShell/Microsoft.PowerShell_profile.ps1 D:/repos/zsh-pwsh-wt/windows-pws-posh/PROFILE.txt"                 
+         pwsh -Command "cd c:/ && copy C:/Users/troja/Documents/PowerShell/Microsoft.PowerShell_profile.ps1 D:/repos/zsh-pwsh-wt/windows-pws-posh/PROFILE.txt && cp C:/Users/troja/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt D:/repos/zsh-pwsh-wt/windows-pws-posh/ConsoleHost_history.txt && copy C:/Users/troja/Documents/PowerShell/Microsoft.PowerShell_profile.ps1 D:/repos/zsh-pwsh-wt/windows-pws-posh/Microsoft.PowerShell_profile.ps1 "                 
                        
         """)
     result = os.system(

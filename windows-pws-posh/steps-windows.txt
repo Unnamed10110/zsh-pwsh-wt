@@ -6,4 +6,4 @@ C:\Users\troja\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
 
 
 // my personal pwsh command history  (append its content to the local machine)
-ConsoleHost_historyPERSONAL.txt
+ConsoleHost_history.txt

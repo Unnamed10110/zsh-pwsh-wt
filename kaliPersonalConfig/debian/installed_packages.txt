@@ -24,6 +24,7 @@ bsdutils
 btop
 bubblewrap
 build-essential
+bzip2-doc
 bzip2
 ca-certificates
 caca-utils
@@ -33,6 +34,8 @@ coreutils
 cpio
 cpp-13-x86-64-linux-gnu
 cpp-13
+cpp-14-x86-64-linux-gnu
+cpp-14
 cpp-x86-64-linux-gnu
 cpp
 cron-daemon-common
@@ -85,16 +88,24 @@ fuse3
 fzf
 g++-13-x86-64-linux-gnu
 g++-13
+g++-14-x86-64-linux-gnu
+g++-14
 g++-x86-64-linux-gnu
 g++
 gcc-13-base
 gcc-13-x86-64-linux-gnu
 gcc-13
 gcc-14-base
+gcc-14-x86-64-linux-gnu
+gcc-14
 gcc-x86-64-linux-gnu
 gcc
 gedit-common
 gedit
+gfortran-14-x86-64-linux-gnu
+gfortran-14
+gfortran-x86-64-linux-gnu
+gfortran
 ghostscript
 gir1.2-amtk-5
 gir1.2-atk-1.0
@@ -138,6 +149,7 @@ hostname
 htop
 hunspell-en-us
 i965-va-driver
+icu-devtools
 ifupdown
 imagemagick-6-common
 imagemagick-6.q16
@@ -202,6 +214,7 @@ libavtp0
 libavutil58
 libbdplus0
 libbinutils
+libblas-dev
 libblas3
 libblkid1
 libbluray2
@@ -210,6 +223,7 @@ libbrotli1
 libbs2b0
 libbsd0
 libbz2-1.0
+libbz2-dev
 libc-bin
 libc-dev-bin
 libc-l10n
@@ -254,6 +268,7 @@ libde265-0
 libdebconfclient0
 libdecor-0-0
 libdecor-0-plugin-1-gtk
+libdeflate-dev
 libdeflate0
 libdevmapper1.02.1
 libdirectfb-1.7-7t64
@@ -309,6 +324,7 @@ libgav1-1
 libgbm1
 libgc1
 libgcc-13-dev
+libgcc-14-dev
 libgcc-s1
 libgcrypt20
 libgdbm-compat4t64
@@ -320,6 +336,7 @@ libgedit-amtk-5-0
 libgedit-amtk-5-common
 libgedit-gtksourceview-300-0
 libgedit-gtksourceview-300-common
+libgfortran-14-dev
 libgfortran5
 libgif7
 libgirepository-1.0-1
@@ -395,6 +412,7 @@ libhwasan0
 libhwy1t64
 libhyphen0
 libice6
+libicu-dev
 libicu72
 libid3tag0
 libidn12
@@ -418,6 +436,8 @@ libjavascriptcoregtk-4.1-0
 libjbig0
 libjbig2dec0
 libjemalloc2
+libjpeg-dev
+libjpeg62-turbo-dev
 libjpeg62-turbo
 libjs-jquery
 libjson-c5
@@ -432,6 +452,7 @@ libkmod2
 libkrb5-3
 libkrb5support0
 libksba8
+liblapack-dev
 liblapack3
 liblc3-1
 liblcms2-2
@@ -454,6 +475,7 @@ liblua5.4-0
 liblwp-mediatypes-perl
 liblwp-protocol-https-perl
 liblz4-1
+liblzma-dev
 liblzma5
 liblzo2-2
 libmagic-mgc
@@ -479,6 +501,7 @@ libmpfr6
 libmpg123-0t64
 libmplex2-2.1-0t64
 libmysofa1
+libncurses-dev
 libncurses6
 libncursesw6
 libneon27t64
@@ -533,7 +556,11 @@ libparted2t64
 libpcap0.8t64
 libpci3
 libpciaccess0
+libpcre2-16-0
+libpcre2-32-0
 libpcre2-8-0
+libpcre2-dev
+libpcre2-posix3
 libpeas-1.0-0
 libpeas-common
 libperl5.38t64
@@ -542,7 +569,10 @@ libpipeline1
 libpipewire-0.3-0t64
 libpipewire-0.3-common
 libpixman-1-0
+libpkgconf3
 libplacebo338
+libpng-dev
+libpng-tools
 libpng16-16t64
 libpocketsphinx3
 libpopt0
@@ -565,6 +595,7 @@ libraptor2-0
 librav1e0.7
 libraw1394-11
 libraw23t64
+libreadline-dev
 libreadline8t64
 libregexp-assemble-perl
 librist4
@@ -622,6 +653,7 @@ libssh-gcrypt-4
 libssh2-1t64
 libssl3t64
 libstdc++-13-dev
+libstdc++-14-dev
 libstdc++6
 libstemmer0d
 libsvtav1enc2
@@ -647,7 +679,9 @@ libtiff6
 libtimedate-perl
 libtinfo6
 libtirpc-common
+libtirpc-dev
 libtirpc3t64
+libtk8.6
 libtry-tiny-perl
 libtsan2
 libtwolame0
@@ -815,6 +849,8 @@ perl-modules-5.38
 perl-openssl-defaults
 perl
 pinentry-curses
+pkgconf-bin
+pkgconf
 plocate
 pocketsphinx-en-us
 poppler-data
@@ -822,6 +858,7 @@ powershell
 procps
 publicsuffix
 python-apt-common
+python-is-python3
 python3-apt
 python3-cairo
 python3-distro
@@ -834,6 +871,27 @@ python3.11
 python3.12-minimal
 python3.12
 python3
+r-base-core
+r-base-dev
+r-base-html
+r-base
+r-cran-boot
+r-cran-class
+r-cran-cluster
+r-cran-codetools
+r-cran-foreign
+r-cran-kernsmooth
+r-cran-lattice
+r-cran-mass
+r-cran-matrix
+r-cran-mgcv
+r-cran-nlme
+r-cran-nnet
+r-cran-rpart
+r-cran-spatial
+r-cran-survival
+r-doc-html
+r-recommended
 rake
 readline-common
 rpcsvc-proto
@@ -919,6 +977,7 @@ yelp
 zenity-common
 zenity
 zip
+zlib1g-dev
 zlib1g
 zsh-autosuggestions
 zsh-common
