@@ -306,33 +306,33 @@ if __name__ == "__main__":
         with open("content.txt", "w", encoding="utf-8",errors="ignore") as file:
             file.write("""
 -> FILE JUST CREATED! ..\n
-This is a text with Arial bold white font. 
-It will word-wrap to fit inside the window as the window resizes.
-alt + 96   = \`
+DEFAULT TEXT!
 
-alt + 0180 = \´
+alt + 96   = `
 
-alt + 39   = \'
+alt + 0180 = ´
 
-alt + 168  = \¿
+alt + 39   = '
 
-alt + 47   = \/
+alt + 168  = ¿
+
+alt + 47   = /
 
 alt + 92   = \\
 
-alt + 173  = \¡
+alt + 173  = ¡
 
-alt + 124  = \|
+alt + 124  = |
 
-alt + 60   = \<
+alt + 60   = <
 
-alt + 62   = \>
+alt + 62   = >
 
-alt + 126  = \~
+alt + 126  = ~
 
-alt + 0176 = \°
+alt + 0176 = °
 
-alt + 39 = \'
+alt + 39 = '
 
             """)
         text = open('content.txt', 'r', encoding='utf-8-sig', errors='ignore').read()

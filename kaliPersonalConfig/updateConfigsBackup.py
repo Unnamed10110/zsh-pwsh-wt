@@ -10,7 +10,7 @@ def execute_zsh_command():
         """)
     result = os.system(
         """
-        wsl zsh -c "cd ~ && ls -a | grep ".zshrc" | xargs cp -t /mnt/d/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/Home && apt list --installed | cut -d/ -f1 > /mnt/d/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/installed_packages.txt &&echo "Configurations from zsh UPDATED!\n"Press any key to continue..."; read -k1 -s"
+        wsl zsh -c "cd ~ && ls -a | grep ".zshrc" | xargs cp -t /mnt/d/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/Home && apt list --installed | cut -d/ -f1 > /mnt/d/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/installed_packages.txt && cp ~/zsh-pwsh-wt/kaliPersonalConfig/debian/installed_packages /mnt/d/repos/zsh-pwsh-wt/kaliPersonalConfig/debian/ &&echo "Configurations from zsh UPDATED!\n"Press any key to continue..."; read -k1 -s"
         """
                 
     )
