@@ -60,6 +60,7 @@ dmidecode
 dmsetup
 dnsutils
 docbook-xml
+dos2unix
 dpkg-dev
 dpkg
 e2fsprogs
