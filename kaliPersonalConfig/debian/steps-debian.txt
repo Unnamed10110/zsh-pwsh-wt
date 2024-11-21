@@ -9,3 +9,7 @@ chsh -s $(which zsh)
 brew install zsh-autocomplete
 brew install history-search-multi-word
 
+
+// install pkgs from list file
+cat  installed_packages | sudo apt install
+
