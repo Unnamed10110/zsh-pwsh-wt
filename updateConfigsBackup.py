@@ -5,7 +5,7 @@ def execute_zsh_command():
     # Execute the command
     result2= os.system(
         """
-         pwsh -Command "cd c:/ && copy C:/Users/$($env:username)/Documents/PowerShell/Microsoft.PowerShell_profile.ps1 D:/repos/zsh-pwsh-wt/windows-pws-posh/PROFILE.txt && cp C:/Users/$($env:username)/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt D:/repos/zsh-pwsh-wt/windows-pws-posh/ConsoleHost_history.txt && copy C:/Users/$($env:username)/Documents/PowerShell/Microsoft.PowerShell_profile.ps1 D:/repos/zsh-pwsh-wt/windows-pws-posh/Microsoft.PowerShell_profile.ps1 "                 
+         pwsh -Command "pwsh -command Get-Content "C:/Users/$($env:username)/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt" | Select-Object -Unique | ForEach-Object {$_} | Set-Content "C:/Users/$($env:username)/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt" && cd c:/ && copy C:/Users/$($env:username)/Documents/PowerShell/Microsoft.PowerShell_profile.ps1 D:/repos/zsh-pwsh-wt/windows-pws-posh/PROFILE.txt && cp C:/Users/$($env:username)/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt D:/repos/zsh-pwsh-wt/windows-pws-posh/ConsoleHost_history.txt && copy C:/Users/$($env:username)/Documents/PowerShell/Microsoft.PowerShell_profile.ps1 D:/repos/zsh-pwsh-wt/windows-pws-posh/Microsoft.PowerShell_profile.ps1 "                 
                        
         """)
     result = os.system(

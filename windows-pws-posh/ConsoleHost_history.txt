@@ -571,7 +571,7 @@ python -c "import win32gui; print('pywin32 is working')"
 python .\overlayPY.py
 text="`
 alt + 96   = \``
-alt + 0180 = \´`
+alt + 0180 = \'`
 alt + 39   = \'`
 alt + 168  = \¿`
 alt + 47   = \/`
@@ -934,3 +934,4 @@ cd D:\repos\zsh-pwsh-wt\windows-pws-posh&& wsl zsh remove_duplicates_keeplast.zs
 Get-Content "yourfile.txt" | Select-Object -Unique | ForEach-Object {$_} | Set-Content "yourfile.txt"
 Get-Content "C:/Users/$($env:username)/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt" | Select-Object -Unique | ForEach-Object {$_} | Set-Content "C:/Users/$($env:username)/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt"
 [System.Windows.Forms.MessageBox]::Show("Command History File Cleaned!")
+pwsh -command Get-Content "C:/Users/$($env:username)/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt" | Select-Object -Unique | ForEach-Object {$_} | Set-Content "C:/Users/$($env:username)/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt"
