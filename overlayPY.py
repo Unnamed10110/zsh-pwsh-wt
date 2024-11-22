@@ -308,31 +308,31 @@ if __name__ == "__main__":
 -> FILE JUST CREATED! ..\n
 DEFAULT TEXT!
 
-alt + 96   = `
+96     = `
 
-alt + 0180 = ´
+0180 = ´
 
-alt + 39   = '
+39     =  '
 
-alt + 168  = ¿
+168   = ¿
 
-alt + 47   = /
+47     = /
 
-alt + 92   = \\
+92     = \
 
-alt + 173  = ¡
+173   = ¡
 
-alt + 124  = |
+179   = │
 
-alt + 60   = <
+60     = <
 
-alt + 62   = >
+62     = >
 
-alt + 126  = ~
+126   = ~
 
-alt + 0176 = °
+0176 = °
 
-alt + 39 = '
+39 = '
 
             """)
         text = open('content.txt', 'r', encoding='utf-8-sig', errors='ignore').read()
