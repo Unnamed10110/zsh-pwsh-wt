@@ -71,7 +71,7 @@ try {
 
 
     # Read-Host -Prompt "Press any key to exit."
-    pause
+    #pause
 } catch {
     Write-Error "An error occurred: $_"
 } finally {

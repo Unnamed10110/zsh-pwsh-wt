@@ -987,3 +987,167 @@ Get-Content -Path "d:\installed_programs.txt" | ForEach-Object {`
 Get-Content -Path "D:\installed_programs.txt" | ForEach-Object {`
         winget install --exact --id $id --source winget`
 pwsh .\Initial_Programs.ps1
+Get-Content -Path "D:\installed_programs.txt" | ForEach-Object { $parts = $_ -split '\s{2,}' if ($parts.Length -ge 2) { $id = $parts[1] winget install --exact --id $id --source winget } }
+    $parts = $_ -split '\s{2,}'`
+    if ($parts.Length -ge 2) {`
+Get-Content -Path "D:\installed_programs.txt" | Select-Object -Skip 1 | ForEach-Object {`
+    if ($parts.Length -gt 2) {`
+        try {`
+            winget install --exact --id $id --source winget`
+        } catch {`
+            Write-Output "Failed to install $id"`
+winget uninstall winrar
+winget uninstall RARLab.WinRAR
+winget install winrar
+            $a=winget install --exact --id $id --source winget`
+            echo $a`
+    if ($parts.Length -gt 1) {`
+        if ($id -ne '') {`
+            Write-Output "Installing: $id"`
+            try {`
+                winget install --id $id --source winget -e -h`
+            } catch {`
+                Write-Output "Failed to install $id"`
+            }`
+            Write-Output "Trying to install: $id"`
+                Write-Output "Successfully installed: $id"`
+                Write-Output "Failed to install: $id"`
+    Write-Output "Processing line: $_"`
+    Write-Output "Split parts: $parts"`
+        Write-Output "Extracted ID: $id"`
+            Write-Output "ID is empty"`
+    } else {`
+        Write-Output "Insufficient parts"`
+    Write-Output "Split parts: $($parts -join ', ')"`
+        $id = $parts[1].Trim()`
+$failedInstalls = @()
+Get-Content -Path "D:\repos\zsh-pwsh-wt\failed_installs.txt" | Select-Object -Skip 1 | ForEach-Object {`
+                $failedInstalls += "$($parts -join ',')"`
+            $failedInstalls += "$($parts -join ',')"`
+        $failedInstalls += "$($parts -join ',')"`
+# Save failed installations to a file
+$failedInstalls | Set-Content -Path "D:\repos\zsh-pwsh-wt\failed_installs.txt"
+Get-Content -Path "D:\repos\zsh-pwsh-wt\installed_programs.txt" | Select-Object -Skip 1 | ForEach-Object {`
+Get-Content -Path "D:\installed_programs.txt" | Select-Object -Skip 2 | ForEach-Object {`
+    $parts = $_ -replace '\s{2,}', ',' -split ','`
+    if ($parts.Length -ge 4) {`
+                $failedInstalls += "$($_)"`
+            $failedInstalls += "$($_)"`
+        $failedInstalls += "$($_)"`
+$failedInstalls | Set-Content -Path "D:\failed_installs.txt"
+    $match = [regex]::Match($_, '^\s*(.*?)\s{2,}(.*?)\s{2,}.*?$')`
+    if ($match.Success) {`
+        $name = $match.Groups[1].Value.Trim()`
+        $id = $match.Groups[2].Value.Trim()`
+        Write-Output "Extracted Name: $name, ID: $id"`
+                $failedInstalls += "$name,$id"`
+            $failedInstalls += "$name,$id"`
+        Write-Output "Failed to parse line: $_"`
+        $failedInstalls += "$_"`
+# Query installed programs from the registry
+$programs = Get-ItemProperty "HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*" ,`
+                             "HKLM:\Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*" |`
+    Where-Object { $_.DisplayName -and $_.EstimatedSize }
+# Format the output with program name and size in MB
+$programs | Select-Object @{Name="Program Name"; Expression={$_.DisplayName}}, `
+                        @{Name="Size (MB)"; Expression={[math]::Round($_.EstimatedSize / 1024, 2)}} |`
+    Sort-Object "Program Name" |`
+    Format-Table -AutoSize
+# Format the output with program name and size in MB, sorted by size in descending order
+    Sort-Object "Size (MB)" -Descending |`
+.\CleanDisk.ps1
+ cc
+# Ensure the script runs as administrator
+if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {`
+    Write-Error "Please run this script as Administrator."`
+    exit`
+Write-Host "Starting disk cleanup. This may take a while..." -ForegroundColor Green
+# 1. Clean Temporary Files
+Write-Host "Cleaning temporary files..."
+Remove-Item -Path "$env:TEMP\*" -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item -Path "$env:WinDir\Temp\*" -Recurse -Force -ErrorAction SilentlyContinue
+# 2. Clear the Recycle Bin
+Write-Host "Clearing Recycle Bin..."
+$drives = Get-PSDrive -PSProvider FileSystem | Select-Object -ExpandProperty Root
+foreach ($drive in $drives) {`
+    $recycleBin = "$drive\$Recycle.Bin"`
+    if (Test-Path $recycleBin) {`
+        Get-ChildItem -Path "$recycleBin\*" -Recurse -Force -ErrorAction SilentlyContinue |`
+            Remove-Item -Recurse -Force -ErrorAction SilentlyContinue`
+# 3. Clean Windows Update Cache
+Write-Host "Cleaning Windows Update cache..."
+Stop-Service -Name wuauserv -Force -ErrorAction SilentlyContinue
+Remove-Item -Path "C:\Windows\SoftwareDistribution\Download\*" -Recurse -Force -ErrorAction SilentlyContinue
+Start-Service -Name wuauserv
+# 4. Remove Old System Restore Points
+Write-Host "Removing old system restore points..."
+vssadmin delete shadows /for=c: /oldest | Out-Null
+# 5. Run Disk Cleanup Tool (Silent Mode)
+Write-Host "Running Disk Cleanup..."
+cmd.exe /c "cleanmgr /sagerun:1"
+# 6. Disable Hibernate (Optional)
+#Write-Host "Disabling Hibernate..."
+#powercfg -h off
+# 7. Remove Unused Features
+Write-Host "Removing unused Windows features..."
+    Get-WindowsOptionalFeature -Online | Where-Object { $_.State -eq "Enabled" } |`
+        ForEach-Object { `
+            Disable-WindowsOptionalFeature -Online -FeatureName $_.FeatureName -NoRestart -ErrorAction SilentlyContinue `
+    Write-Warning "Failed to access Windows Optional Features. Skipping this step."`
+# 8. Clear Delivery Optimization Files
+Write-Host "Clearing Delivery Optimization files..."
+Remove-Item -Path "C:\Windows\SoftwareDistribution\DataStore\*" -Recurse -Force -ErrorAction SilentlyContinue
+# 9. Analyze Disk Space Usage (Optional, Comment out if not needed)
+Write-Host "Analyzing disk space usage for large files..."
+Get-ChildItem -Path C:\ -Recurse -ErrorAction SilentlyContinue | `
+    Where-Object { $_.PSIsContainer -eq $false } |`
+    Sort-Object Length -Descending | `
+    Select-Object FullName, @{Name="Size (MB)"; Expression={[math]::Round($_.Length / 1MB, 2)}} -First 50 |`
+Write-Host "Disk cleanup completed!" -ForegroundColor Green
+.\moveFiles.ps1
+# Set the registry value to keep PowerShell open after script execution
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell" -Name ExecutionPolicy -Value "RemoteSigned"
+# Set the registry value to keep CMD open after script execution
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Command Processor" -Name AutoRun -Value "pause"
+[# Set the registry value to keep PowerShell open after script execution`
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell" -Name ExecutionPolicy -Value "RemoteSigned"]
+[# Set the registry value to keep CMD open after script execution`
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Command Processor" -Name AutoRun -Value "pause"]
+D:\repos\zsh-pwsh-wt\
+cd D:\repos\zsh-pwsh-wt\
+try { .\cleandisk.ps1 } catch { Write-Error "An error occurred: $_" } finally { Read-Host "Press Enter to exit" }
+Start-Process pwsh -ArgumentList "-File `./CleanDisk.ps1`" -Verb RunAs"
+C:\Users\troja\AppData\Local\Microsoft\WindowsApps\pwsh.exe -command  -File "CleanDisk.ps1" -Verb RunAs
+C:\Users\troja\AppData\Local\Microsoft\WindowsApps\pwsh.exe -command  -command "CleanDisk.ps1" -Verb RunAs
+C:\Users\troja\AppData\Local\Microsoft\WindowsApps\pwsh.exe -command "CleanDisk.ps1" -Verb RunAs
+C:\Users\troja\AppData\Local\Microsoft\WindowsApps\pwsh.exe -command "./CleanDisk.ps1" -Verb RunAs
+C:\Users\troja\AppData\Local\Microsoft\WindowsApps\pwsh.exe -command "./CleanDisk.ps1" -Verb RunAs Administrator
+lcs
+winget install everything
+winget install voidtools.Everything
+winget install total commander
+winget install search "total commander"
+[ Write-Host "Analyzing disk space usage for large files..."]
+    Get-ChildItem -Path C:\ -Recurse -ErrorAction SilentlyContinue | `
+        Where-Object { $_.PSIsContainer -eq $false } |`
+        Sort-Object Length -Descending | `
+        Select-Object FullName, @{Name="Size (MB)"; Expression={[math]::Round($_.Length / 1MB, 2)}} -First 50 |`
+        ForEach-Object {`
+            # Correctly print the full file path enclosed in double quotes`
+            Write-Host "`"$( $_.FullName )`""`
+        }
+    Write-Host "Disk cleanup completed!" -ForegroundColor Green
+@' Write-Host "Analyzing disk space usage for large files..."'@
+@'`
+ls`
+'@
+`ls`
+` Write-Host "Analyzing disk space usage for large files..."`
+    Write-Host "Disk cleanup completed!" -ForegroundColor Green`
+ollama run llama3.2
+windows
+ollama --help
+ollama run llama32
+ollama list
+ollama run llama*
+pip install open-webui

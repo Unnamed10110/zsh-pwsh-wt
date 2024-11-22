@@ -332,7 +332,10 @@ DEFAULT TEXT!
 
 0176 = °
 
-39 = '
+39 = 
+
+96 = `
+'
 
             """)
         text = open('content.txt', 'r', encoding='utf-8-sig', errors='ignore').read()
