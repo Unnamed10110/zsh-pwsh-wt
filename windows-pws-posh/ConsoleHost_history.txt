@@ -935,3 +935,55 @@ Get-Content "yourfile.txt" | Select-Object -Unique | ForEach-Object {$_} | Set-C
 Get-Content "C:/Users/$($env:username)/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt" | Select-Object -Unique | ForEach-Object {$_} | Set-Content "C:/Users/$($env:username)/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt"
 [System.Windows.Forms.MessageBox]::Show("Command History File Cleaned!")
 pwsh -command Get-Content "C:/Users/$($env:username)/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt" | Select-Object -Unique | ForEach-Object {$_} | Set-Content "C:/Users/$($env:username)/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt"
+winget install AutoHotkey
+winget install 9PLQFDG8HH9D
+winget install UniGetUI
+winget install MartiCliment.UniGetUI
+winget install python --scope machine
+winget install python 
+winget install python --scope user
+winget install ssh --scope user
+winget list
+ssh
+Get-Command "winget" -ErrorAction SilentlyContinue | If { $_ } { winget list --source=winget | Select-Object -Skip 1 | ForEach-Object { $_.Trim() } | Set-Content -Path "C:\path\to\installed_programs.txt" } Else { Write-Output "winget not installed" }
+if (Get-Command "winget" -ErrorAction SilentlyContinue) {`
+    winget list --source=winget | Select-Object -Skip 1 | ForEach-Object { $_.Trim() } | Set-Content -Path "C:\path\to\installed_programs.txt"`
+} else {`
+    Write-Output "winget not installed"`
+(if (Get-Command "winget" -ErrorAction SilentlyContinue) {`
+})
+if (Get-Command "winget" -ErrorAction SilentlyContinue) { winget list --source=winget | Select-Object -Skip 1 | ForEach-Object { $_.Trim() } | Set-Content -Path "C:\path\to\installed_programs.txt" } else { Write-Output "winget not installed" }
+if (Get-Command "winget" -ErrorAction SilentlyContinue) { winget list --source=winget | Select-Object -Skip 1 | ForEach-Object { $_.Trim() } | Set-Content -Path "d:\\installed_programs.txt" } else { Write-Output "winget not installed" }
+Get-Content -Path "C:\path\to\installed_programs.txt" | ForEach-Object { winget install --exact --id $_ }
+Get-Content -Path "d:installed_programs.txt" | ForEach-Object { winget install --exact --id $_ }
+winget source update
+winget upgrade
+Get-Content -Path "d:\installed_programs.txt" | ForEach-Object { winget install --exact --id $_ --source=winget }
+    winget list --source=winget | Select-Object -Skip 1 | ForEach-Object {`
+        $parts = $_ -split '\s{2,}'`
+        if ($parts.Length -ge 3) { `
+            $name = $parts[0]`
+            $id = $parts[1]`
+            "$name,$id"`
+        }`
+    } | Set-Content -Path "C:\path\to\installed_programs.txt"`
+(if (Get-Command "winget" -ErrorAction SilentlyContinue) { winget list --source=winget | Select-Object -Skip 1 | ForEach-Object { $parts = $_ -split '\s{2,}' if ($parts.Length -ge 3) { $name = $parts[0] $id = $parts[1] "$name,$id" } } | Set-Content -Path "C:\path\to\installed_programs.txt" } else { Write-Output "winget not installed")`
+    } | Set-Content -Path "d:\installed_programs.txt"`
+Get-Content -Path "C:\path\to\installed_programs.txt" | ForEach-Object {`
+    $parts = $_ -split ','`
+    if ($parts.Length -eq 2) {`
+        $id = $parts[1]`
+        winget install --exact --id $id`
+Get-Content -Path "C:\installed_programs.txt" | ForEach-Object {`
+Get-Content -Path "d:\installed_programs.txt" | ForEach-Object {`
+        if ($parts.Length -ge 3) {`
+        $sources = winget search --id $id | Select-Object -Skip 1`
+        if ($sources.Count -gt 0) {`
+            $source = $sources[0]`
+            winget install --exact --id $id --source $source`
+        } else {`
+            Write-Output "No sources found for $id"`
+    } | Set-Content -Path "D:\installed_programs.txt"`
+Get-Content -Path "D:\installed_programs.txt" | ForEach-Object {`
+        winget install --exact --id $id --source winget`
+pwsh .\Initial_Programs.ps1
