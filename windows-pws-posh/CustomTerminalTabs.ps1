@@ -1,0 +1,1 @@
+wt.exe new-tab --title 'CMD' -p cmd.exe`; new-tab --title 'LLM Models' -Profile pwsh`; split-pane -V -Profile pwsh`; new-tab --title 'General PWSH' -Profile pwsh`; split-pane  -V -Profile pwsh`; new-tab --title 'Kali ZSH'-Profile wsl -e zsh`; split-pane -V -Profile wsl -e zsh

@@ -1,3 +1,8 @@
+[31;1mSetValueInvocationException: [0m
+[31;1m[36;1mLine |[0m
+[31;1m[36;1m[36;1m   3 | [0m [36;1m$RawUI.CursorPosition = @{X=0;Y=0}[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m     | [31;1m ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[31;1m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m     | [31;1mException setting "CursorPosition": "The handle is invalid."[0m
 winget install JanDeDobbeleer.OhMyPosh -s winget
 oh-my-posh font install
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
@@ -1151,3 +1156,194 @@ ollama run llama32
 ollama list
 ollama run llama*
 pip install open-webui
+cd .\repos\zsh-pwsh-wt\scripts\
+.\customInstallPY.py
+py .\customInstallPY.py
+py .\custompip.py
+winget search open-webui
+winget update python
+.\custompip.ps1
+pwsh -command .\custompip.ps1
+`# Ensure pyenv is installed and initialized`
+if (-not (Get-Command pyenv -ErrorAction SilentlyContinue)) {`
+    git clone https://github.com/pyenv-win/pyenv-win.git $env:USERPROFILE\.pyenv`
+    [System.Environment]::SetEnvironmentVariable("PATH", [System.Environment]::GetEnvironmentVariable("PATH", "User") + ";$env:USERPROFILE\.pyenv\bin;$env:USERPROFILE\.pyenv\shims", "User")`
+# Ensure the PATH is updated
+$env:PATH += ";$env:USERPROFILE\.pyenv\bin;$env:USERPROFILE\.pyenv\shims"
+# Initialize pyenv
+pyenv rehash
+# Check for the required Python version
+$requiredPythonVersion = "3.11.0"
+if (-not (pyenv versions | Select-String $requiredPythonVersion)) {`
+    pyenv install $requiredPythonVersion`
+# Set the required Python version
+pyenv global $requiredPythonVersion
+# Install the package using the required Python version
+$package = Read-Host "Enter the package name to install"
+pyenv shell $requiredPythonVersion
+    # Check if the package is already installed`
+    pyenv exec python -m pip show $package`
+    Write-Output "$package is already installed."`
+    # Install the package and its dependencies`
+    pyenv exec python -m pip install $package`
+pip install pyenv
+Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
+pyenv install -l
+cñla
+winget anythingllm
+winget install anythingllm
+ollama run llama2-uncensored
+ollama run deepseek-coder-v2
+ollama run codellama
+ollama run mistral
+ollama run llama3:8b
+note $profile
+cmd -command 'where onecommandr'
+.\Set-RunAsAdmin.ps1 -ProgramPath "C:\Users\troja\AppData\Local\Microsoft\WindowsApps\onecommander.exe"
+Set-RunAsAdmin.ps1 -ProgramPath "C:\Users\troja\AppData\Local\Microsoft\WindowsApps\onecommander.exe"
+pwsh -command `Set-RunAsAdmin.ps1 -ProgramPath "C:\Users\troja\AppData\Local\Microsoft\WindowsApps\onecommander.exe"``
+paint
+mspaint
+taskkill /f /im whatsap*
+.\DisableAutoOpenDiveces.ps1
+.\ToggleDisableAutoOpenDiveces.ps1
+wt -d . ; new-tab -d C:\ pwsh.exe
+wt ; new-tab -p "Command Prompt" -d C:\ ; split-pane wsl zsh
+.\customWindowsTerminal.ps1
+wt -d "c:/"
+winget search windows terminal
+winget search "windows terminal"
+winget install Microsoft.WindowsTerminal
+cd D:\repos\zsh-pwsh-wt\scripts
+`@echo off`
+wt new-tab cmd.exe ^`
+    ; new-tab pwsh ^ `
+    ; split-pane -H pwsh ^ `
+    ; split-pane -H pwsh`
+wt
+Start-Process "wt.exe" -ArgumentList "new-tab cmd ; new-tab pwsh"`
+Start-Process "wt.exe" -ArgumentList "new-tab cmd ; new-tab pwsh"
+Start-Process "wt.exe" -ArgumentList "new-tab cmd ; new-tab pwsh;split-pane -H -p 'Windows PowerShell'"
+Start-Process "wt.exe" -ArgumentList "new-tab cmd ; new-tab pwsh;split-pane -H -p 'pwsh'"
+Start-Process "wt.exe" -ArgumentList "new-tab cmd ; new-tab pwsh split-pane -H -p 'pwsh'"
+Start-Process "wt.exe" -ArgumentList "new-tab cmd ; new-tab pwsh;split-pane -p 'pwsh'"
+wt.exe new-tab cmd ; new-tab pwsh ; split-pane -V -p "pwsh"
+Start-Process "wt.exe" -ArgumentList "new-tab cmd ; new-tab pwsh ; split-pane -V -p 'pwsh'"
+Start-Process "wt.exe" -ArgumentList "new-tab cmd ; new-tab -p 'pwsh' ; split-pane -V -p 'pwsh'"
+Start-Process "wt.exe" -ArgumentList "new-tab cmd ; new-tab pwsh ; split-pane -V -p pwsh"
+Start-Process "wt.exe" -ArgumentList "new-tab cmd ; new-tab -p pwsh ; split-pane -p pwsh -V"
+Start-Process "wt.exe" -ArgumentList "new-tab cmd ; new-tab pwsh ; split-pane -p pwsh -V"
+wt.exe settings
+Start-Process "wt.exe" -ArgumentList "new-tab cmd ; new-tab pwsh ; split-pane --profile pwsh -V"
+Start-Process "wt.exe" -ArgumentList "new-tab cmd ; split-pane --profile pwsh -V"
+Start-Process "wt.exe" -ArgumentList "new-tab cmd ; new-tab pwsh ; split-pane --profile pwsh -V pwsh"
+Start-Process "wt.exe" -ArgumentList "new-tab md --title "Classic CMD" ; new-tab pwsh --title "LLM"; split-pane --profile pwsh -V pwsh ; new-tab pwsh --title "Dev"; split-pane --profile pwsh -V pwsh --title "Scripting""
+Start-Process "wt.exe" -ArgumentList "new-tab md --title \"Classic CMD\" ; new-tab pwsh --title \"LLM\"; split-pane --profile pwsh -V pwsh ; new-tab pwsh --title \"Dev\"; split-pane --profile pwsh -V pwsh --title \"Scripting\""
+Start-Process "wt.exe" -ArgumentList "new-tab md --title ^"Classic CMD^" ; new-tab pwsh --title ^"LLM^"; split-pane --profile pwsh -V pwsh ; new-tab pwsh --title ^"Dev^"; split-pane --profile pwsh -V pwsh --title ^"Scripting^""
+Start-Process "wt.exe" -ArgumentList "new-tab md --title Classic CMD"
+Start-Process "wt.exe" -ArgumentList "new-tab md --title 'Classic CMD'"
+Start-Process "wt.exe" -ArgumentList "new-tab cmd --title 'Classic CMD'"
+Start-Process "wt.exe" -ArgumentList "new-tab md --title 'CMD' ; new-tab pwsh --title 'LLM models'; split-pane --profile pwsh -V pwsh ; new-tab pwsh --title 'Dev'; split-pane --profile pwsh -V pwsh --title 'Scripting'"
+wt --help
+Start-Process "wt.exe" -ArgumentList "new-tab md --title 'CMD' "
+Start-Process "wt.exe" -ArgumentList "new-tab cmd --title 'CMD' "
+Start-Process "wt.exe" -ArgumentList "new-tab cmd --title 'CMD' ; new-tab pwsh --title 'LLM models'; split-pane --profile pwsh -V pwsh ; new-tab pwsh --title 'Dev'; split-pane --profile pwsh -V pwsh --title 'Scripting'"
+Start-Process "wt.exe" -ArgumentList "new-tab --title 'CMD' cmd  ; new-tab 'LLM models' pwsh --title ; split-pane --profile pwsh -V pwsh ; new-tab --title 'Dev' pwsh ; split-pane --title 'Scripting' --profile pwsh -V pwsh "
+Start-Process "wt.exe" -ArgumentList "new-tab --title 'CMD' cmd  ; new-tab 'LLM models' pwsh ; split-pane --profile pwsh -V pwsh ; new-tab --title 'Dev' pwsh ; split-pane --title 'Scripting' --profile pwsh -V pwsh "
+Start-Process "wt.exe" -ArgumentList "new-tab --title 'CMD' cmd"
+Start-Process "wt.exe" -ArgumentList "new-tab --title 'CMD' cmd  ; new-tab --title 'LLM models' pwsh ; split-pane --profile pwsh -V pwsh ; new-tab --title 'Dev' pwsh ; split-pane --title 'Scripting' --profile pwsh -V pwsh "
+Start-Process "wt.exe" -ArgumentList "new-tab --title 'CMD' cmd  ; new-tab --title 'LLM models' pwsh"
+Start-Process "wt.exe" -ArgumentList "new-tab --title 'CMD' cmd  ; new-tab pwsh"
+Start-Process "wt.exe" -ArgumentList 'new-tab cmd.exe ; new-tab pwsh'
+Start-Process "wt.exe" -ArgumentList "new-tab --title 'CMD' pwsh"
+Start-Process "wt.exe" -ArgumentList "new-tab cmd.exe ; new-tab pwsh"
+Start-Process "wt.exe" -ArgumentList "new-tab --title 'CMD' cmd  "
+Start-Process "wt.exe" -ArgumentList "new-tab --title 'CMD' cmd  ; new-tab cmd"
+Start-Process wt -ArgumentList "new-tab --title 'CMD' cmd  ; new-tab cmd"
+Start-Process shell:AppsFolder\Microsoft.WindowsTerminal_8wekyb3d8bbwe!App -ArgumentList "new-tab --title 'CMD' cmd  ; new-tab cmd"
+Start-Process shell:AppsFolder\Microsoft.WindowsTerminal_8wekyb3d8bbwe!App -ArgumentList "new-tab --title 'CMD' cmd"
+Start-Process shell:AppsFolder\Microsoft.WindowsTerminal_8wekyb3d8bbwe!App -ArgumentList "new-tab --title 'CMD' cmd; new tab cmd"
+wt.exe -w code new-tab -p "GitBash" ; new-tab -p "Ubuntu" -d "/home/mark/code/project1" ; new-tab -p "Ubuntu" -d "/home/mark/code/project2" ; new-tab -p "Ubuntu" -d "/home/mark/code/project3" ; new-tab -p "GitBash"
+wt.exe -ArgumentList "new-tab --title 'CMD' cmd  ; new-tab --title 'LLM models' pwsh ; split-pane --profile pwsh -V pwsh ; new-tab --title 'Dev' pwsh ; split-pane --title 'Scripting' --profile pwsh -V pwsh "
+wt.exe -new-tab --title 'CMD' cmd  ; new-tab --title 'LLM models' pwsh ; split-pane --profile pwsh -V pwsh ; new-tab --title 'Dev' pwsh ; split-pane --title 'Scripting' --profile pwsh -V pwsh
+wt.exe -new-tab --title 'CMD' 
+wt.exe new-tab title 'CMD' 
+wt.exe new-tab --title 'CMD' 
+wt.exe new-tab --title 'CMD' cmd  ; new-tab --title 'LLM models' pwsh
+wt.exe new-tab --title 'CMD' cmd  & new-tab --title 'LLM models' pwsh
+wt.exe -w code new-tab -p "GitBash" ; new-tab -p "Ubuntu" -d "/home/mark/code/project1"
+wt.exe "new-tab --title 'CMD' cmd  & new-tab --title 'LLM models' pwsh"
+wt.exe new-tab cmd.exe
+wt.exe new-tab cmd.exe ``
+wt.exe new-tab cmd.exe `; new-tab pwsh `;
+wt.exe new-tab cmd.exe `; new-tab pwsh `; split-pane -H pwsh `; new-tab pwsh `; split-pane -H pwsh
+wt.exe new-tab cmd.exe `; new-tab pwsh ``
+wt.exe new-tab cmd.exe `; new-tab pwsh `; split-pane -H pwsh ``
+wt.exe new-tab cmd.exe `; new-tab pwsh `; split-pane -H pwsh `; new-tab pwsh ``
+wt.exe new-tab cmd.exe `; new-tab pwsh `; split-pane -V -H pwsh `; new-tab pwsh `; split-pane -V -H pwsh
+wt.exe new-tab cmd.exe `; new-tab pwsh `; split-pane -v -H pwsh `; new-tab pwsh `; split-pane -v -H pwsh
+wt.exe new-tab cmd.exe `; new-tab pwsh `; split-pane -V pwsh `; new-tab pwsh `; split-pane -V pwsh
+wt.exe new-tab --title 'CMD' cmd.exe `; new-tab --title 'LLM Models' pwsh `; split-pane -V pwsh `; new-tab --title 'General PWSH' pwsh `; split-pane -V pwsh
+wt.exe new-tab --title 'CMD' cmd.exe `; new-tab --title 'LLM Models' pwsh `; split-pane -V pwsh `; new-tab  pwsh `; split-pane  -V --title 'General PWSH' pwsh
+wt.exe new-tab --title 'CMD' cmd.exe `; new-tab --title 'LLM Models' pwsh `; split-pane -V pwsh `; new-tab  pwsh `; split-pane  -V --title 'General PWSH' pwsh`; split-pane  -V --title 'Kali ZSH' zsh
+wt.exe new-tab zsh
+wt.exe new-tab wsl
+wt.exe new-tab wsl zsh
+new-tab --title 'Kali ZSH' wsl zsh
+wt new-tab --title 'Kali ZSH' wsl zsh
+wt.exe new-tab --title 'CMD' wsl
+wt.exe new-tab --title 'CMD' cmd.exe `; new-tab --title 'LLM Models' pwsh `; split-pane -V pwsh `; new-tab  pwsh `; split-pane  -V --title 'General PWSH' pwsh`; new-tab --title 'Kali ZSH' wsl
+wt.exe new-tab --title 'CMD' cmd.exe `; new-tab --title 'LLM Models' pwsh `; split-pane -V pwsh `; new-tab  pwsh `; split-pane  -V --title 'General PWSH' pwsh`; new-tab --title 'Kali ZSH' wslwt.exe new-tab --title 'CMD' cmd.exe `; new-tab --title 'LLM Models' pwsh `; split-pane -V pwsh `; new-tab  pwsh `; split-pane  -V --title 'General PWSH' pwsh`; new-tab --title 'Kali ZSH' wsl zsh
+wt.exe new-tab --title 'CMD' cmd.exe `; new-tab --title 'LLM Models' pwsh `; split-pane -V pwsh `; new-tab  pwsh `; split-pane  -V --title 'General PWSH' pwsh`; new-tab --title 'Kali ZSH' wsl -command 'zsh'
+wt.exe new-tab --title 'CMD' cmd.exe `; new-tab --title 'LLM Models' pwsh `; split-pane -V pwsh `; new-tab  pwsh `; split-pane  -V --title 'General PWSH' pwsh`; new-tab --title 'Kali ZSH' wsl -c 'zsh'
+wt.exe new-tab --title 'CMD' cmd.exe `; new-tab --title 'LLM Models' pwsh `; split-pane -V pwsh `; new-tab  pwsh `; split-pane  -V --title 'General PWSH' pwsh`; new-tab --title 'Kali ZSH' 'wsl zsh'
+wt.exe new-tab --title 'CMD' cmd.exe `; new-tab --title 'LLM Models' pwsh `; split-pane -V pwsh `; new-tab  pwsh `; split-pane  -V --title 'General PWSH' pwsh`; new-tab --title 'Kali ZSH' "wsl zsh"
+wt.exe new-tab --title 'CMD' cmd.exe `; new-tab --title 'LLM Models' pwsh `; split-pane -V pwsh `; new-tab  pwsh `; split-pane  -V --title 'General PWSH' pwsh`; new-tab --title 'Kali ZSH' wsl -e zsh
+wt.exe new-tab --title "Kali ZSH" wsl -d kali-linux
+wt.exe new-tab --title "Kali ZSH" wsl -d kali-linux -e zsh
+wt.exe new-tab --title 'CMD' cmd.exe `; new-tab --title 'LLM Models' pwsh -command cls`; split-pane -V pwsh -command cls`; new-tab  pwsh -command cls`; split-pane  -V --title 'General PWSH' pwsh-command cls `; new-tab --title 'Kali ZSH' wsl -e zsh
+wt.exe new-tab --title 'CMD' cmd.exe `; new-tab --title 'LLM Models' pwsh -command cls`; split-pane -V pwsh -command cls`; new-tab  pwsh -command cls`; split-pane  -V --title 'General PWSH' pwsh-command cls `; new-tab --title 'Kali ZSH' wsl -e zshwt.exe new-tab --title 'CMD' cmd.exe `; new-tab --title 'LLM Models' pwsh -command "cls"`; split-pane -V pwsh -command "cls"`; new-tab  pwsh -command "cls"`; split-pane  -V --title 'General PWSH' pwsh-command cls `; new-tab --title 'Kali ZSH' wsl -e zsh
+wt.exe new-tab --title 'CMD' -p cmd.exe `; new-tab --title 'LLM Models' -p pwsh pwsh -command cls`; split-pane -V -p pwsh pwsh -command cls`; new-tab -p pwsh pwsh -command cls`; split-pane  -V --title 'General PWSH' -p pwsh pwsh -command cls`; new-tab --title 'Kali ZSH' wsl -e zsh
+wt new-tab --title 'LLM Models' -p pwsh [pwsh -command cls]`
+wt new-tab --title 'LLM Models' -p pwsh pwsh`
+wt new-tab --title 'LLM Models' -p pwsh pwsh
+wt new-tab --title 'LLM Models' -p pwsh pwsh -command cls
+wt new-tab --title 'LLM Models' -p pwsh [pwsh -command cls]
+wt new-tab --title 'LLM Models' -p pwsh [pwsh.exe -command cls]
+wt new-tab --title 'LLM Models' -p pwsh cls
+wt new-tab --title 'LLM Models' pwsh cls
+wt new-tab --title 'LLM Models' pwsh {cls}
+wt new-tab --title 'LLM Models' pwsh {dir}
+wt.exe new-tab --title 'CMD' -p cmd.exe `; new-tab --title 'LLM Models' -p pwsh {cls}`; split-pane -V -p pwsh {cls}`; new-tab -p pwsh {cls}`; split-pane  -V --title 'General PWSH' -p pwsh {cls}`; new-tab --title 'Kali ZSH' wsl -e zsh
+wt.exe new-tab --title 'CMD' -p cmd.exe 
+wt.exe new-tab --title 'CMD' -p cmd.exe `; new-tab --title 'LLM Models' -p pwsh {cls}
+wt.exe new-tab --title 'CMD' -p cmd.exe `; new-tab --title 'LLM Models' -p pwsh
+wt.exe new-tab --title 'CMD' -p cmd.exe `; new-tab --title 'LLM Models' -P pwsh
+wt.exe new-tab --title 'CMD' -p cmd.exe `; new-tab --title 'LLM Models' -Profile pwsh
+wt.exe new-tab --title 'CMD' -p cmd.exe `; new-tab --title 'LLM Models' -Profile pwsh {cls}`; split-pane -V -Profile pwsh {cls}`; new-tab -Profile pwsh {cls}`; split-pane  -V --title 'General PWSH' -Profile pwsh {cls}`; new-tab --title 'Kali ZSH'-Profile wsl -e zsh
+wt.exe new-tab --title 'CMD' -p cmd.exe `; new-tab --title 'LLM Models' -Profile pwsh {cls}
+wt.exe new-tab --title 'CMD' -p cmd.exe `; new-tab --title 'LLM Models' -Profile pwsh {cls&pause}
+wt.exe new-tab --title 'CMD' -p cmd.exe `; new-tab --title 'LLM Models' -Profile pwsh {pwsh -command "cls"}
+wt.exe new-tab --title 'CMD' -p cmd.exe `; new-tab --title 'LLM Models' -Profile pwsh`; split-pane -V -Profile pwsh`; new-tab -Profile pwsh`; split-pane  -V --title 'General PWSH' -Profile pwsh`; new-tab --title 'Kali ZSH'-Profile wsl -e zsh
+cd D:\repos\zsh-pwsh-wt\windows-pws-posh
+pwsh.exe -command -f customterminaltabs.ps1
+pwsh.exe -command customterminaltabs.ps1
+pwsh.exe -command .\CustomTerminalTabs.ps1
+C:\Users\troja\AppData\Local\Microsoft\WindowsApps\pwsh.exe -command .\CustomTerminalTabs.ps1
+.\CustomTerminal.lnk
+.\CustomTerminal.lnk  >> a.txt
+pwsh -command .\CustomTerminalTabs.ps1
+pwsh -command "{wt.exe new-tab --title 'CMD' -p cmd.exe `; new-tab --title 'LLM Models' -Profile pwsh`; split-pane -V -Profile pwsh`; new-tab -Profile pwsh`; split-pane  -V --title 'General PWSH' -Profile pwsh`; new-tab --title 'Kali ZSH'-Profile wsl -e zsh}"
+pwsh -command {wt.exe new-tab --title 'CMD' -p cmd.exe `; new-tab --title 'LLM Models' -Profile pwsh`; split-pane -V -Profile pwsh`; new-tab -Profile pwsh`; split-pane  -V --title 'General PWSH' -Profile pwsh`; new-tab --title 'Kali ZSH'-Profile wsl -e zsh}
+.\CustomTerminalTabs.ps1
+wt.exe new-tab --title 'CMD' -p cmd.exe cd`; new-tab --title 'LLM Models' -Profile pwsh`; split-pane -V -Profile pwsh`; new-tab -Profile pwsh`; split-pane  -V --title 'General PWSH' -Profile pwsh`; new-tab --title 'Kali ZSH'-Profile wsl -e zsh`; split-pane -V -Profile wsl -e zsh
+wt.exe new-tab --title 'CMD' -p cmd.exe cd ~`; new-tab --title 'LLM Models' -Profile pwsh`; split-pane -V -Profile pwsh`; new-tab -Profile pwsh`; split-pane  -V --title 'General PWSH' -Profile pwsh`; new-tab --title 'Kali ZSH'-Profile wsl -e zsh`; split-pane -V -Profile wsl -e zsh
+wt.exe new-tab --title 'CMD' -p cmd.exe cd ^~`; new-tab --title 'LLM Models' -Profile pwsh`; split-pane -V -Profile pwsh`; new-tab -Profile pwsh`; split-pane  -V --title 'General PWSH' -Profile pwsh`; new-tab --title 'Kali ZSH'-Profile wsl -e zsh`; split-pane -V -Profile wsl -e zsh
+wt.exe new-tab --title 'CMD' -p cmd.exe cd \~`; new-tab --title 'LLM Models' -Profile pwsh`; split-pane -V -Profile pwsh`; new-tab -Profile pwsh`; split-pane  -V --title 'General PWSH' -Profile pwsh`; new-tab --title 'Kali ZSH'-Profile wsl -e zsh`; split-pane -V -Profile wsl -e zsh
+wt.exe new-tab --title 'CMD' -p cmd.exe cd /`; new-tab --title 'LLM Models' -Profile pwsh`; split-pane -V -Profile pwsh`; new-tab -Profile pwsh`; split-pane  -V --title 'General PWSH' -Profile pwsh`; new-tab --title 'Kali ZSH'-Profile wsl -e zsh`; split-pane -V -Profile wsl -e zsh
+wt.exe new-tab --title 'CMD' -p cmd.exe cd d:/repos`; new-tab --title 'LLM Models' -Profile pwsh`; split-pane -V -Profile pwsh`; new-tab -Profile pwsh`; split-pane  -V --title 'General PWSH' -Profile pwsh`; new-tab --title 'Kali ZSH'-Profile wsl -e zsh`; split-pane -V -Profile wsl -e zsh
+wt.exe new-tab --title 'CMD' -p cmd.exe {cd d:/repos}`; new-tab --title 'LLM Models' -Profile pwsh`; split-pane -V -Profile pwsh`; new-tab -Profile pwsh`; split-pane  -V --title 'General PWSH' -Profile pwsh`; new-tab --title 'Kali ZSH'-Profile wsl -e zsh`; split-pane -V -Profile wsl -e zsh
+wt.exe new-tab --title 'CMD' -p cmd.exe {cls}`; new-tab --title 'LLM Models' -Profile pwsh`; split-pane -V -Profile pwsh`; new-tab -Profile pwsh`; split-pane  -V --title 'General PWSH' -Profile pwsh`; new-tab --title 'Kali ZSH'-Profile wsl -e zsh`; split-pane -V -Profile wsl -e zsh
+wt.exe new-tab --title 'CMD' -p cmd.exe`; new-tab --title 'LLM Models' -Profile pwsh`; split-pane -V -Profile pwsh`; new-tab -Profile pwsh`; split-pane  -V --title 'General PWSH' -Profile pwsh`; new-tab --title 'Kali ZSH'-Profile wsl -e zsh`; split-pane -V --tittle 'Kali ZSH'-Profile wsl -e zsh
+wt.exe new-tab --title 'CMD' -p cmd.exe`; new-tab --title 'LLM Models' -Profile pwsh`; split-pane -V -Profile pwsh`; new-tab -Profile pwsh`; split-pane  -V --title 'General PWSH' -Profile pwsh`; new-tab --title 'Kali ZSH'-Profile wsl -e zsh`; split-pane -V -Profile wsl -e zsh
+wt.exe new-tab --title 'CMD' -p cmd.exe`; new-tab --title 'LLM Models' -Profile pwsh`; split-pane -V --title 'General PWSH' -Profile pwsh`; new-tab -Profile pwsh`; split-pane  -V  -Profile pwsh`; new-tab --title 'Kali ZSH'-Profile wsl -e zsh`; split-pane -V -Profile wsl -e zsh

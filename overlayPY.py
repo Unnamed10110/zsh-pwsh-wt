@@ -307,7 +307,6 @@ if __name__ == "__main__":
             file.write("""
 -> FILE JUST CREATED! ..\n
 DEFAULT TEXT!
-
 96     = `
 
 0180 = ´
@@ -332,9 +331,11 @@ DEFAULT TEXT!
 
 0176 = °
 
-39 = 
+39 = '
 
 96 = `
+
+94 = ^
 '
 
             """)
