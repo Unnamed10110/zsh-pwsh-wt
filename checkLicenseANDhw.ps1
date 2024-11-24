@@ -1,5 +1,7 @@
 pwsh -command "& {Get-WmiObject -Query 'SELECT * FROM SoftwareLicensingService' | Select-Object OA3xOriginalProductKey, LicenseStatus, Description, @{Name='WindowsVersion';Expression={(Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion').ProductName}}}"
 
+Write-Host "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" -ForegroundColor Green
+Write-Host "Availabe HW info." -ForegroundColor Green
 
     # Get the Windows activation and version info
     $licenseInfo = Get-WmiObject -Query 'SELECT * FROM SoftwareLicensingService' | Select-Object OA3xOriginalProductKey, LicenseStatus, Description, @{Name='WindowsVersion';Expression={(Get-ItemProperty -Path ''HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion'').ProductName}}
