@@ -1426,3 +1426,38 @@ $($env:installedApps)
 echo $($env:installedApps)
 windir disk
 winget list >> ProgramListBeforeFiltering.txt
+pwsh -command .\checkLicenseANDhw.ps1
+wsl zsh cat $profile
+wsl zsh -c 'cat $profile'
+type $profile
+ls -la
+;s
+dor
+winget list | findstr 'postman*'
+'aaaaaaaaaaaaaaaa' | findstr '*a*'
+findstr 'postman*' winget list
+lks
+asll
+"D:\repos\zsh-pwsh-wt\customPoshTheme.omp.json"
+oh-my-posh --init --config D:\repos\zsh-pwsh-wt\customPoshTheme.omp.json | Invoke-Expression
+oh-my-posh --init --config D:\repos\zsh-pwsh-wt\customPoshTheme.omp.json 
+(@(& 'C:/Users/troja/AppData/Local/Programs/oh-my-posh/bin/oh-my-posh.exe' init pwsh --config='C:\Users\troja\AppData\Local\Programs\oh-my-posh\themes\half-life.omp.json' --print) -join "`n") | Invoke-Expression
+Import-Module Terminal-Icons
+where shell
+$line = "─" * (Get-Host).UI.RawUI.WindowSize.Width Write-Host $line
+{$line = "─" * (Get-Host).UI.RawUI.WindowSize.Width Write-Host $line}
+.\printLines.ps1
+printf '%*s\n' \"$(tput cols)\" '' | tr ' ' '─'
+pwsh -comman "printf '%*s\n' \'$(tput cols)\' '' | tr ' ' '─'"
+ssdf
+wsh -NoProfile -Command \"'─' * [Console]::WindowWidth\"
+pwsh -NoProfile -Command \"'─' * [Console]::WindowWidth\"
+pwsh -NoProfile -Command "'─' * [Console]::WindowWidth\"
+pwsh -NoProfile -Command "'─' * [Console]::WindowWidth"
+pwsh -NoProfile -Command '\"─\" * [Console]::WindowWidth'
+pwsh -command "pwsh -NoProfile -Command ''─' * [Console]::WindowWidth'"
+pwsh -NoProfile -Command \"'─' * [console]::WindowWidth\"
+'─' * [Console]::WindowWidth
+Write-Host ('─' * [Console]::WindowWidth) -ForegroundColor Green
+Get-Process
+"$PWD> "

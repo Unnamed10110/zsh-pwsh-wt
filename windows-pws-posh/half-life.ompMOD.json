@@ -1,0 +1,74 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 3,
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#26ff00",
+          "template": "\n────────────────────────────────... I could always do it tomorrow ... ────────────────────────────────────────────\n"
+        },
+        {
+          "type": "command",
+          "style": "plain",
+          "foreground": "#87FF00",
+          "properties": {
+            "command": "pwsh.exe -NoProfile -Command \"$columns = (Get-Host).UI.RawUI.BufferSize.Width; Write-Host ('─' * ($columns - 1)) -ForegroundColor Red\""
+          },
+          "template": "{{ .Output }}"
+        },        
+        {
+          "type": "session",
+          "style": "plain",
+          "foreground": "#5FD7FF",
+          "template": "{{ .UserName }} "
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#87FF00",
+          "template": "in "
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "foreground": "#87FF00",
+          "properties": {
+            "style": "full"
+          },
+          "template": "{{ .Path }} "
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "#5FD7FF",
+          "properties": {
+            "branch_ahead_icon": "",
+            "branch_behind_icon": "",
+            "branch_gone_icon": "",
+            "branch_icon": "",
+            "branch_identical_icon": "",
+            "cherry_pick_icon": "",
+            "commit_icon": "",
+            "fetch_status": true,
+            "merge_icon": "",
+            "rebase_icon": "",
+            "revert_icon": "",
+            "tag_icon": ""
+          },
+          "template": "<#ffffff>on</> {{ .HEAD }}{{ if .Staging.Changed }}<#FF0000> \u25cf {{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }}<#FF0000> \u25cf {{ .Working.String }}</>{{ end }} "
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#FF0000",
+          "template": " ──> λ : "
+        }
+      ]
+    }
+  ]
+}
