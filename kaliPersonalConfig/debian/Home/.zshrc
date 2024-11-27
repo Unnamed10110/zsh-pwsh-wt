@@ -39,6 +39,10 @@ if [[ "${terminfo[kcud1]}" != "" ]]; then
     bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
 fi
 
+PROMPT_COMMAND='echo -ne "\033]2;WSL ZSH\007"'
+
+
+
 #bindkey '^[OA' up-line-or-history     # Cursor up
 #bindkey '^[OB' down-line-or-history   # Cursor down
 bindkey '\E' backward-kill-line

@@ -1347,3 +1347,82 @@ wt.exe new-tab --title 'CMD' -p cmd.exe {cls}`; new-tab --title 'LLM Models' -Pr
 wt.exe new-tab --title 'CMD' -p cmd.exe`; new-tab --title 'LLM Models' -Profile pwsh`; split-pane -V -Profile pwsh`; new-tab -Profile pwsh`; split-pane  -V --title 'General PWSH' -Profile pwsh`; new-tab --title 'Kali ZSH'-Profile wsl -e zsh`; split-pane -V --tittle 'Kali ZSH'-Profile wsl -e zsh
 wt.exe new-tab --title 'CMD' -p cmd.exe`; new-tab --title 'LLM Models' -Profile pwsh`; split-pane -V -Profile pwsh`; new-tab -Profile pwsh`; split-pane  -V --title 'General PWSH' -Profile pwsh`; new-tab --title 'Kali ZSH'-Profile wsl -e zsh`; split-pane -V -Profile wsl -e zsh
 wt.exe new-tab --title 'CMD' -p cmd.exe`; new-tab --title 'LLM Models' -Profile pwsh`; split-pane -V --title 'General PWSH' -Profile pwsh`; new-tab -Profile pwsh`; split-pane  -V  -Profile pwsh`; new-tab --title 'Kali ZSH'-Profile wsl -e zsh`; split-pane -V -Profile wsl -e zsh
+youtube-dl https://www.youtube.com/watch?v=VDeJF8hB_54
+yt-dlp https://www.youtube.com/watch?v=VDeJF8hB_54
+pwsh -command 'lmgr /dli&& pause'
+lmgr
+slmgr.vbs /dlv
+(Get-WmiObject -Query "SELECT * FROM SoftwareLicensingService").OA3xOriginalProductKey
+Get-WmiObject -Query "SELECT * FROM SoftwareLicensingService" | Select-Object OA3xOriginalProductKey, LicenseStatus, Description
+Get-WmiObject -Query "SELECT * FROM SoftwareLicensingService" | Select-Object OA3xOriginalProductKey, LicenseStatus, Description, @{Name='WindowsVersion';Expression={(Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion').ProductName}}
+pwsh -command 'Get-WmiObject -Query "SELECT * FROM SoftwareLicensingService" | Select-Object OA3xOriginalProductKey, LicenseStatus, Description, @{Name='WindowsVersion';Expression={(Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion').ProductName}}`
+&&`
+pause'
+.\checkLicense.ps1
+pwsh -command "& {Get-WmiObject -Query 'SELECT * FROM SoftwareLicensingService' | Select-Object OA3xOriginalProductKey, LicenseStatus, Description, @{Name='WindowsVersion';Expression={(Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion').ProductName}}; pause}"
+pwsh -command "& {Get-WmiObject -Query 'SELECT * FROM SoftwareLicensingService' | Select-Object OA3xOriginalProductKey, LicenseStatus, Description, @{Name='WindowsVersion';Expression={(Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion').ProductName}}&&pause}"
+winget upgrade vlc
+Get-WmiObject -Query 'SELECT * FROM SoftwareLicensingService'
+pwsh -command "& {Get-CimInstance -Query 'SELECT * FROM SoftwareLicensingService' | Select-Object OA3xOriginalProductKey, LicenseStatus, Description, @{Name='WindowsVersion';Expression={(Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion").ProductName}}; pause}"
+$host.ui.RawUI.WindowTitle = "My Custom Title"
+winget uninstall whatsapp
+(reg query "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v ProductKey).ToString() + ' - OS: ' +`
+(Get-WmiObject -Query "Select * from Win32_OperatingSystem").Caption
+.\checkLicense2.ps1
+C:\Windows\System32\reg.exe query "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v ProductName |`
+Out-String | Select-String -Pattern "ProductName:"
+del .\checkLicense2.ps1
+pwsh -command .\checkLicense2.ps1
+& '.\checkLicense&HW.ps1'
+.\checkLicense&HW.ps1
+'.\checkLicense&HW.ps1'
+.\checkLicenseANDhw.ps1
+# Get the Windows licensing channel information $licenseChannel = (Get-WmiObject -Class SoftwareLicensingService).OA3xOriginalProductKey if ($licenseChannel) { Write-Output "The operating system license is OEM." } else { Write-Output "The operating system license is Retail or Volume License." }
+pwsh -command '# Get the Windows licensing channel information $licenseChannel = (Get-WmiObject -Class SoftwareLicensingService).OA3xOriginalProductKey if ($licenseChannel) { Write-Output "The operating system license is OEM." } else { Write-Output "The operating system license is Retail or Volume License." }'
+    # Get the Windows activation and version info
+    $licenseInfo = Get-WmiObject -Query 'SELECT * FROM SoftwareLicensingService' | Select-Object OA3xOriginalProductKey, LicenseStatus, Description, @{Name='WindowsVersion';Expression={(Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion').ProductName}}
+    Write-Host '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++' -ForegroundColor Green
+    Write-Host 'Checking Windows License Type...' -ForegroundColor Cyan
+    # Get the Windows licensing channel information
+    $licenseChannel = (Get-WmiObject -Class SoftwareLicensingService).OA3xOriginalProductKey
+    # Display License Type
+    if ($licenseChannel) {`
+        Write-Host "The operating system license is OEM." -ForegroundColor Green`
+        Write-Host "The operating system license is Retail or Volume License." -ForegroundColor Yellow`
+    }
+    Write-Host 'Available Hardware Info:' -ForegroundColor Cyan
+    # Get hardware information
+    $computerInfo = Get-WmiObject -Class Win32_ComputerSystem | Select-Object Manufacturer, Model, Name, SystemType
+    $biosInfo = Get-WmiObject -Class Win32_BIOS | Select-Object SerialNumber, BIOSVersion, Manufacturer, ReleaseDate
+    # Get operating system information
+    $osInfo = Get-WmiObject -Class Win32_OperatingSystem | Select-Object Caption, OSArchitecture, Version, LastBootUpTime
+    # Get installed applications and sort by Name ascending
+    $installedApps = Get-WmiObject -Class Win32_Product | Select-Object Name, Version, Vendor, InstallDate | Sort-Object Name
+    # Get network adapter configuration
+    $networkAdapters = Get-WmiObject -Class Win32_NetworkAdapterConfiguration | Select-Object Description, MACAddress, IPAddress
+    # Get disk drives information
+    $diskDrives = Get-WmiObject -Class Win32_DiskDrive | Select-Object Model, InterfaceType, MediaType, Size
+    # Display the information
+    Write-Output 'Windows Activation and Version Info:'
+    $licenseInfo | Format-List
+    Write-Output 'Computer Hardware Info:'
+    $computerInfo | Format-List
+    Write-Output 'BIOS Info:'
+    $biosInfo | Format-List
+    Write-Output 'Operating System Info:'
+    $osInfo | Format-List
+    Write-Output 'Installed Applications:'
+    $installedApps | Format-Table -AutoSize
+    Write-Output 'Network Adapter Configuration:'
+    $networkAdapters | Format-List
+    Write-Output 'Disk Drives Info:'
+    $diskDrives | Format-Table -AutoSize
+notepad 
+$installedApps
+echo 
+echo $installedApss
+echo $installedApps
+$($env:installedApps)
+echo $($env:installedApps)
+windir disk
+winget list >> ProgramListBeforeFiltering.txt
