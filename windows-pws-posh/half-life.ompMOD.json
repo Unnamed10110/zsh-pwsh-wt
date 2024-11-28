@@ -7,25 +7,22 @@
       "alignment": "left",
       "segments": [
         {
-          "type": "text",
-          "style": "plain",
-          "foreground": "#26ff00",
-          "template": "\n────────────────────────────────... I could always do it tomorrow ... ────────────────────────────────────────────\n"
-        },
-        {
           "type": "command",
           "style": "plain",
-          "foreground": "#87FF00",
+          "foreground": "#ffffff",
           "properties": {
-            "command": "pwsh.exe -NoProfile -Command \"$columns = (Get-Host).UI.RawUI.BufferSize.Width; Write-Host ('─' * ($columns - 1)) -ForegroundColor Red\""
+            "shell": "pwsh",
+            "command": "$cols = $Host.UI.RawUI.WindowSize.Width; Write-Host ('─' * ($cols - 1)) -ForegroundColor Green"
           },
           "template": "{{ .Output }}"
-        },        
+        },
+
+
         {
           "type": "session",
           "style": "plain",
-          "foreground": "#5FD7FF",
-          "template": "{{ .UserName }} "
+          "foreground": "#007ACC",
+          "template": "\n{{ .UserName }} "
         },
         {
           "type": "text",
@@ -36,7 +33,7 @@
         {
           "type": "path",
           "style": "plain",
-          "foreground": "#87FF00",
+          "foreground": "#88ff00",
           "properties": {
             "style": "full"
           },
@@ -65,8 +62,28 @@
         {
           "type": "text",
           "style": "plain",
-          "foreground": "#FF0000",
-          "template": " ──> λ : "
+          "foreground": "#0088ff",
+          "template": "["
+        },
+        {
+          "type": "time",
+          "style": "plain",
+          "foreground": "#b5b548",
+          "properties": {
+            "time_format": "Monday, 02-Jan-06 15:04:05 MST"
+          }
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#0088ff",
+          "template": "]"
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#ffffff",
+          "template": "\n>> λ : "
         }
       ]
     }
