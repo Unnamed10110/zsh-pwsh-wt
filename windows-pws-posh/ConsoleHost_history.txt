@@ -1461,3 +1461,41 @@ pwsh -NoProfile -Command \"'─' * [console]::WindowWidth\"
 Write-Host ('─' * [Console]::WindowWidth) -ForegroundColor Green
 Get-Process
 "$PWD> "
+ddir
+do-ir
+start
+echo -----------------------------------
+echo hola
+for /L %i in (1,1,%columns%) do @echo|set /p=-
+for /L %i in (1,1,120) do @echo|set /p=-
+$columns = (Get-Host).UI.RawUI.BufferSize.Width; Write-Host ('-' * $columns) -ForegroundColor Green
+$columns = (Get-Host).UI.RawUI.BufferSize.Width; Write-Host ('-' * ($columns - 1))
+pwsh.exe -NoProfile -Command "$columns = (Get-Host).UI.RawUI.BufferSize.Width; Write-Host ('─' * ($columns - 1)) -ForegroundColor Red"
+pwsh.exe -NoProfile -Command "\$columns = (Get-Host).UI.RawUI.BufferSize.Width; Write-Host ('─' * ($columns - 1)) -ForegroundColor Red"
+pwsh -Verbose
+pwsh -version
+pwsh -verbose
+winget update powershell
+pwsh -ExecutionPolicy Bypass -Command { Import-Module OhMyPosh }
+pwsh -ExecutionPolicy Bypass -Command { Import-Module Oh-My-Posh }
+Get-Module -ListAvailable OhMyPosh
+Get-Module -ListAvailable Oh*
+Get-Module -list
+oh-my-posh.exe
+pwsh -ExecutionPolicy Bypass -Command { Import-Module OhMyPosh.exe }
+pwsh -ExecutionPolicy Bypass -Command { Import-Module oh-my-posh.exe }
+Install-Module -Name OhMyPosh 
+(Get-Command oh-my-posh).Source
+$env:PSModulePath += ";C:\Users\troja\AppData\Local\Programs\oh-my-posh\bin\oh-my-posh.exe"
+Import-Module OhMyPosh
+oh-my-posh --version
+$PSVersionTable.PSVersion
+pwsh -command Write-Host ('─' * $Host.UI.RawUI.WindowSize.Width)
+pwsh -command "Write-Host ('─' * $Host.UI.RawUI.WindowSize.Width)"
+pwsh -command 'cls'
+pwsh -command Write-Host ('...I can always do it tomorrow...') -ForegroundColor Green
+Write-Host ('─' * $Host.UI.RawUI.WindowSize.Width) -ForegroundColor Green
+Write-Host ('─' * [System.Console]::WindowWidth) -ForegroundColor Red
+chcp 65001
+brave
+brave.exe
