@@ -12,7 +12,7 @@
           "foreground": "#ffffff",
           "properties": {
             "shell": "pwsh",
-            "command": "$cols = $Host.UI.RawUI.WindowSize.Width; Write-Host ('─' * ($cols - 1)) -ForegroundColor Green"
+            "command": "$cols = $Host.UI.RawUI.WindowSize.Width; Write-Host ('─' * (100 - 1)) -ForegroundColor Green"
           },
           "template": "{{ .Output }}"
         },
@@ -21,8 +21,8 @@
         {
           "type": "session",
           "style": "plain",
-          "foreground": "#007ACC",
-          "template": "\n{{ .UserName }} "
+          "foreground": "#ff0000",
+          "template": "\n<b>{{ .UserName }}</b>  >>  "
         },
         {
           "type": "text",

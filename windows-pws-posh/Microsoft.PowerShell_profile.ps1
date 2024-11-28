@@ -1,5 +1,5 @@
 
-
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 (@(& 'C:/Users/troja/AppData/Local/Programs/oh-my-posh/bin/oh-my-posh.exe' init pwsh --config='C:\Users\troja\AppData\Local\Programs\oh-my-posh\themes\half-life.omp.json' --print) -join "`n") | Invoke-Expression
 
@@ -14,11 +14,11 @@ Set-PSReadLineOption –HistoryNoDuplicates:$True
 #wsl zsh -NoLogo
 
 
-function hist { 
-  $find = $args; 
-  Write-Host "Finding in full history using {`$_ -like `"*$find*`"}"; 
-  Get-Content (Get-PSReadlineOption).HistorySavePath | ? {$_ -like "*$find*"} | Get-Unique | more 
-}
+#function hist { 
+#  $find = $args; 
+#  Write-Host "Finding in full history using {`$_ -like `"*$find*`"}"; 
+#  Get-Content (Get-PSReadlineOption).HistorySavePath | ? {$_ -like "*$find*"} | Get-Unique | more 
+#}
 
 
 
@@ -36,11 +36,7 @@ function hist {
 cls
 #Write-Host ('─' * [System.Console]::WindowWidth) -ForegroundColor Red
 #Write-Host ('...I can always do it tomorrow...') -ForegroundColor Red
-Write-Host ('─' * [System.Console]::WindowWidth) -ForegroundColor Red
+#Write-Host ('─' * [System.Console]::WindowWidth) -ForegroundColor Red
 
 
 
-
-#Write-Host "Profiles loaded in $($ExecutionContext.SessionState.PSVariable.Get('PROFILE_LOAD_TIME'))ms." -ForegroundColor Yellow
-
-#pwsh -command "cls&&exit"
