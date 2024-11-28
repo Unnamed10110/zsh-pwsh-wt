@@ -6,17 +6,13 @@
       "type": "prompt",
       "alignment": "left",
       "segments": [
+        
         {
-          "type": "command",
+          "type": "text",
           "style": "plain",
-          "foreground": "#ffffff",
-          "properties": {
-            "shell": "pwsh",
-            "command": "$cols = $Host.UI.RawUI.WindowSize.Width; Write-Host ('─' * (100 - 1)) -ForegroundColor Green"
-          },
-          "template": "{{ .Output }}"
+          "foreground": "#87FF00",
+          "template": "───────────────────────────────────── ... I can always do it tomorrow ... ─────────────────────────────────────"
         },
-
 
         {
           "type": "session",
@@ -68,7 +64,7 @@
         {
           "type": "time",
           "style": "plain",
-          "foreground": "#b5b548",
+          "foreground": "#ffffff",
           "properties": {
             "time_format": "Monday, 02-Jan-06 15:04:05 MST"
           }
@@ -77,13 +73,34 @@
           "type": "text",
           "style": "plain",
           "foreground": "#0088ff",
-          "template": "]"
+          "template": "]\n"
+        },
+
+
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#0088ff",
+          "template": "["
         },
         {
           "type": "text",
           "style": "plain",
           "foreground": "#ffffff",
-          "template": "\n>> λ : "
+          "template": "unnamed10110"
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#0088ff",
+          "template": "]"
+        },
+
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#88ff00",
+          "template": " >> λ : "
         }
       ]
     }

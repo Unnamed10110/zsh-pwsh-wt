@@ -40,3 +40,13 @@ cls
 
 
 
+#{
+#  "type": "command",
+#  "style": "plain",
+#  "foreground": "#ffffff",
+#  "properties": {
+#    "shell": "pwsh",
+#    "command": "$cols = $Host.UI.RawUI.WindowSize.Width; Write-Host ('─' * (100 - 1)) -ForegroundColor Green"
+#  },
+#  "template": "{{ .Output }}"
+#},
