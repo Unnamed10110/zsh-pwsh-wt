@@ -10,7 +10,7 @@
         {
           "type": "text",
           "style": "plain",
-          "foreground": "#87FF00",
+          "foreground": "#00FF00",
           "template": "───────────────────────────────── ... I can always do it tomorrow ... ─────────────────────────────────"
         },
 
@@ -23,13 +23,13 @@
         {
           "type": "text",
           "style": "plain",
-          "foreground": "#87FF00",
+          "foreground": "#00FF00",
           "template": "in "
         },
         {
           "type": "path",
           "style": "plain",
-          "foreground": "#88ff00",
+          "foreground": "#00FF00",
           "properties": {
             "style": "full"
           },
@@ -99,7 +99,7 @@
         {
           "type": "text",
           "style": "plain",
-          "foreground": "#88ff00",
+          "foreground": "#00FF00",
           "template": " >> λ : "
         }
       ]
