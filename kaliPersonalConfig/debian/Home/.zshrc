@@ -1,6 +1,10 @@
-alias cc="clear"
 
-echo ----------------------------------------------------------------------------------------------------
+
+sleep 4s # Waits 5 seconds.
+clear
+alias cc="clear"
+alias py="python"
+
 
 
 
@@ -53,6 +57,38 @@ PROMPT_COMMAND='echo -ne "\033]2;WSL ZSH\007"'
 #bindkey '^[OA' up-line-or-history     # Cursor up
 #bindkey '^[OB' down-line-or-history   # Cursor down
 bindkey '\E' backward-kill-line
+
+
+
+
+# Function to print a bold, bright green message before the prompt
+function print_message_before_prompt() {
+    local width=$(tput cols)
+    local message=" ... I can always do it tomorrow ... "
+    local padding=$(( (width - ${#message}) / 2 ))
+    
+    # Define colors and text attributes
+    BLACK=$(tput setaf 0)
+    RED=$(tput setaf 1)
+    GREEN=$(tput setaf 2)
+    YELLOW=$(tput setaf 3)
+    LIME_YELLOW=$(tput setaf 190)
+    POWDER_BLUE=$(tput setaf 153)
+    BLUE=$(tput setaf 4)
+    MAGENTA=$(tput setaf 5)
+    CYAN=$(tput setaf 6)
+    WHITE=$(tput setaf 7)
+    BRIGHT=$(tput bold)
+    NORMAL=$(tput sgr0)
+    
+    # Print the message in bright bold green
+    printf '\n%*s%s%*s\n' "$padding" '' "${BRIGHT}${GREEN}${message}${NORMAL}" "$padding" ''
+}
+
+# Add the function to the precmd hook
+precmd_functions+=(print_message_before_prompt)
+
+
 
 
 
@@ -133,12 +169,15 @@ plugins=(
 git
 zsh-autosuggestions
 zsh-syntax-highlighting
-history-search-multi-word
+#history-search-multi-word
 
 web-search
 jsontools
 
 H-S-MW
+
+
+safe-paste
 )
 
 source $ZSH/oh-my-zsh.sh
