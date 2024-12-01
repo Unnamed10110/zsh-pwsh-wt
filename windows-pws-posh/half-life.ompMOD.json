@@ -10,9 +10,25 @@
         {
           "type": "text",
           "style": "plain",
-          "foreground": "#00FF00",
-          "template": "───────────────────────────────── ... I can always do it tomorrow ... ─────────────────────────────────"
+          "foreground": "#0088ff",
+          "template": "─────────────────────────────────"
         },
+	      {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#ffffff",
+          "template": " ... I can always do it tomorrow ... "
+        },
+	      {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#0088ff",
+          "template": "─────────────────────────────────"
+        },
+
+
+
+
 
         {
           "type": "session",
@@ -64,7 +80,7 @@
         {
           "type": "time",
           "style": "plain",
-          "foreground": "#ffffff",
+          "foreground": "#e1ff4d",
           "properties": {
             "time_format": "Monday, 02-Jan-06 15:04:05 MST"
           }

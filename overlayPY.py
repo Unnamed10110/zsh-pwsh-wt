@@ -1,3 +1,4 @@
+
 import tkinter as tk
 from tkinter import ttk
 import ctypes
@@ -187,33 +188,35 @@ class ResizableTextWindow:
             with open("content.txt", "w", encoding="utf-8",errors="ignore") as file:
                 file.write("""
 -> FILE JUST CREATED! ..\n
-This is a text with Arial bold white font. 
-It will word-wrap to fit inside the window as the window resizes.
-alt + 96   = \`
+96     = `
 
-alt + 0180 = \´
+0180 = ´
 
-alt + 39   = \'
+39     =  '
 
-alt + 168  = \¿
+168   = ¿
 
-alt + 47   = \/
+47     = /
 
-alt + 92   = \\
+92     = \
 
-alt + 173  = \¡
+173   = ¡
 
-alt + 179  = \│
+179   = │
 
-alt + 60   = \<
+60     = <
 
-alt + 62   = \>
+62     = >
 
-alt + 126  = \~
+126   = ~
 
-alt + 0176 = \°
+0176 = °
 
-alt + 39 = \'
+39 = '
+
+96 = `
+
+94 = ^
 
             """)
             file_content = open('content.txt', 'r', encoding='utf-8-sig', errors='ignore').read()
