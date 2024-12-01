@@ -10,38 +10,52 @@
         {
           "type": "text",
           "style": "plain",
-          "foreground": "#0088ff",
+          "foreground": "#ffffff",
           "template": "─────────────────────────────────"
         },
 	      {
           "type": "text",
           "style": "plain",
           "foreground": "#ffffff",
-          "template": " ... I can always do it tomorrow ... "
+          "template": "<r> ... I can always do it tomorrow ... </r>"
         },
 	      {
           "type": "text",
           "style": "plain",
-          "foreground": "#0088ff",
-          "template": "─────────────────────────────────"
+          "foreground": "#ffffff",
+          "template": "─────────────────────────────────\n"
         },
 
 
-
-
-
         {
-          "type": "session",
+          "type": "text",
           "style": "plain",
-          "foreground": "#ff0000",
-          "template": "\n<b>{{ .UserName }}</b>  >>  "
+          "foreground": "#0088ff",
+          "template": "["
+        },
+        {
+          "type": "time",
+          "style": "plain",
+          "foreground": "#ffc022",
+          "properties": {
+            "time_format": "Monday, 02-Jan-06 15:04:05 MST"
+          }
         },
         {
           "type": "text",
           "style": "plain",
-          "foreground": "#00FF00",
-          "template": "in "
+          "foreground": "#0088ff",
+          "template": "]"
         },
+
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#ffffff",
+          "template": " - "
+        },
+
+
         {
           "type": "path",
           "style": "plain",
@@ -71,38 +85,18 @@
           },
           "template": "<#ffffff>on</> {{ .HEAD }}{{ if .Staging.Changed }}<#FF0000> \u25cf {{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }}<#FF0000> \u25cf {{ .Working.String }}</>{{ end }} "
         },
-        {
-          "type": "text",
-          "style": "plain",
-          "foreground": "#0088ff",
-          "template": "["
-        },
-        {
-          "type": "time",
-          "style": "plain",
-          "foreground": "#e1ff4d",
-          "properties": {
-            "time_format": "Monday, 02-Jan-06 15:04:05 MST"
-          }
-        },
-        {
-          "type": "text",
-          "style": "plain",
-          "foreground": "#0088ff",
-          "template": "]\n"
-        },
-
+        
 
         {
           "type": "text",
           "style": "plain",
           "foreground": "#0088ff",
-          "template": "["
+          "template": "\n["
         },
         {
           "type": "text",
           "style": "plain",
-          "foreground": "#ffffff",
+          "foreground": "#00FF00",
           "template": "unnamed10110"
         },
         {
@@ -111,12 +105,24 @@
           "foreground": "#0088ff",
           "template": "]"
         },
-
         {
           "type": "text",
           "style": "plain",
-          "foreground": "#00FF00",
-          "template": " >> λ : "
+          "foreground": "#ffffff",
+          "template": " >>"
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#ffffff",
+          "template": " <r> λ </r> "
+        }
+        ,
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#ffffff",
+          "template": ": "
         }
       ]
     }

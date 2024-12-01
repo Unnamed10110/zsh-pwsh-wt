@@ -33,8 +33,8 @@ Set-PSReadLineOption –HistoryNoDuplicates:$True
 
 #}
 #---------------------------------------------------------------------------
-
-pause
+Write-Host ('...4 Seconds to check displayed errors/logs...') -ForegroundColor Green
+Start-Sleep -Seconds 4
 cls
 #Write-Host ('─' * [System.Console]::WindowWidth) -ForegroundColor Red
 #Write-Host ('...I can always do it tomorrow...') -ForegroundColor Red
