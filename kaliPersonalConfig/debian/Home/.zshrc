@@ -1,7 +1,5 @@
 
 
-sleep 4s # Waits 5 seconds.
-clear
 alias cc="clear"
 alias py="python"
 
@@ -212,3 +210,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+
+
+echo ${(%):-%F{green\}}'...4 Seconds to check displayed errors/logs...'${(%):-%f} 
+sleep 4s # Waits 5 seconds.
+clear
+cd ~
