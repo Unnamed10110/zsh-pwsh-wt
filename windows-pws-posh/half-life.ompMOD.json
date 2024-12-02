@@ -9,8 +9,8 @@
         {
           "type": "text",
           "style": "plain",
-          "foreground": "#ffffff",
-          "template": "<d>I can always do it tomorrow </d>"
+          "foreground": "#ff0000",
+          "template": "<d>I can always do it tomorrow... </d>"
         },
         {
           "type": "text",
