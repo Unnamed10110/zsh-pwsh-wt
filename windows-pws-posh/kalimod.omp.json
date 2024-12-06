@@ -1,0 +1,90 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "red",
+          "foreground_templates": ["{{ if .Root }}red{{ end }}"],
+          "properties": { "display_host": true },
+          "style": "plain",
+          "template": "<{{ if .Root }}white{{ else }}green{{ end }}>\u250c\u2500\u2500(</>{{ .UserName }}{{ if .Root }}💀{{ else }}㉿{{ end }}{{ .HostName }}<{{ if .Root }}white{{ else }}green{{ end }}>)</>",
+          "type": "session"
+        },
+        {
+          "foreground": "yellow",
+          "properties": { "fetch_version": false, "fetch_virtual_env": true },
+          "style": "plain",
+          "template": "<{{ if .Root }}white{{ else }}green{{ end }}>-[</>\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }}{{ end }}{{ .Full }}{{ end }}<{{ if .Root }}white{{ else }}green{{ end }}>]</>",
+          "type": "python"
+        },
+
+        {
+          "foreground": "green",
+          "properties": {
+            "folder_separator_icon": "<#c0c0c0>/</>",
+            "style": "full"
+          },
+          "style": "plain",
+          "template": "<{{ if .Root }}white{{ else }}green{{ end }}>──────────[</>{{ .Path }}<{{ if .Root }}white{{ else }}green{{ end }}>]</>",
+          "type": "path"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": false,
+      "segments": [
+        {
+          "type": "command",
+          "properties": {
+            "shell": "PowerShell",
+            "command": "Write-Host ('...I can always do it tomorrow...') -ForegroundColor Red"
+          },
+          "foreground": "white",
+          "style": "plain",
+          "template": "<d>{{ .Output }}</d>"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "foreground": "white",
+          "properties": { "always_enabled": true, "style": "round" },
+          "style": "plain",
+          "template": " {{ .FormattedMs }} ",
+          "type": "executiontime"
+        },
+        {
+          "foreground": "green",
+          "foreground_templates": ["{{ if gt .Code 0 }}red{{ end }}"],
+          "properties": { "always_enabled": true },
+          "style": "plain",
+          "template": " {{ if gt .Code 0 }}\uea76{{else}}\uf42e{{ end }} ",
+          "type": "status"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "white",
+          "style": "plain",
+          "template": "<{{ if .Root }}white{{ else }}green{{ end }}>\u2514\u2500</>{{ if .Root }}<red>#</>{{ else }}${{ end }} ",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 3
+}

@@ -6,6 +6,20 @@
       "type": "prompt",
       "alignment": "left",
       "segments": [
+        
+        {
+          "type": "command",
+          "alias": "DynamicLine",
+          "style": "plain",
+          "foreground": "#ff0000",
+          "properties": {
+              "shell": "PowerShell",
+              "command": "& Write-Output ('─' * ([console]::WindowWidth - 1))"
+          },
+          "template": "{{ .Output }}\n"
+      }
+,
+
         {
           "type": "text",
           "style": "plain",
@@ -38,14 +52,12 @@
           "foreground": "#ffffff",
           "template": " ────────────────── "
         },
-        
         {
           "type": "text",
           "style": "plain",
           "foreground": "#ffffff",
           "template": " ~ "
         },
-        
         {
           "type": "path",
           "style": "plain",
@@ -55,7 +67,6 @@
           },
           "template": "{{ .Path }} "
         },
-        
         {
           "type": "git",
           "style": "plain",
@@ -76,18 +87,12 @@
           },
           "template": "<#ffffff>on</> {{ .HEAD }}{{ if .Staging.Changed }}<#FF0000> \u25cf {{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }}<#FF0000> \u25cf {{ .Working.String }}</>{{ end }} "
         },
-
-
-
-
         {
           "type": "text",
           "style": "plain",
           "foreground": "#0088ff",
           "template": "\n["
         },
-
-        
         {
           "type": "text",
           "style": "plain",
