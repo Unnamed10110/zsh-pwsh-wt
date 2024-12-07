@@ -38,10 +38,40 @@
       ],
       "type": "prompt"
     },
+    
 
     {
+      
       "alignment": "right",
       "segments": [
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "#5FD7FF",
+          "properties": {
+            "branch_ahead_icon": "",
+            "branch_behind_icon": "",
+            "branch_gone_icon": "",
+            "branch_icon": "",
+            "branch_identical_icon": "",
+            "cherry_pick_icon": "",
+            "commit_icon": "",
+            "fetch_status": true,
+            "merge_icon": "",
+            "rebase_icon": "",
+            "revert_icon": "",
+            "tag_icon": ""
+          },
+          "template": "<#ffffff>on {{ .HEAD }}{{ if .Staging.Changed }}<#FF0000> \u25cf {{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }}<#FF0000> \u25cf <green>{{ .Working.String }}{{ end }}<green> "
+        },
+        {
+          "type": "time",
+          "style": "plain",
+          "foreground": "#ffffff",
+          "properties": {
+            "time_format": "Monday, 02-Jan-06 15:04:05"
+          }
+        },
         {
           "foreground": "white",
           "properties": { "always_enabled": true, "style": "round" },
@@ -54,7 +84,7 @@
           "foreground_templates": ["{{ if gt .Code 0 }}red{{ end }}"],
           "properties": { "always_enabled": true },
           "style": "plain",
-          "template": " {{ if gt .Code 0 }}\uea76{{else}}\uf42e{{ end }} ",
+          "template": " {{ if gt .Code 0 }}<red>\uea76</red>{{else}}<green>\uf42e{{ end }}</green> ",
           "type": "status"
         }
       ],
@@ -67,7 +97,7 @@
         {
           "foreground": "white",
           "style": "plain",
-          "template": "<white>\u2514\u2500</white><green> λ: </green>",
+          "template": "<white>\u2514\u2500►</white><green> λ: </green>",
           "type": "text"
         }
       ],
