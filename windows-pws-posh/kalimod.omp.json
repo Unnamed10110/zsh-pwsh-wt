@@ -84,7 +84,7 @@
           "foreground_templates": ["{{ if gt .Code 0 }}red{{ end }}"],
           "properties": { "always_enabled": true },
           "style": "plain",
-          "template": " {{ if gt .Code 0 }}<red>\uea76</red>{{else}}<green>\uf42e{{ end }}</green> ",
+          "template": " {{ if gt .Code 0 }}<red>\uea76</red>{{else}}<blue>\uf42e{{ end }}</blue> ",
           "type": "status"
         }
       ],
