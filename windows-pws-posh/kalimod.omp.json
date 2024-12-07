@@ -16,7 +16,7 @@
           "foreground": "yellow",
           "properties": { "fetch_version": false, "fetch_virtual_env": true },
           "style": "plain",
-          "template": "<{{ if .Root }}white{{ else }}green{{ end }}>-[</>\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }}{{ end }}{{ .Full }}{{ end }}<{{ if .Root }}white{{ else }}green{{ end }}>]</>",
+          "template": "<#2fff00>[\ue235</#2fff00> {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }}{{ end }}{{ .Full }}{{ end }}<{{ if .Root }}white{{ else }}green{{ end }}>]</>",
           "type": "python"
         },
 
@@ -32,22 +32,20 @@
         },
         {
           "type": "text",
-          
+
           "template": "<white><d>'...I can always do it tomorrow...'</d></white>"
         }
       ],
       "type": "prompt"
     },
-    
 
     {
-      
       "alignment": "right",
       "segments": [
         {
           "type": "git",
           "style": "plain",
-          "foreground": "#5FD7FF",
+          "foreground": "#ff0000",
           "properties": {
             "branch_ahead_icon": "",
             "branch_behind_icon": "",
@@ -62,7 +60,19 @@
             "revert_icon": "",
             "tag_icon": ""
           },
-          "template": "<#ffffff>on {{ .HEAD }}{{ if .Staging.Changed }}<#FF0000> \u25cf {{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }}<#FF0000> \u25cf <green>{{ .Working.String }}{{ end }}<green> "
+          "template": "<#2fff00>on</#2fff00><#ffffff> {{ .HEAD }}{{ if .Staging.Changed }}<#FF0000> \u25cf {{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }}<#FF0000> \u25cf <green>{{ .Working.String }}{{ end }}<green> "
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#ff0000",
+          "template": "["
         },
         {
           "type": "time",
@@ -73,11 +83,10 @@
           }
         },
         {
-          "foreground": "white",
-          "properties": { "always_enabled": true, "style": "round" },
+          "type": "text",
           "style": "plain",
-          "template": " {{ .FormattedMs }} ",
-          "type": "executiontime"
+          "foreground": "#ff0000",
+          "template": "]"
         }
       ],
       "type": "prompt"
