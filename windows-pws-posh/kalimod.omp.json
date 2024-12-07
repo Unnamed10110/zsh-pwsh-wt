@@ -8,14 +8,14 @@
 
           "properties": { "display_host": true },
           "style": "plain",
-          "template": "<#ffffff>\u250c\u2500\u2500(</#ffffff><green>{{ .UserName }}</green>💀<#ffffff><#ffffff>\u2500▶ </#ffffff><#ff0000>{{ .HostName }}</#ff0000><#ffffff><#ffffff>)</#ffffff></ffffff>",
+          "template": "<#ffffff>\u250c\u2500\u2500(</#ffffff><#00FF00>{{ .UserName }}</#00FF00>💀⌛<#ffffff><#ffffff>\u2500▶ </#ffffff><#ff0000>{{ .HostName }}</#ff0000><#ffffff><#ffffff>)</#ffffff></ffffff>",
           "type": "session"
         },
         {
           "foreground": "yellow",
           "properties": { "fetch_version": false, "fetch_virtual_env": true },
           "style": "plain",
-          "template": "<#2fff00>[\ue235</#2fff00> {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }}{{ end }}{{ .Full }}{{ end }}<{{ if .Root }}#ffffff{{ else }}green{{ end }}>]</>",
+          "template": "<#2fff00>[\ue235</#2fff00> {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }}{{ end }}{{ .Full }}{{ end }}<{{ if .Root }}#ffffff{{ else }}#00FF00{{ end }}>]</>",
           "type": "python"
         },
 
@@ -25,7 +25,7 @@
             "style": "full"
           },
           "style": "plain",
-          "template": "<#ffffff>──[</#ffffff><green>{{ .Path }}</green>",
+          "template": "<#ffffff>──[</#ffffff><#00FF00>{{ .Path }}</#00FF00>",
           "type": "path"
         },
         {
@@ -63,7 +63,7 @@
             "revert_icon": "",
             "tag_icon": ""
           },
-          "template": "<#2fff00>on─►</#2fff00><#ffffff> {{ .HEAD }}─►</#FF0000> {{ .Staging.String }}{{ if .Working.Changed }}<#FF0000> \u25cf─►</#FF0000> <green>{{ .Working.String }}{{ end }}</green>\n"
+          "template": "<#2fff00>on─►</#2fff00><#ffffff> {{ .HEAD }}─►</#FF0000> {{ .Staging.String }}{{ if .Working.Changed }}<#FF0000> \u25cf─►</#FF0000> <#00FF00>{{ .Working.String }}{{ end }}</#00FF00>\n"
         }
         
       ],
