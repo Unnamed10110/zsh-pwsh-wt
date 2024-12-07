@@ -1,16 +1,15 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
-    
     {
       "alignment": "left",
       "segments": [
         {
           "foreground": "red",
-          "foreground_templates": ["{{ if .Root }}red{{ end }}"],
+          "foreground_templates": ["blue"],
           "properties": { "display_host": true },
           "style": "plain",
-          "template": "<{{ if .Root }}white{{ else }}green{{ end }}>\u250c\u2500\u2500(</>{{ .UserName }}{{ if .Root }}💀{{ else }}㉿{{ end }}{{ .HostName }}<{{ if .Root }}white{{ else }}green{{ end }}>)</>",
+          "template": "<white>\u250c\u2500\u2500(</white><green>{{ .UserName }}</green>💀<red>{{ .HostName }}</red><white>)</white>",
           "type": "session"
         },
         {
@@ -28,29 +27,18 @@
             "style": "full"
           },
           "style": "plain",
-          "template": "<{{ if .Root }}white{{ else }}green{{ end }}>──────────[</>{{ .Path }}<{{ if .Root }}white{{ else }}green{{ end }}>]</>",
+          "template": "<white>──────────[</white>{{ .Path }}]</>",
           "type": "path"
-        }
-      ],
-      "type": "prompt"
-    },
-    {
-      "alignment": "left",
-      "newline": false,
-      "segments": [
+        },
         {
-          "type": "command",
-          "properties": {
-            "shell": "PowerShell",
-            "command": "Write-Host ('...I can always do it tomorrow...') -ForegroundColor Red"
-          },
-          "foreground": "white",
-          "style": "plain",
-          "template": "<d>{{ .Output }}</d>"
+          "type": "text",
+          
+          "template": "<white><d>'...I can always do it tomorrow...'</d></white>"
         }
       ],
       "type": "prompt"
     },
+
     {
       "alignment": "right",
       "segments": [
@@ -79,7 +67,7 @@
         {
           "foreground": "white",
           "style": "plain",
-          "template": "<{{ if .Root }}white{{ else }}green{{ end }}>\u2514\u2500</>{{ if .Root }}<red>#</>{{ else }}${{ end }} ",
+          "template": "<white>\u2514\u2500</white><green> λ: </green>",
           "type": "text"
         }
       ],
