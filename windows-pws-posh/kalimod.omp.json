@@ -8,14 +8,14 @@
 
           "properties": { "display_host": true },
           "style": "plain",
-          "template": "<white>\u250c\u2500\u2500(</white><green>{{ .UserName }}</green>💀<white><#ffffff>\u2500▶ </#ffffff><#ff0000>{{ .HostName }}</#ff0000><#ffffff><white>)</white></ffffff>",
+          "template": "<#ffffff>\u250c\u2500\u2500(</#ffffff><green>{{ .UserName }}</green>💀<#ffffff><#ffffff>\u2500▶ </#ffffff><#ff0000>{{ .HostName }}</#ff0000><#ffffff><#ffffff>)</#ffffff></ffffff>",
           "type": "session"
         },
         {
           "foreground": "yellow",
           "properties": { "fetch_version": false, "fetch_virtual_env": true },
           "style": "plain",
-          "template": "<#2fff00>[\ue235</#2fff00> {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }}{{ end }}{{ .Full }}{{ end }}<{{ if .Root }}white{{ else }}green{{ end }}>]</>",
+          "template": "<#2fff00>[\ue235</#2fff00> {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }}{{ end }}{{ .Full }}{{ end }}<{{ if .Root }}#ffffff{{ else }}green{{ end }}>]</>",
           "type": "python"
         },
 
@@ -25,12 +25,12 @@
             "style": "full"
           },
           "style": "plain",
-          "template": "<white>──[</white><green>{{ .Path }}</green>",
+          "template": "<#ffffff>──[</#ffffff><green>{{ .Path }}</green>",
           "type": "path"
         },
         {
           "type": "text",
-          "template": "<white>]</white>"
+          "template": "<#ffffff>]</#ffffff>"
         },
         {
           "type": "text",
@@ -77,7 +77,7 @@
       "segments": [
         {
           "type": "text",
-          "template": "<white>\u2502</white> "
+          "template": "<#ffffff>\u2502</#ffffff> "
         }
         
       ],
@@ -98,11 +98,10 @@
         },
         
         {
-          "foreground":"#ffffff",
           "type": "time",
           "style": "plain",
           "properties": {
-            "time_format": "<white>Monday, 02-Jan-06 15:04:05</white>"
+            "time_format": "<#ffffff>Monday, 02-Jan-06 15:04:05</#ffffff>"
           }
         },
         {
