@@ -1,8 +1,15 @@
-
+﻿
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 
-(@(& 'C:/Users/troja/AppData/Local/Programs/oh-my-posh/bin/oh-my-posh.exe' init pwsh --config='D:\repos\zsh-pwsh-wt\windows-pws-posh\half-life.ompMOD.json' --print) -join "`n") | Invoke-Expression
+#(@(& 'C:/Users/troja/AppData/Local/Programs/oh-my-posh/bin/oh-my-posh.exe' init pwsh --config='D:\repos\zsh-pwsh-wt\windows-pws-posh\half-lifeMOD.omp.json' --print) -join "`n") | Invoke-Expression
+
+#oh-my-posh init pwsh --config 'D:\repos\zsh-pwsh-wt\windows-pws-posh\half-lifeMOD.omp.json' | Invoke-Expression
+
+#oh-my-posh init pwsh --config 'C:\Users\troja\AppData\Local\Programs\oh-my-posh\themes\atomicBit.omp.json' | Invoke-Expression
+# half-lifeMOD.omp.json   sonicboom_dark.omp.json   stelbent.minimal.omp.json  kali atomicBit
+oh-my-posh init pwsh --config 'D:\repos\zsh-pwsh-wt\windows-pws-posh\kalimod.omp.json' | Invoke-Expression
+
 
 Import-Module Terminal-Icons
 set-psreadlineoption -predictionviewstyle listview
@@ -33,8 +40,8 @@ Set-PSReadLineOption –HistoryNoDuplicates:$True
 
 #}
 #---------------------------------------------------------------------------
-Write-Host ('...4 Seconds to check displayed errors/logs...') -ForegroundColor Green
-Start-Sleep -Seconds 4
+Write-Host ('...2 Seconds to check displayed errors/logs...') -ForegroundColor Green
+Start-Sleep -Seconds 2
 cls
 #Write-Host ('─' * [System.Console]::WindowWidth) -ForegroundColor Red
 #Write-Host ('...I can always do it tomorrow...') -ForegroundColor Red
