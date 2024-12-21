@@ -98,3 +98,85 @@ sudo umount /mnt/persistence
 ---
 
 Let me know if any step is unclear or if you encounter further issues!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Steps to Add Persistence to Kali Linux on Medicat USB
+Back Up Your Data:
+
+Ensure you back up important data on the USB drive, as partitioning may lead to data loss.
+Create a Persistence Partition:
+
+Using MiniTool Partition Wizard:
+Download and install MiniTool Partition Wizard.
+Open the software and locate your USB drive.
+Resize the existing Medicat partition to leave free space for persistence.
+Create a new partition in the free space:
+File System: ext4
+Partition Label: persistence
+Apply the changes and wait for the process to complete.
+Verify the Partition:
+
+Ensure the USB now has a new partition labeled persistence with the ext4 filesystem.
+Mount the Persistence Partition and Configure It: Since you’re on Windows, you’ll need a live Linux environment (like Kali or Medicat's live tools) to create the required persistence.conf file.
+
+Boot into Kali Linux Live or Medicat Tools.
+
+Open a terminal.
+
+Mount the persistence partition:
+
+bash
+Copy code
+sudo mkdir /mnt/persistence
+sudo mount /dev/sdXY /mnt/persistence
+Replace sdXY with the actual persistence partition, such as /dev/sdb2.
+
+Create the persistence.conf file:
+
+bash
+Copy code
+echo "/ union" | sudo tee /mnt/persistence/persistence.conf
+Unmount the partition:
+
+bash
+Copy code
+sudo umount /mnt/persistence
+Add Persistence Mode to Ventoy:
+
+Open the ventoy.json file located in /mnt/e/ventoy.
+Add the persistence entry for the Kali ISO:
+json
+Copy code
+{
+  "image": "/relative/path/to/kali-linux-2024.3-live-amd64.iso",
+  "persistence": "/ventoy/persistence.dat"
+}
+Replace /relative/path/to/kali-linux-2024.3-live-amd64.iso with the actual relative path to the ISO.
+Test Persistence:
+
+Reboot and select the Kali Linux ISO in Ventoy.
+Choose Kali with Persistence from the boot menu.
+Verify persistence by creating a file or modifying settings, then reboot to confirm the changes persist.
+Troubleshooting:
+Partition Not Showing: If the persistence partition doesn’t appear, ensure it’s labeled correctly as persistence and formatted as ext4.
+Persistence Not Working: Verify the persistence.conf file is correctly placed and contains the line / union.
+Access Errors on Windows: Windows doesn’t natively support ext4. Use tools like DiskInternals Linux Reader to verify the persistence partition if needed.
+Let me know if you encounter specific issues!
+
+
+
+
+
+
