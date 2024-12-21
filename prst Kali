@@ -1,0 +1,100 @@
+To enable persistence for your Kali ISO on a USB drive using Ventoy within Medicat, you’ll need to follow a specific process. Let's troubleshoot and make it work:
+
+---
+
+### Step-by-Step Guide to Enable Persistence:
+
+#### **1. Ensure the Partition for Persistence Exists**
+- Plug in your Medicat USB and check its partitions. You need a separate **ext4** partition for persistence.
+- Use a partition manager (e.g., `gparted` in Linux, or any partition tool for Windows):
+  1. Shrink an existing partition to create unallocated space.
+  2. Create a new partition and format it as **ext4**.
+  3. Label the new partition as `persistence`.
+
+#### **2. Create the Persistence File**
+- If you prefer not to create a separate partition, you can use a persistence file. Run these commands on a Linux machine:
+```bash
+sudo dd if=/dev/zero of=persistence.dat bs=1M count=4096
+sudo mkfs.ext4 -L persistence persistence.dat
+```
+This creates a 4GB persistence file (`persistence.dat`).
+
+---
+
+#### **3. Mount the Persistence File or Partition**
+- For a partition:
+```bash
+sudo mount /dev/sdX2 /mnt
+```
+Replace `/dev/sdX2` with the actual partition for persistence.
+
+- For a file:
+```bash
+sudo mkdir /mnt/persistence
+sudo mount -o loop persistence.dat /mnt/persistence
+```
+
+---
+
+#### **4. Configure Persistence**
+- Add the configuration file:
+```bash
+echo "/ union" | sudo tee /mnt/persistence/persistence.conf
+```
+
+---
+
+#### **5. Unmount the Persistence**
+- Unmount the file or partition:
+```bash
+sudo umount /mnt/persistence
+```
+
+---
+
+#### **6. Modify the `ventoy.json` for Persistence**
+- Open `ventoy.json` located in `/mnt/e/ventoy`.
+- Add the `persistence.dat` configuration for your Kali ISO:
+```json
+{
+  "persistence": [
+    {
+      "image": "/Kali/kali-linux-2024.3-live-amd64.iso",
+      "backend": "/ventoy/persistence.dat"
+    }
+  ]
+}
+```
+- Ensure the path to your ISO and `persistence.dat` matches your Ventoy setup.
+
+---
+
+#### **7. Test Boot with Persistence**
+- Boot from the USB drive.
+- In the Ventoy menu, select the Kali ISO.
+- Look for an option to boot with persistence (if your Ventoy version supports automatic options).
+- If not, add the boot parameter manually:
+  1. Highlight the ISO in the menu.
+  2. Press `E` to edit boot parameters.
+  3. Add `persistence persistence-encrypt` at the end of the boot command line.
+
+---
+
+#### **Troubleshooting Common Errors**
+1. **Error: "Persistence not found"**
+   - Double-check that your partition or file is labeled `persistence`.
+   - Ensure the `ventoy.json` paths are correct.
+
+2. **Error: "Permission Denied"**
+   - Run all commands with `sudo`.
+   - Ensure the USB drive is writable.
+
+3. **Ventoy Version**
+   - Ensure you're using the latest version of Ventoy, as older versions might not support persistence.
+
+4. **Kali Persistence Format**
+   - Use only `ext4` for the persistence file or partition. Other formats might not be supported.
+
+---
+
+Let me know if any step is unclear or if you encounter further issues!
