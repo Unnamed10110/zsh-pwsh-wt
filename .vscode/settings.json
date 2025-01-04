@@ -1,0 +1,20 @@
+{
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.largeFileOptimizations": false,
+  "workbench.colorTheme": "Pitch Black",
+  "workbench.colorCustomizations": {
+    "menu.background": "#000000",
+    "menu.foreground": "#ffffff",
+    "dropdown.foreground": "#000000",
+    "list.activeSelectionBackground": "#ffffff",
+    "list.activeSelectionForeground": "#000000",
+
+    "statusBar.background": "#2c2a2a",
+    "statusBar.foreground": "#ffffff",
+
+    "tab.activeBackground": "#000000",
+    "tab.activeForeground": "#ff0000",
+    "tab.inactiveBackground": "#000000",
+    "tab.inactiveForeground": "#ffffff"
+  }
+}

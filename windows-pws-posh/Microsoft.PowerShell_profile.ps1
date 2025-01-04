@@ -1,4 +1,4 @@
-﻿
+
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 
@@ -107,3 +107,4 @@ Write-Host('⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀�
 #  "template": "{{ .Output }}"
 #},
 
+Register-EngineEvent PowerShell.Exiting -Action { [console]::beep(1000, 300) }
