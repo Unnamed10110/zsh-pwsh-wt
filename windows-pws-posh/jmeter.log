@@ -1,0 +1,155 @@
+2025-01-04 17:52:11,420 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2025-01-04 17:52:11,428 INFO o.a.j.JMeter: Loading user properties from: D:\repos\apache-jmeter-5.6.3\bin\user.properties
+2025-01-04 17:52:11,428 INFO o.a.j.JMeter: Loading system properties from: D:\repos\apache-jmeter-5.6.3\bin\system.properties
+2025-01-04 17:52:11,433 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2025-01-04 17:52:11,433 INFO o.a.j.JMeter: Version 5.6.3
+2025-01-04 17:52:11,433 INFO o.a.j.JMeter: java.version=1.8.0_431
+2025-01-04 17:52:11,433 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2025-01-04 17:52:11,433 INFO o.a.j.JMeter: os.name=Windows 11
+2025-01-04 17:52:11,433 INFO o.a.j.JMeter: os.arch=amd64
+2025-01-04 17:52:11,433 INFO o.a.j.JMeter: os.version=10.0
+2025-01-04 17:52:11,433 INFO o.a.j.JMeter: file.encoding=Cp1252
+2025-01-04 17:52:11,433 INFO o.a.j.JMeter: java.awt.headless=null
+2025-01-04 17:52:11,433 INFO o.a.j.JMeter: Max memory     =1073741824
+2025-01-04 17:52:11,433 INFO o.a.j.JMeter: Available Processors =8
+2025-01-04 17:52:11,436 INFO o.a.j.JMeter: Default Locale=English (EN)
+2025-01-04 17:52:11,436 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2025-01-04 17:52:11,436 INFO o.a.j.JMeter: JMeterHome=D:\repos\apache-jmeter-5.6.3
+2025-01-04 17:52:11,436 INFO o.a.j.JMeter: user.dir  =D:\repos\zsh-pwsh-wt\windows-pws-posh
+2025-01-04 17:52:11,437 INFO o.a.j.JMeter: PWD       =D:\repos\zsh-pwsh-wt\windows-pws-posh
+2025-01-04 17:52:11,438 INFO o.a.j.JMeter: IP: 192.168.0.19 Name: unnamed10110 FullName: unnamed10110
+2025-01-04 17:52:11,450 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2025-01-04 17:52:11,586 INFO o.a.j.JMeterGuiLauncher: Setting LAF to: com.github.weisj.darklaf.DarkLaf:com.github.weisj.darklaf.theme.DarculaTheme
+2025-01-04 17:52:12,354 INFO o.a.j.r.ClassFinder: Will scan jar D:\repos\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-fifo-0.2.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-01-04 17:52:12,361 INFO o.a.j.r.ClassFinder: Will scan jar D:\repos\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-01-04 17:52:12,507 INFO o.a.j.r.ClassFinder: Will scan jar D:\repos\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-fifo-0.2.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-01-04 17:52:12,508 INFO o.a.j.r.ClassFinder: Will scan jar D:\repos\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-01-04 17:52:15,134 INFO o.j.r.JARSourceHTTP: Found cached repo
+2025-01-04 17:52:15,336 INFO o.j.r.PluginManager: Plugins Status: [jpgc-fifo=0.2, jpgc-plugins-manager=1.10, jmeter-core=5.6.3, jmeter-ftp=5.6.3, jmeter-http=5.6.3, jmeter-jdbc=5.6.3, jmeter-jms=5.6.3, jmeter-junit=5.6.3, jmeter-java=5.6.3, jmeter-ldap=5.6.3, jmeter-mail=5.6.3, jmeter-mongodb=5.6.3, jmeter-native=5.6.3, jmeter-tcp=5.6.3, jmeter-components=5.6.3]
+2025-01-04 17:52:23,727 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2025-01-04 17:52:23,727 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2025-01-04 17:52:23,926 INFO o.a.j.r.ClassFinder: Will scan jar D:\repos\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-fifo-0.2.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-01-04 17:52:23,926 INFO o.a.j.r.ClassFinder: Will scan jar D:\repos\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-01-04 17:52:41,864 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-01-04 17:52:41,864 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-01-04 17:52:41,864 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-01-04 17:52:41,864 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-01-04 17:52:41,864 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2025-01-04 17:52:41,864 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2025-01-05 09:55:09,582 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2025-01-05 09:55:09,585 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2025-01-05 09:55:09,585 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2025-01-05 09:55:09,585 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2025-01-05 09:55:09,737 INFO o.a.j.r.ClassFinder: Will scan jar D:\repos\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-fifo-0.2.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.ResultRenderer], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-01-05 09:55:09,739 INFO o.a.j.r.ClassFinder: Will scan jar D:\repos\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.ResultRenderer], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-01-05 09:55:09,765 INFO o.a.j.r.ClassFinder: Will scan jar D:\repos\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-fifo-0.2.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.RequestView], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-01-05 09:55:09,766 INFO o.a.j.r.ClassFinder: Will scan jar D:\repos\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.RequestView], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-01-05 09:55:25,404 INFO o.a.j.s.FileServer: Default base='D:\repos\zsh-pwsh-wt\windows-pws-posh'
+2025-01-05 09:55:25,405 INFO o.a.j.s.FileServer: Set new base='C:\Users\troja\OneDrive\Escritorio'
+2025-01-05 09:55:25,560 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2025-01-05 09:55:25,567 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2025-01-05 09:55:25,568 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2025-01-05 09:55:25,598 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-01-05 09:55:25,599 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-01-05 09:55:25,599 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-01-05 09:55:25,602 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2025-01-05 09:55:25,665 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2025-01-05 09:55:25,665 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2025-01-05 09:55:25,665 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-01-05 09:55:25,665 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2025-01-05 09:55:25,673 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2025-01-05 09:55:25,673 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-01-05 09:55:25,675 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2025-01-05 09:55:43,727 INFO o.a.j.g.a.Start: Stopping test
+2025-01-05 09:55:43,738 INFO o.a.j.t.JMeterThread: Stopping: Thread Group 1-1
+2025-01-05 09:55:43,739 WARN k.a.j.m.FifoPopPreProcessor: Interrupted pop from queue SYNC_FIFO
+2025-01-05 09:55:43,739 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2025-01-05 09:55:43,739 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2025-01-05 09:55:43,739 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2025-01-05 09:55:43,740 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2025-01-05 09:55:56,798 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-01-05 09:55:56,799 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-01-05 09:55:56,801 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2025-01-05 09:55:56,987 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2025-01-05 09:55:56,988 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2025-01-05 09:55:56,988 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-01-05 09:55:56,988 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2025-01-05 09:55:56,988 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2025-01-05 09:55:56,989 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-01-05 09:55:56,990 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2025-01-05 09:56:40,839 INFO o.a.j.g.a.Start: Stopping test
+2025-01-05 09:56:40,846 INFO o.a.j.t.JMeterThread: Stopping: Thread Group 1-1
+2025-01-05 09:56:40,846 WARN k.a.j.m.FifoPopPreProcessor: Interrupted pop from queue SYNC_FIFO
+2025-01-05 09:56:40,847 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2025-01-05 09:56:40,847 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2025-01-05 09:56:40,847 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2025-01-05 09:56:40,847 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2025-01-05 09:56:42,994 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-01-05 09:56:42,994 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-01-05 09:56:42,995 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2025-01-05 09:56:43,072 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2025-01-05 09:56:43,073 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2025-01-05 09:56:43,073 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-01-05 09:56:43,073 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2025-01-05 09:56:43,073 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2025-01-05 09:56:43,073 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-01-05 09:56:43,075 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2025-01-05 09:56:50,518 INFO o.a.j.g.a.Start: Stopping test
+2025-01-05 09:56:50,527 INFO o.a.j.t.JMeterThread: Stopping: Thread Group 1-1
+2025-01-05 09:56:50,527 WARN k.a.j.m.FifoPopPreProcessor: Interrupted pop from queue SYNC_FIFO
+2025-01-05 09:56:50,528 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2025-01-05 09:56:50,528 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2025-01-05 09:56:50,528 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2025-01-05 09:56:50,528 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2025-01-05 09:56:55,165 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-01-05 09:56:55,165 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-01-05 09:56:55,166 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2025-01-05 09:56:55,227 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2025-01-05 09:56:55,227 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2025-01-05 09:56:55,227 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-01-05 09:56:55,227 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2025-01-05 09:56:55,228 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2025-01-05 09:56:55,228 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-01-05 09:56:55,229 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2025-01-05 09:56:56,251 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = unnamed10110
+2025-01-05 09:56:56,257 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2025-01-05 09:56:56,333 INFO o.a.j.p.h.s.h.LazyLayeredConnectionSocketFactory: Setting up HTTPS TrustAll Socket Factory
+2025-01-05 09:56:56,335 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2025-01-05 09:56:56,335 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2025-01-05 09:56:56,391 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
+2025-01-05 09:56:56,392 INFO o.a.j.u.SSLManager: KeyStore created OK
+2025-01-05 09:56:56,392 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
+2025-01-05 09:56:56,798 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2025-01-05 09:56:56,799 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2025-01-05 09:56:56,800 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2025-01-05 09:56:56,800 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2025-01-05 10:15:02,592 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-01-05 10:15:02,593 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-01-05 10:15:02,594 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2025-01-05 10:15:02,690 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2025-01-05 10:15:02,690 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2025-01-05 10:15:02,690 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-01-05 10:15:02,690 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2025-01-05 10:15:02,690 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2025-01-05 10:15:02,690 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-01-05 10:15:02,693 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2025-01-05 10:15:06,297 INFO o.a.j.g.a.Start: Stopping test
+2025-01-05 10:15:06,305 INFO o.a.j.t.JMeterThread: Stopping: Thread Group 1-1
+2025-01-05 10:15:06,305 WARN k.a.j.m.FifoPopPreProcessor: Interrupted pop from queue SYNC_FIFO
+2025-01-05 10:15:06,305 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2025-01-05 10:15:06,305 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2025-01-05 10:15:06,306 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2025-01-05 10:15:10,708 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-01-05 10:15:10,708 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-01-05 10:15:10,709 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2025-01-05 10:15:10,793 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2025-01-05 10:15:10,793 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2025-01-05 10:15:10,793 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-01-05 10:15:10,793 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2025-01-05 10:15:10,794 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2025-01-05 10:15:10,794 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-01-05 10:15:10,797 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2025-01-05 10:15:21,038 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2025-01-05 10:15:21,038 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2025-01-05 10:15:21,039 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2025-01-05 10:15:21,039 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)

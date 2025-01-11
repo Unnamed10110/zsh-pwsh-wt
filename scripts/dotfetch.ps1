@@ -325,6 +325,7 @@ $strings.pwsh = if ($configuration.HasFlag([Configuration]::Show_Pwsh)) {
 }
 
 # ===== CONNECTION CHECKER =====
+<#
 function Get-Status {
     $adaptor = (Test-NetConnection -WarningAction silentlycontinue)
     $status = 'Offline'
@@ -342,8 +343,8 @@ function Get-Status {
     }
     return $status
 }
-
-$strings.connection = Get-Status
+#>
+#$strings.connection = Get-Status
 
 # ===== IP Address =====
 

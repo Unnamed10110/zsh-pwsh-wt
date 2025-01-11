@@ -1,4 +1,5 @@
 
+cls
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 
@@ -10,6 +11,11 @@
 # half-lifeMOD.omp.json   sonicboom_dark.omp.json   stelbent.minimal.omp.json  kali atomicBit
 oh-my-posh init pwsh --config 'D:\repos\zsh-pwsh-wt\windows-pws-posh\kalimod.omp.json' | Invoke-Expression
 
+
+
+$width = [Console]::WindowWidth
+$env:MY_PADDING = "─" * 20
+dotfetch
 
 Import-Module Terminal-Icons
 set-psreadlineoption -predictionviewstyle listview
@@ -40,8 +46,10 @@ Set-PSReadLineOption –HistoryNoDuplicates:$True
 
 #}
 #---------------------------------------------------------------------------
+<#
+
 Write-Host ('...2 Seconds to check displayed errors/logs...') -ForegroundColor Green
-Start-Sleep -Seconds 2
+#Start-Sleep -Seconds 2
 cls
 Write-Host('⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠤⠤⠒⠒⠒⠂⠀⠀⠀⠀⠀⠒⠒⠢⠤⠀⠀⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -107,4 +115,10 @@ Write-Host('⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀�
 #  "template": "{{ .Output }}"
 #},
 
+
+
+
 Register-EngineEvent PowerShell.Exiting -Action { [console]::beep(1000, 300) }
+
+
+#>

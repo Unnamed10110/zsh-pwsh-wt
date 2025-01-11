@@ -1,6 +1,33 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
+	
+	{
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "text",
+          "template": "──────────────────────────────────────────────────────────────────────"
+        }
+        
+      ],
+      "type": "prompt"
+
+    },
+	
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "text",
+          "template": "──────────────────────────────────────────────────────────────────────"
+        }
+        
+      ],
+      "type": "prompt"
+
+    },
+
     {
       "alignment": "left",
       "segments": [
@@ -8,7 +35,7 @@
 
           "properties": { "display_host": true },
           "style": "plain",
-          "template": "<#ffffff>\u250c\u2500\u2500(</#ffffff><#00FF00>{{ .UserName }}</#00FF00>💀⌛<#ffffff><#ffffff>\u2500▶ </#ffffff><#ff0000>{{ .HostName }}</#ff0000><#ffffff><#ffffff>)</#ffffff></ffffff>",
+          "template": "\n<#ffffff>\u250c\u2500\u2500(</#ffffff><#00FF00>{{ .UserName }}</#00FF00>💀⌛<#ffffff><#ffffff>\u2500▶ </#ffffff><#ff0000>{{ .HostName }}</#ff0000><#ffffff><#ffffff>)</#ffffff></ffffff>",
           "type": "session"
         },
         {
