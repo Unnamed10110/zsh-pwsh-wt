@@ -1,31 +1,20 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
-	
-	{
+    {
+      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "type": "text",
-          "template": "──────────────────────────────────────────────────────────────────────"
+          "type": "command",
+          "style": "plain",
+          "foreground": "#ffffff",
+          "properties": {
+            "shell": "powershell",
+            "command": "$env:PROMPT_LINE"
+          }
         }
-        
-      ],
-      "type": "prompt"
-
-    },
-	
-    {
-      "alignment": "right",
-      "segments": [
-        {
-          "type": "text",
-          "template": "──────────────────────────────────────────────────────────────────────"
-        }
-        
-      ],
-      "type": "prompt"
-
+      ]
     },
 
     {

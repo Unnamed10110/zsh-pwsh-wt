@@ -9,13 +9,34 @@ cls
 
 #oh-my-posh init pwsh --config 'C:\Users\troja\AppData\Local\Programs\oh-my-posh\themes\atomicBit.omp.json' | Invoke-Expression
 # half-lifeMOD.omp.json   sonicboom_dark.omp.json   stelbent.minimal.omp.json  kali atomicBit
+
+
+
+#$width = [Console]::WindowWidth
+#$env:MY_PADDING = "─" * $width
+#otfetch
 oh-my-posh init pwsh --config 'D:\repos\zsh-pwsh-wt\windows-pws-posh\kalimod.omp.json' | Invoke-Expression
+$width = [console]::WindowWidth
+    $result = "-" * ($width-2)
+    #$result = variable.Substring(0, $result.Length - 1)
+    [System.Environment]::SetEnvironmentVariable("PROMPT_LINE", $result, [System.EnvironmentVariableTarget]::Process)
+Register-EngineEvent -SourceIdentifier PowerShell.OnIdle -Action {
+    $width = [console]::WindowWidth
+    $result = "-" * ($width-2)
+    #$result = variable.Substring(0, $result.Length - 1)
+
+    [System.Environment]::SetEnvironmentVariable("PROMPT_LINE", $result, [System.EnvironmentVariableTarget]::Process)
+
+	#write-Host($result)
+    oh-my-posh init pwsh --config 'D:\repos\zsh-pwsh-wt\windows-pws-posh\kalimod.omp.json' | Invoke-Expression
+    # Output the custom prompt (optional to display additional info)
+}
 
 
 
-$width = [Console]::WindowWidth
-$env:MY_PADDING = "─" * 20
-dotfetch
+
+
+
 
 Import-Module Terminal-Icons
 set-psreadlineoption -predictionviewstyle listview
@@ -122,3 +143,4 @@ Register-EngineEvent PowerShell.Exiting -Action { [console]::beep(1000, 300) }
 
 
 #>
+cls
