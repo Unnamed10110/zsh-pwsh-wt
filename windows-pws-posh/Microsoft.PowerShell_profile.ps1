@@ -17,19 +17,28 @@ cls
 #otfetch
 oh-my-posh init pwsh --config 'D:\repos\zsh-pwsh-wt\windows-pws-posh\kalimod.omp.json' | Invoke-Expression
 $width = [console]::WindowWidth
-    $result = "-" * ($width-2)
-    #$result = variable.Substring(0, $result.Length - 1)
+$message = " I can always do it tomorrow... "
+$messageLength = $message.Length
+
+# Calculate padding on each side of the message
+$paddingLength = [math]::Max(0, ($width - $messageLength) / 2)
+$padding = "ˍ" * ($paddingLength-1)
+
+# Construct the result line
+$result = $padding + $message + $padding
     [System.Environment]::SetEnvironmentVariable("PROMPT_LINE", $result, [System.EnvironmentVariableTarget]::Process)
 Register-EngineEvent -SourceIdentifier PowerShell.OnIdle -Action {
     $width = [console]::WindowWidth
-    $result = "-" * ($width-2)
-    #$result = variable.Substring(0, $result.Length - 1)
+    $message = " I can always do it tomorrow... "
+    $messageLength = $message.Length
+
+    # Calculate padding on each side of the message
+    $paddingLength = [math]::Max(0, ($width - $messageLength) / 2)
+    $padding = "ˍ" * ($paddingLength-1)
 
     [System.Environment]::SetEnvironmentVariable("PROMPT_LINE", $result, [System.EnvironmentVariableTarget]::Process)
 
-	#write-Host($result)
     oh-my-posh init pwsh --config 'D:\repos\zsh-pwsh-wt\windows-pws-posh\kalimod.omp.json' | Invoke-Expression
-    # Output the custom prompt (optional to display additional info)
 }
 
 
