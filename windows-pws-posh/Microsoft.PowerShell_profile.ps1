@@ -36,7 +36,6 @@ Register-EngineEvent -SourceIdentifier PowerShell.OnIdle -Action {
     [System.Environment]::SetEnvironmentVariable("PROMPT_LINE", $result, [System.EnvironmentVariableTarget]::Process)
 }
 
-# Import Terminal-Icons module
 Import-Module Terminal-Icons
 
 # Set PSReadLine options
@@ -44,3 +43,6 @@ set-psreadlineoption -predictionviewstyle listview
 set-alias py python
 set-alias cc cls
 Set-PSReadLineOption –HistoryNoDuplicates:$True
+
+
+cls
