@@ -188,13 +188,14 @@ class ResizableTextWindow:
             with open("content.txt", "w", encoding="utf-8",errors="ignore") as file:
                 file.write("""
 Code Symbol
-138 ¿
-39 '
-92 \
-124 |
-126 ~
-96 `
-94 ^
+138  ¿
+39   '
+92   \\
+124  |
+126  ~
+96   `
+94   ^
+Right Alt (AltGr) + N → ñ
 ctrl + ' then e = é
 ============================================
 32
@@ -310,7 +311,7 @@ def create_and_run_windows(text):
 
 if __name__ == "__main__":
     try:
-        text = open('content.txt', 'r', encoding='utf-8-sig', errors='ignore').read()
+        text = open('content1.txt', 'r', encoding='utf-8-sig', errors='ignore').read()
     except FileNotFoundError:
         text = (
             "This is a text with Arial bold white font. "
@@ -319,13 +320,14 @@ if __name__ == "__main__":
         with open("content.txt", "w", encoding="utf-8",errors="ignore") as file:
             file.write("""
 Code Symbol
-138 ¿
-39 '
-92 \
-124 |
-126 ~
-96 `
-94 ^
+138  ¿
+39   '
+92   \\
+124  |
+126  ~
+96   `
+94   ^
+Right Alt (AltGr) + N → ñ
 ctrl + ' then e = é
 ============================================
 32
