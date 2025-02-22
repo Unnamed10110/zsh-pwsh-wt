@@ -7,8 +7,9 @@ Code Symbol
 126   ~
 96    `
 94    ^
-Right Alt (AltGr) + N → ñ
-ctrl + ' then e = é
+0161  ¡ 
+AltGr + N → ñ
+AlGr + e = é
 ============================================
 32
 33 !
