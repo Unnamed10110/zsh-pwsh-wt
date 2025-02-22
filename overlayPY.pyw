@@ -5,6 +5,50 @@ import ctypes
 from screeninfo import get_monitors
 import threading
 import time
+ttt = """
+Code Symbol
+0191  ¿
+39    '
+92    \\
+124   |
+126   ~
+96    `
+94    ^
+0161  ¡ 
+AltGr + N → ñ
+AlGr + e = é
+============================================
+32
+33 !
+34 "
+35 #
+36 $
+37 %
+38 &
+40 (
+41 )
+42 *
+43 +
+44 ,
+45 -
+46 .
+47 /
+58 :
+59 ;
+60 <
+61 =
+62 >
+63 ?
+64 @
+90 Z
+91 [
+91 [
+92 \\
+93 ]
+93 ]
+95 _
+123 {
+125 }"""
 
 # Structure for RECT, used for getting taskbar height
 class RECT(ctypes.Structure):
@@ -186,50 +230,7 @@ class ResizableTextWindow:
                 file_content = file.read()
         except FileNotFoundError:
             with open("content.txt", "w", encoding="utf-8",errors="ignore") as file:
-                file.write("""
-Code Symbol
-138  ¿
-39   '
-92   \\
-124  |
-126  ~
-96   `
-94   ^
-Right Alt (AltGr) + N → ñ
-ctrl + ' then e = é
-============================================
-32
-33 !
-34 "
-35 #
-36 $
-37 %
-38 &
-40 (
-41 )
-42 *
-43 +
-44 ,
-45 -
-46 .
-47 /
-58 :
-59 ;
-60 <
-61 =
-62 >
-63 ?
-64 @
-90 Z
-91 [
-91 [
-92 \
-93 ]
-93 ]
-95 _
-123 {
-125 }
-            """)
+                file.write(ttt)
             file_content = open('content.txt', 'r', encoding='utf-8-sig', errors='ignore').read()
 
         # Text input box
@@ -318,50 +319,7 @@ if __name__ == "__main__":
             "It will word-wrap to fit inside the window as the window resizes."
         )
         with open("content.txt", "w", encoding="utf-8",errors="ignore") as file:
-            file.write("""
-Code Symbol
-138  ¿
-39   '
-92   \\
-124  |
-126  ~
-96   `
-94   ^
-Right Alt (AltGr) + N → ñ
-ctrl + ' then e = é
-============================================
-32
-33 !
-34 "
-35 #
-36 $
-37 %
-38 &
-40 (
-41 )
-42 *
-43 +
-44 ,
-45 -
-46 .
-47 /
-58 :
-59 ;
-60 <
-61 =
-62 >
-63 ?
-64 @
-90 Z
-91 [
-91 [
-92 \
-93 ]
-93 ]
-95 _
-123 {
-125 }
-            """)
+            file.write(ttt)
         text = open('content.txt', 'r', encoding='utf-8-sig', errors='ignore').read()
 
     create_and_run_windows(text)
