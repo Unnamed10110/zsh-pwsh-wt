@@ -187,37 +187,47 @@ class ResizableTextWindow:
         except FileNotFoundError:
             with open("content.txt", "w", encoding="utf-8",errors="ignore") as file:
                 file.write("""
--> FILE JUST CREATED! ..\n
-96     = `
-
-0180 = ´
-
-39     =  '
-
-168   = ¿
-
-47     = /
-
-92     = \
-
-173   = ¡
-
-179   = │
-
-60     = <
-
-62     = >
-
-126   = ~
-
-0176 = °
-
-39 = '
-
-96 = `
-
-94 = ^
-
+Code Symbol
+138 ¿
+39 '
+92 \
+124 |
+126 ~
+96 `
+94 ^
+ctrl + ' then e = é
+============================================
+32
+33 !
+34 "
+35 #
+36 $
+37 %
+38 &
+40 (
+41 )
+42 *
+43 +
+44 ,
+45 -
+46 .
+47 /
+58 :
+59 ;
+60 <
+61 =
+62 >
+63 ?
+64 @
+90 Z
+91 [
+91 [
+92 \
+93 ]
+93 ]
+95 _
+123 {
+125 }
             """)
             file_content = open('content.txt', 'r', encoding='utf-8-sig', errors='ignore').read()
 
@@ -308,39 +318,47 @@ if __name__ == "__main__":
         )
         with open("content.txt", "w", encoding="utf-8",errors="ignore") as file:
             file.write("""
--> FILE JUST CREATED! ..\n
-DEFAULT TEXT!
-96     = `
-
-0180 = ´
-
-39     =  '
-
-168   = ¿
-
-47     = /
-
-92     = \
-
-173   = ¡
-
-179   = │
-
-60     = <
-
-62     = >
-
-126   = ~
-
-0176 = °
-
-39 = '
-
-96 = `
-
-94 = ^
-'
-
+Code Symbol
+138 ¿
+39 '
+92 \
+124 |
+126 ~
+96 `
+94 ^
+ctrl + ' then e = é
+============================================
+32
+33 !
+34 "
+35 #
+36 $
+37 %
+38 &
+40 (
+41 )
+42 *
+43 +
+44 ,
+45 -
+46 .
+47 /
+58 :
+59 ;
+60 <
+61 =
+62 >
+63 ?
+64 @
+90 Z
+91 [
+91 [
+92 \
+93 ]
+93 ]
+95 _
+123 {
+125 }
             """)
         text = open('content.txt', 'r', encoding='utf-8-sig', errors='ignore').read()
 
