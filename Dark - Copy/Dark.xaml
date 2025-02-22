@@ -1,0 +1,256 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+    xmlns:m="clr-namespace:ModernWpf.Markup;assembly=modernwpf"
+    xmlns:s="clr-namespace:System;assembly=mscorlib">
+
+    <!-- Dark base -->
+    <Thickness x:Key="WindowPadding">1,1,0,1</Thickness>
+    <Thickness x:Key="WindowPaddingMaximized">0,-2,0,0</Thickness>
+
+    <SolidColorBrush x:Key="WindowBorderBrush" Color="{DynamicResource SystemAccentColor}" />
+    <Thickness x:Key="WindowBorderThickness">1</Thickness>
+    <SolidColorBrush x:Key="WindowAcrylicTintBrush" Color="#d60D0B0E" />
+
+    <SolidColorBrush x:Key="MainBackgroundBrush" Color="#000000" /> <!-- Already black -->
+    <SolidColorBrush x:Key="DialogBackgroundBrush" Color="#000000" /> <!-- Changed to black -->
+    <SolidColorBrush x:Key="SidebarBackgroundBrush" Color="Transparent" />
+
+    <SolidColorBrush x:Key="PathEditPopupBackgroundBrush" Color="#000000" /> <!-- Changed to black -->
+
+    <SolidColorBrush x:Key="TextPrimaryBrush" Color="#ffffff" />
+
+    <Style x:Key="{x:Type TextBlock}" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+    </Style>
+
+    <SolidColorBrush x:Key="TextImportantBrush" Color="#0f92fe" />
+
+    <SolidColorBrush x:Key="TextUnimportantBrush" Color="#000000" /> <!-- Changed to black -->
+
+    <SolidColorBrush x:Key="TextBackgroundOverlayBrush" Color="#BE000000" /> <!-- Changed to black -->
+
+    <!-- Sidebar - Favorites -->
+    <Thickness x:Key="FavoritesPanelMargin">0,1,8,0</Thickness>
+    <s:Double x:Key="SidebarCollapsedWidth">38</s:Double>
+
+    <Style x:Key="PathPanelGroupBorder" TargetType="{x:Type Border}">
+        <Setter Property="Background" Value="#000000" /> <!-- Changed to black -->
+        <Setter Property="Margin" Value="12,0,12,12" />
+        <Setter Property="Padding" Value="8,8,8,8" />
+        <Setter Property="CornerRadius" Value="4" />
+    </Style>
+
+    <Style x:Key="PathPanelGroupTitle" TargetType="{x:Type TextBlock}">
+        <Setter Property="Margin" Value="4,-6,0,0" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Foreground" Value="{DynamicResource SystemControlPageTextBaseHighBrush}" />
+    </Style>
+
+    <SolidColorBrush x:Key="PathPanelItemBackgroundBrush" Color="#000000" /> <!-- Changed to black -->
+
+    <!-- File Browser Panel -->
+    <SolidColorBrush x:Key="CurrentFolderPanelBackgroundBrush" Color="#000000" /> <!-- Changed to black -->
+    <SolidColorBrush x:Key="NavigationPanelBackgroundBrush.StandardLayout" Color="#000000" /> <!-- Changed to black -->
+    <SolidColorBrush x:Key="NavigationPanelBackgroundBrush.ColumnsLayout" Color="#000000" /> <!-- Changed to black -->
+
+    <Style x:Key="FilesPanelBorder" TargetType="{x:Type Border}">
+        <Setter Property="Background" Value="#000000" /> <!-- Changed to black -->
+    </Style>
+
+    <Style x:Key="FilesPanelEdgeBorder" TargetType="{x:Type Border}">
+        <Setter Property="Margin" Value="0,0,0,0" />
+        <Setter Property="BorderThickness" Value="0,0,2,0" />
+        <Setter Property="BorderBrush" Value="{DynamicResource AccentBrush}" />
+        <Setter Property="HorizontalAlignment" Value="Right" />
+        <Setter Property="Width" Value="20" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Offset="0" Color="#000000" /> <!-- Changed to black -->
+                    <GradientStop Offset=".6" Color="#000000" /> <!-- Changed to black -->
+                    <GradientStop Offset=".9" Color="#000000" /> <!-- Changed to black -->
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="FilesPanelEdgeTopBorder" TargetType="{x:Type Border}">
+        <Setter Property="BorderBrush" Value="{DynamicResource AccentBrush}" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="HorizontalAlignment" Value="Right" />
+        <Setter Property="Width" Value="20" />
+        <Setter Property="Height" Value="44" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush MappingMode="Absolute" StartPoint="7,25" EndPoint="27,32">
+                    <GradientStop Offset="0" Color="#000000" /> <!-- Changed to black -->
+                    <GradientStop Offset="1" Color="#000000" /> <!-- Changed to black -->
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="OpacityMask">
+            <Setter.Value>
+                <LinearGradientBrush MappingMode="Absolute" StartPoint="0,0" EndPoint="0,44">
+                    <GradientStop Offset="0" Color="#ffffffff" />
+                    <GradientStop Offset="1" Color="#00000000" />
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <s:Double x:Key="FilesPanelTitleHeight">30</s:Double>
+    <Thickness x:Key="FilesPanelSortControlMargin">0,32,0,0</Thickness>
+    <Thickness x:Key="FilesPanelContentMargin">0,54,0,0</Thickness>
+
+    <Style x:Key="FilesPanelTitle" TargetType="{x:Type TextBlock}">
+        <Setter Property="Margin" Value="10,2,0,0" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="Foreground" Value="{DynamicResource SystemControlPageTextBaseHighBrush}" />
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="{DynamicResource AccentBrush}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="FilesPanelPathSeparator" TargetType="{x:Type TextBlock}">
+        <Setter Property="Text" Value="\" />
+        <Setter Property="Margin" Value="0,2,0,0" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="Foreground" Value="{DynamicResource TextUnimportantBrush}" />
+    </Style>
+
+    <Style x:Key="PreviewPanelBorder" TargetType="{x:Type Border}">
+        <Setter Property="Background" Value="#000000" /> <!-- Changed to black -->
+    </Style>
+
+    <Style x:Key="PreviewPanelBorder.ColumnsLayout" TargetType="{x:Type Border}">
+        <Setter Property="Background" Value="#000000" /> <!-- Changed to black -->
+    </Style>
+
+    <s:Double x:Key="PreviewPanelMinHeight">28</s:Double>
+
+    <Style x:Key="PopupPanelBorder" TargetType="{x:Type Border}">
+        <Setter Property="Background" Value="{DynamicResource SystemControlPageBackgroundChromeLowBrush}" />
+        <Setter Property="Effect" Value="{DynamicResource PopupShadowEffect}" />
+    </Style>
+
+    <!-- Other gray tones darkened -->
+    <SolidColorBrush x:Key="ListItemEvenBackgroundBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="ListItemOddBackgroundBrush" Color="#000000" /> <!-- Changed to black -->
+
+    <SolidColorBrush x:Key="ListItemToDoBackgroundBrush" Color="#ccffc932" />
+    <SolidColorBrush x:Key="ListItemToDoDoneBackgroundBrush" Color="#ccdeaf2c" />
+    <SolidColorBrush x:Key="ListItemToDoForegroundBrush" Color="#000000" />
+
+    <DropShadowEffect
+        x:Key="HoverItemEffect"
+        BlurRadius="15"
+        Direction="315"
+        Opacity=".5"
+        ShadowDepth="2"
+        Color="Black" />
+
+    <DropShadowEffect
+        x:Key="PopupShadowEffect"
+        BlurRadius="30"
+        Direction="270"
+        Opacity=".65"
+        ShadowDepth="10"
+        Color="Black" />
+
+    <Thickness x:Key="ShadowThickness">20,10,20,30</Thickness>
+
+    <Style x:Key="ContextMenuBorder" TargetType="Border">
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Background" Value="{DynamicResource DialogBackgroundBrush}" />
+        <Setter Property="Padding" Value="0,4,0,4" />
+        <Setter Property="CornerRadius" Value="4" />
+    </Style>
+
+    <!-- Other gray tones darkened -->
+    <SolidColorBrush x:Key="ScrollBarTrackBrush" Color="#000000" /> <!-- Changed to black -->
+    <SolidColorBrush x:Key="ScrollBarThumbBrush" Color="#000000" /> <!-- Changed to black -->
+    <SolidColorBrush x:Key="ScrollBarThumbHoverBrush" Color="#000000" /> <!-- Changed to black -->
+    <SolidColorBrush x:Key="ScrollBarThumbPressedBrush" Color="#000000" /> <!-- Changed to black -->
+
+    <SolidColorBrush
+        x:Key="OverlayBrush"
+        Opacity=".15"
+        Color="#ffffff" />
+
+    <SolidColorBrush x:Key="FlashBrush" Color="#afd9fa" />
+
+    <SolidColorBrush
+        x:Key="OverlayInactiveBrowserBrush"
+        Opacity=".25"
+        Color="#000000" />
+
+    <SolidColorBrush
+        x:Key="OverlayCollapsingBrowserBrush"
+        Opacity=".84"
+        Color="#000000" /> <!-- Changed to black -->
+
+    <SolidColorBrush x:Key="ResizerBrush" Color="#000000" /> <!-- Changed to black -->
+    <SolidColorBrush x:Key="ResizerHoverBrush" Color="#000000" /> <!-- Changed to black -->
+
+    <!-- Other gray tones darkened -->
+    <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="#000000" /> <!-- Changed to black -->
+    <SolidColorBrush x:Key="IconButtonBackgroundBrush" Color="#000000" /> <!-- Changed to black -->
+
+    <SolidColorBrush x:Key="ButtonBackgroundPointerOverBrush" Color="#000000" /> <!-- Already black -->
+    <SolidColorBrush x:Key="ButtonBackgroundPressedBrush" Color="#000000" /> <!-- Already black -->
+    <SolidColorBrush x:Key="ButtonBackgroundDisabledBrush" Color="#000000" /> <!-- Changed to black -->
+
+    <SolidColorBrush x:Key="ButtonForegroundBrush" Color="#ffffff" />
+    <SolidColorBrush x:Key="ButtonForegroundPointerOverBrush" Color="#ffffff" />
+    <SolidColorBrush x:Key="ButtonForegroundPressedBrush" Color="#ffffff" />
+    <SolidColorBrush x:Key="ButtonForegroundDisabledBrush" Color="#000000" />
+
+    <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="ButtonBorderPointerOverBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="ButtonBorderPressedBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="ButtonBorderDisabledBrush" Color="Transparent" />
+
+    <Thickness x:Key="ButtonBorderThickness">0</Thickness>
+    <Thickness x:Key="ButtonPadding">4,0,4,0</Thickness>
+    <s:Double x:Key="ButtonMinSize">28</s:Double>
+
+    <Style x:Key="ScrollIndicatorLine" TargetType="{x:Type Line}">
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Stretch" Value="Fill" />
+        <Setter Property="StrokeThickness" Value="8" />
+        <Setter Property="X2" Value="1" />
+        <Setter Property="OpacityMask">
+            <Setter.Value>
+                <LinearGradientBrush MappingMode="RelativeToBoundingBox" StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Offset="0" Color="#00000000" />
+                    <GradientStop Offset="0.2" Color="#ffffffff" />
+                    <GradientStop Offset="0.8" Color="#ffffffff" />
+                    <GradientStop Offset="1" Color="#00000000" />
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <LinearGradientBrush x:Key="ScrollIndicatorTopBrush" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0" Color="#44000000" />
+        <GradientStop Offset="1" Color="#00000000" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ScrollIndicatorBottomBrush" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="1" Color="#44000000" />
+        <GradientStop Offset="0" Color="#00000000" />
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="TagRedBrush" Color="#ef7063" />
+    <SolidColorBrush x:Key="TagOrangeBrush" Color="#eda95d" />
+    <SolidColorBrush x:Key="TagYellowBrush" Color="#efcf68" />
+    <SolidColorBrush x:Key="TagGreenBrush" Color="#88c866" />
+    <SolidColorBrush x:Key="TagBlueBrush" Color="#6fb8ef" />
+    <SolidColorBrush x:Key="TagPurpleBrush" Color="#c78edd" />
+    <SolidColorBrush x:Key="TagGrayBrush" Color="#000000" /> <!-- Changed to black -->
+
+</ResourceDictionary>
