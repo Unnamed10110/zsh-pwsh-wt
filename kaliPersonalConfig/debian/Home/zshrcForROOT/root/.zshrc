@@ -1,5 +1,4 @@
-
-
+alias fzfcat="fzf --preview 'batcat --color=always {}'"
 alias cc="clear"
 alias py="python"
 
@@ -64,7 +63,7 @@ function print_message_before_prompt() {
     local width=$(tput cols)
     local message=" ... I can always do it tomorrow ... "
     local padding=$(( (width - ${#message}) / 2 ))
-    
+
     # Define colors and text attributes
     BLACK=$(tput setaf 0)
     RED=$(tput setaf 1)
@@ -78,7 +77,7 @@ function print_message_before_prompt() {
     WHITE=$(tput setaf 7)
     BRIGHT=$(tput bold)
     NORMAL=$(tput sgr0)
-    
+
     # Print the message in bright bold green
     printf '\n%*s%s%*s\n' "$padding" '' "${BRIGHT}${GREEN}${message}${NORMAL}" "$padding" ''
 }
@@ -398,4 +397,4 @@ echo -e "${GREEN}'...4 Seconds to check displayed errors/logs...'${NOCOLOR}"
 
 sleep 4s # Waits 5 seconds.
 clear
-cd ~
+cd ~#  
