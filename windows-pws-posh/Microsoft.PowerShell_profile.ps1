@@ -24,7 +24,7 @@ $result = $padding + $message + $padding
 Register-EngineEvent -SourceIdentifier PowerShell.OnIdle -Action {
     # Only update the prompt line, don't reinitialize Oh My Posh
     $width = [console]::WindowWidth
-    $message = " I can always do it tomorrow... "
+    $message = "... I can be free, it just takes making the last decision I will ever make ..."
     $messageLength = $message.Length
 
     # Calculate padding on each side of the message
