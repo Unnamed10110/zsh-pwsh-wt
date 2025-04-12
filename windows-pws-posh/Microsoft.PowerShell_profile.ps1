@@ -42,7 +42,13 @@ Import-Module Terminal-Icons
 set-psreadlineoption -predictionviewstyle listview
 set-alias py python
 set-alias cc cls
+set-alias ll dir
+function fzfcat {
+    fzf --preview 'bat --color=always {}'
+}
+
+
+
 Set-PSReadLineOption –HistoryNoDuplicates:$True
 
 
-cls
