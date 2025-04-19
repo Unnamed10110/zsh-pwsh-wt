@@ -63,7 +63,7 @@ bindkey '\E' backward-kill-line
 # Function to print a bold, bright green message before the prompt
 function print_message_before_prompt() {
     local width=$(tput cols)
-    local message=" ... I can always do it tomorrow ... "
+    local message=" ... I can be free, it just takes making the last decision I will ever make ... "
     local padding=$(( (width - ${#message}) / 2 ))
 
     # Define colors and text attributes
