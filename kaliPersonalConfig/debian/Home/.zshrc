@@ -1,3 +1,5 @@
+#bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+
 alias fzfcat="fzf --preview 'batcat --color=always {}'"
 alias cc="clear"
 alias py="python"
@@ -358,6 +360,7 @@ H-S-MW
 safe-paste
 )
 
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -393,8 +396,8 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 
 GREEN="\033[1;32m"
-echo -e "${GREEN}'...4 Seconds to check displayed errors/logs...'${NOCOLOR}"
+#echo -e "${GREEN}'...4 Seconds to check displayed errors/logs...'${NOCOLOR}"
 
-sleep 4s # Waits 5 seconds.
-clear
-cd ~#  
+#sleep 4s # Waits 5 seconds.
+#clear
+cd ~
