@@ -1,4 +1,4 @@
-﻿# Set console output encoding
+# Set console output encoding
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 # Initialize Oh My Posh once at startup, not on idle
@@ -43,6 +43,27 @@ set-psreadlineoption -predictionviewstyle listview
 set-alias py python
 set-alias cc cls
 set-alias ll dir
+function Kill-Proc {
+    param(
+        [Parameter(Mandatory=$true, Position=0)]
+        [string]$Name
+    )
+
+    if ($Name -like "*.exe") {
+        $Name = $Name -replace '\.exe$', ''
+    }
+
+    $procs = Get-Process -Name $Name -ErrorAction SilentlyContinue
+
+    if ($procs) {
+        $procs | Stop-Process -Force -ErrorAction SilentlyContinue
+        Write-Host "✅ Killed process(es) matching: $Name"
+    } else {
+        Write-Host "❌ No matching process found for: $Name"
+    }
+}
+Set-Alias -Name kill -Value Kill-Proc
+
 function fzfcat {
     fzf --preview 'bat --color=always {}'
 }
@@ -50,5 +71,4 @@ function fzfcat {
 
 
 Set-PSReadLineOption –HistoryNoDuplicates:$True
-
 
