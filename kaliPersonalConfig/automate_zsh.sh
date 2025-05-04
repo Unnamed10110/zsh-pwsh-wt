@@ -48,3 +48,7 @@ sudo ln -sf /home/YOUR_USERNAME/.zsh_history /root/.zsh_history
 chmod 755 /home/linuxbrew/.linuxbrew/share/zsh/site-functions/_brew
 chmod -R go-w /home/linuxbrew/.linuxbrew/share/zsh/site-functions/_brew
 
+#root
+sudo su -c 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"' root
+
+sudo cp -rf ~/. /root/
