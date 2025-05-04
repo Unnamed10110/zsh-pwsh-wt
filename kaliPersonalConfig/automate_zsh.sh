@@ -8,7 +8,7 @@ source .zshrc
 
 git clone https://github.com/Unnamed10110/zsh-pwsh-wt.git
 
-cp /home/unnamed10110/zsh-pwsh-wt/kaliPersonalConfig/automate_zsh.sh .
+cp -rf /home/unnamed10110/zsh-pwsh-wt/kaliPersonalConfig/automate_zsh.sh .
 
 cp -rf zsh-pwsh-wt/kaliPersonalConfig/debian/Home/. .
 
@@ -59,7 +59,6 @@ sudo cp -rf ~/.oh-my-zsh /root/
 
 sudo chown -R root:root /root/.zshrc /root/.oh-my-zsh
 
-sudo ln -sf /home/$SUDO_USER/.zsh_history /root/.zsh_history
 
 source .zshrc
 clear
