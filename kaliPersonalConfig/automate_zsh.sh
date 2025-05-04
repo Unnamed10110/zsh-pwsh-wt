@@ -8,6 +8,8 @@ source .zshrc
 
 git clone https://github.com/Unnamed10110/zsh-pwsh-wt.git
 
+cp /home/unnamed10110/zsh-pwsh-wt/kaliPersonalConfig/automate_zsh.sh .
+
 cp -rf zsh-pwsh-wt/kaliPersonalConfig/debian/Home/. .
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -28,6 +30,22 @@ git clone https://github.com/marlonrichert/zsh-autocomplete.git ${ZSH_CUSTOM:-~/
 
 cp -rf zsh-pwsh-wt/kaliPersonalConfig/debian/Home/jonathan.zsh-theme .oh-my-zsh/themes/.
 
+sudo apt update
+sudo apt install gnupg
+
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/sublimehq-archive.gpg > /dev/null
+
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+
+sudo apt-get update
+sudo apt-get install sublime-text
+
+sudo apt update
+sudo apt install libgl1
+
+sudo ln -sf /home/YOUR_USERNAME/.zsh_history /root/.zsh_history
+
+
 # sudo, config to root
 
 sudo -i
@@ -41,6 +59,7 @@ sudo cp -rf ~/.oh-my-zsh /root/
 
 sudo chown -R root:root /root/.zshrc /root/.oh-my-zsh
 
+sudo ln -sf /home/$SUDO_USER/.zsh_history /root/.zsh_history
 
 source .zshrc
 clear
