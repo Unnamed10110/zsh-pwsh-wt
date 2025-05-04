@@ -46,6 +46,7 @@ sudo apt install libgl1
 sudo ln -sf /home/YOUR_USERNAME/.zsh_history /root/.zsh_history
 
 chmod 755 /home/linuxbrew/.linuxbrew/share/zsh/site-functions/_brew
+chmod -R go-w /home/linuxbrew/.linuxbrew/share/zsh/site-functions/_brew
 
 # sudo, config to root
 
