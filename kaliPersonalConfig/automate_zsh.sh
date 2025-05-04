@@ -49,6 +49,9 @@ sudo ln -sf /home/YOUR_USERNAME/.zsh_history /root/.zsh_history
 # sudo, config to root
 
 sudo -i
+sed -i 's/\r$//' ~/.zshrc
+find ~/.oh-my-zsh -type f -exec sed -i 's/\r$//' {} +
+source .zshrc
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
