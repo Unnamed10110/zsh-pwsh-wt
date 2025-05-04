@@ -49,6 +49,10 @@ chmod 755 /home/linuxbrew/.linuxbrew/share/zsh/site-functions/_brew
 chmod -R go-w /home/linuxbrew/.linuxbrew/share/zsh/site-functions/_brew
 
 #root
-sudo su -c 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"' root
-sudo su -c 'sh -c "sudo chmod -R u+rw ~/.zsh* && sudo chmod -R 755 ~/.zsh/ && sudo chmod 644 ~/.zsh/*.{zsh,sh}"' root
+sudo su -c 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && exit' root
 
+sudo su -c 'sh -c "sudo chmod -R u+rw ~/.zsh*"' root
+
+sudo su -c 'sh -c "&& sudo chmod -R 755 ~/.zsh/"' root
+
+sudo su -c 'sh -c "sudo chmod 644 ~/.zsh/*.{zsh,sh}"' root
