@@ -49,6 +49,10 @@ chmod 755 /home/linuxbrew/.linuxbrew/share/zsh/site-functions/_brew
 chmod -R go-w /home/linuxbrew/.linuxbrew/share/zsh/site-functions/_brew
 sudo chmod go-w /home/linuxbrew/.linuxbrew/share/zsh/site-functions/_brew
 
+sudo ln -sf /home/unnamed10110/.zsh_history /root/.zsh_history
+sudo touch /home/unnamed10110/.zsh_history
+sudo chmod 666 /home/unnamed10110/.zsh_history
+
 #root
 sudo cp -r ~/. /root/
 sudo chown -R root:root /root/
