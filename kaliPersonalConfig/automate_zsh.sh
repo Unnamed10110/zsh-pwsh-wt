@@ -51,6 +51,6 @@ chmod -R go-w /home/linuxbrew/.linuxbrew/share/zsh/site-functions/_brew
 #root
 sudo cp -r ~/. /root/
 sudo chown -R root:root /root/
-sudo compaudit | xargs chmod go-w
+echo 'ZSH_DISABLE_COMPFIX=true' | sudo tee -a /root/.zshrc > /dev/null
 
 
