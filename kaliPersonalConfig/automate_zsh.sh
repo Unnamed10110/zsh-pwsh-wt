@@ -52,4 +52,4 @@ chmod 755 /home/linuxbrew/.linuxbrew/share/zsh/site-functions/_brew
 
 # sudo, config to root
 
-sudo -i zsh -c "&&sed -i 's/\r\$//' ~/.zshrc && find ~/.oh-my-zsh -type f -exec sed -i 's/\r\$//' {} + && source ~/.zshrc && sh -c \"\$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\" && cp ~/.zshrc /root/ && cp -rf ~/.oh-my-zsh /root/ && chown -R root:root /root/.zshrc /root/.oh-my-zsh && source ~/.zshrc && clear && sleep 4 && exit"
+sudo -i zsh -c "sed -i 's/\r\$//' ~/.zshrc && find ~/.oh-my-zsh -type f -exec sed -i 's/\r\$//' {} + && source ~/.zshrc && sh -c \"\$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\" && cp ~/.zshrc /root/ && cp -rf ~/.oh-my-zsh /root/ && chown -R root:root /root/.zshrc /root/.oh-my-zsh && source ~/.zshrc && clear && sleep 4 && exit"
