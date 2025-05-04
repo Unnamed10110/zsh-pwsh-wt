@@ -50,4 +50,7 @@ chmod -R go-w /home/linuxbrew/.linuxbrew/share/zsh/site-functions/_brew
 
 #root
 sudo cp -r ~/. /root/
+sudo chown -R root:root /root/
+sudo compaudit | xargs chmod go-w
+
 
