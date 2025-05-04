@@ -49,7 +49,8 @@ chmod 755 /home/linuxbrew/.linuxbrew/share/zsh/site-functions/_brew
 chmod -R go-w /home/linuxbrew/.linuxbrew/share/zsh/site-functions/_brew
 
 #root
-sudo sh -c 'su root -c "sh -c \"$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\" && exit"'
+sudo bash -c 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && exit'
+
 
 
 sudo su -c 'sh -c "sudo chmod -R u+rw ~/.zsh*"' root
