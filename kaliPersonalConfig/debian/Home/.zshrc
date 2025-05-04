@@ -21,6 +21,7 @@ HISTSIZE=10000000
 SAVEHIST=10000000
 ZSH_DISABLE_COMPFIX=true
 DISABLE_COMPFIX=true
+zstyle ':compinstall' insecure yes
 
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.
 setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
