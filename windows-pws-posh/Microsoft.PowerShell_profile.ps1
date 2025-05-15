@@ -3,7 +3,7 @@
 
 # Initialize Oh My Posh once at startup, not on idle
 if (-not $global:OhMyPoshInitialized) {
-    oh-my-posh init pwsh --config 'D:\repos\zsh-pwsh-wt\windows-pws-posh\kalimod.omp.json' | Invoke-Expression
+    oh-my-posh init pwsh --config 'https://github.com/Unnamed10110/zsh-pwsh-wt/blob/master/windows-pws-posh/kalimod.omp.json' | Invoke-Expression
     $global:OhMyPoshInitialized = $true
 }
 
