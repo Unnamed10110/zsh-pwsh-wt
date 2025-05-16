@@ -267,6 +267,75 @@ Install-Module PSFzf
 
 choco install curl
 
+# Define installer location
+$vsInstallerUrl = "https://aka.ms/vs/17/release/vs_community.exe"
+$installerPath = "$env:TEMP\vs_community.exe"
+
+# Download the Visual Studio installer
+Invoke-WebRequest -Uri $vsInstallerUrl -OutFile $installerPath
+
+# Install with default workload (modify this line to suit your needs)
+Start-Process -FilePath $installerPath -ArgumentList `
+    "--quiet", `
+    "--wait", `
+    "--norestart", `
+    "--nocache", `
+    "--add", "Microsoft.VisualStudio.Workload.CoreEditor", `
+    "--add", "Microsoft.VisualStudio.Workload.NetWeb", `
+    "--add", "Microsoft.VisualStudio.Workload.ManagedDesktop", `
+    "--includeRecommended" `
+    -NoNewWindow -Wait
+
+# Clean up installer
+Remove-Item $installerPath
+
+Write-Host "Visual Studio Community installation script completed."
+
+
+# Define download and install paths
+$autorunsUrl = "https://download.sysinternals.com/files/Autoruns.zip"
+$zipPath = "$env:TEMP\Autoruns.zip"
+$installDir = "C:\Tools\Autoruns"
+
+# Create install directory
+if (-not (Test-Path $installDir)) {
+    New-Item -ItemType Directory -Path $installDir | Out-Null
+}
+
+# Download the zip file
+Invoke-WebRequest -Uri $autorunsUrl -OutFile $zipPath
+
+# Extract the zip
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+[System.IO.Compression.ZipFile]::ExtractToDirectory($zipPath, $installDir)
+
+# Clean up
+Remove-Item $zipPath
+
+# Launch Autoruns GUI
+Start-Process "$installDir\Autoruns64.exe"
+
+Write-Host "Autoruns installed and started from: $installDir"
+
+winget install --id Microsoft.DotNet.DesktopRuntime.3_1 -e
+winget install --id Microsoft.DotNet.DesktopRuntime.5 -e
+winget install --id Microsoft.DotNet.DesktopRuntime.7 -e
+winget install --id Microsoft.DotNet.DesktopRuntime.8 -e
+winget install --id Microsoft.DotNet.DesktopRuntime.9 -e
+winget install --id=NuGet.NuGetCommandLine -e
+choco install audacity -y
+choco install ffmpeg -y
+choco install vlc -y
+choco install yt-dlp -y
+choco install bcuninstaller -y
+choco install crystaldiskinfo crystalmark google-drive virtualbox teracopy treesizefree unigetui sumatrapdf -y
+
+
+
+
+
+
+
 
 # Variables
 $imageUrl = "https://raw.githubusercontent.com/Unnamed10110/zsh-pwsh-wt/master/pillarsofcreation_0000.png"
