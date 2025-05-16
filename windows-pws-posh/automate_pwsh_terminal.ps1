@@ -1,4 +1,6 @@
-Start-Process pwsh -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
+Start-Process powershell -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
+
+choco install powershell-core
 
 
 winget install --id Microsoft.Powershell --source winget --accept-source-agreements --accept-package-agreements
@@ -217,3 +219,96 @@ Write-Host "✅ PowerShell Core (pwsh) installed and set as default in Windows T
   "windowingBehavior": "useExisting"
 }
 '@ | Set-Content "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" -Encoding UTF8
+
+choco install meld -y
+choco install screentogif -y
+choco install autohotkey -y
+$downloadUrl = "https://www.voidtools.com/Everything-1.5a.x64-Setup.exe"
+$installerPath = "$env:TEMP\Everything-1.5a-Setup.exe"
+
+Invoke-WebRequest -Uri $downloadUrl -OutFile $installerPath
+
+Start-Process -FilePath $installerPath -Wait
+
+
+$installerUrl = "https://windhawk.net/download"
+Start-Process $installerUrl
+
+choco install python -y
+
+choco install libreoffice-fresh -y
+
+choco install shotcut -y
+
+choco install sharex -y
+
+choco install postman -y
+
+choco install vscode -y
+
+choco install onecommander -y
+
+choco install dbeaver -y
+
+choco install github-desktop -y
+
+choco install gh -y
+
+wsl --install
+
+choco install 7zip -y
+
+choco install anydesk brave cpu-z file-converter flowlauncher openjdk17 openjdk21 openjdk24 monitorian notepadplusplus obs-studio putty winscp quicklook translucenttb warp -y
+
+choco install bat -y
+
+choco install fzf -y
+Install-Module PSFzf
+
+choco install curl
+
+
+# Variables
+$imageUrl = "https://raw.githubusercontent.com/Unnamed10110/zsh-pwsh-wt/master/pillarsofcreation_0000.png"
+$imagePath = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\pillarsofcreation_0000.png"
+$settingsPath = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
+
+# Download image
+Invoke-WebRequest -Uri $imageUrl -OutFile $imagePath -UseBasicParsing
+
+# Load settings.json
+if (Test-Path $settingsPath) {
+    $json = Get-Content $settingsPath -Raw | ConvertFrom-Json
+} else {
+    Write-Error "Windows Terminal settings.json not found at $settingsPath"
+    exit 1
+}
+
+# Get default profile guid
+$defaultGuid = $json.defaultProfile
+
+# Find the default profile object
+$profile = $json.profiles.list | Where-Object { $_.guid -eq $defaultGuid }
+
+if (-not $profile) {
+    Write-Error "Default profile with guid $defaultGuid not found."
+    exit 1
+}
+
+# Set background image path (use forward slashes or escaped backslashes)
+$profile.backgroundImage = $imagePath.Replace('\','\\')
+
+# Set background image opacity to 0.3 (30%)
+$profile.backgroundImageOpacity = 0.3
+
+# Optional: keep background image fixed (no scrolling)
+$profile.backgroundImageStretchMode = "uniformToFill"
+
+# Save updated settings.json
+$json | ConvertTo-Json -Depth 32 | Set-Content -Encoding UTF8 $settingsPath
+# Set color scheme to Vintage
+$profile.colorScheme = "Vintage"
+
+Write-Host "Background image set with 30% opacity for the default Windows Terminal profile."
+Write-Host "Please restart Windows Terminal to see changes."
+

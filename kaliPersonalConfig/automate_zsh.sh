@@ -1,6 +1,6 @@
 sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-sudo apt update && sudo apt update && sudo apt install -y fzf bat ripgrep zsh curl git neovim dos2unix curl wget git zsh nmap tree build-essential python3-pip jq 
+sudo apt update && sudo apt update && sudo apt install -y fzf bat ripgrep zsh curl git neovim dos2unix curl wget git zsh htop nmap tree build-essential python3-pip jq 
 
 sudo apt install nodejs npm -y
 sudo npm install -g tldr
