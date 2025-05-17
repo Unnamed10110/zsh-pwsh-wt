@@ -380,4 +380,3 @@ $profile.colorScheme = "Vintage"
 
 Write-Host "Background image set with 30% opacity for the default Windows Terminal profile."
 Write-Host "Please restart Windows Terminal to see changes."
-
