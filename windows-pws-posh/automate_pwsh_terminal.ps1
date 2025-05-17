@@ -68,14 +68,14 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Unnamed10110/zsh-pwsh-
 . $PROFILE
 
 # --- Install Font ---
-Install-Font -FontUrl "https://github.com/Unnamed10110/appsFiles_repo/raw/master/CascadiaCode-2407.24/otf/static/CascadiaCodeNF-SemiLight.otf"
+Install-Font -FontUrl "https://github.com/Unnamed10110/appsFiles_repo/blob/master/CascadiaCode-2407.24/otf/static/CascadiaCodeNF-Regular.otf"
 
 # --- Customize Windows Terminal ---
 $wtSettings = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
 if (Test-Path $wtSettings) {
     $json = Get-Content $wtSettings -Raw | ConvertFrom-Json
     foreach ($profile in $json.profiles.list) {
-        if (-not $profile.font) { $profile | Add-Member -MemberType NoteProperty -Name font -Value @{ face = "Cascadia Code NF SemiLight" } }
+        if (-not $profile.font) { $profile | Add-Member -MemberType NoteProperty -Name font -Value @{ face = "Cascadia Code NF" } }
         else { $profile.font.face = "Cascadia Code NF SemiLight" }
     }
     $pwshProfile = $json.profiles.list | Where-Object { $_.commandline -match "pwsh.exe" }
@@ -115,7 +115,7 @@ Install-ChocoPackages @(
     "brave", "cpu-z", "file-converter", "flowlauncher", "monitorian", "notepadplusplus", "obs-studio",
     "putty", "winscp", "quicklook", "translucenttb", "warp", "bat", "fzf", "curl", "audacity",
     "ffmpeg", "vlc", "yt-dlp", "bcuninstaller", "crystaldiskinfo", "crystalmark", "google-drive",
-    "virtualbox", "teracopy", "treesizefree", "pdfarranger", "unigetui", "sumatrapdf"
+    "virtualbox", "teracopy", "treesizefree", "corretto21jdk 21.0.7.61", "corretto17jdk 17.0.15.61", "pdfarranger", "unigetui", "sumatrapdf"
 )
 
 # --- PowerShell modules ---
