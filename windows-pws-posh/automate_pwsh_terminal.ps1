@@ -157,4 +157,23 @@ foreach ($id in 3,5,7,8,9) {
 }
 winget install --id NuGet.NuGetCommandLine -e
 
+$settingsPath = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
+
+if (-not (Test-Path $settingsPath)) {
+    Write-Error "❌ Windows Terminal settings.json not found. Please launch Windows Terminal at least once."
+    exit 1
+}
+
+$json = Get-Content $settingsPath -Raw | ConvertFrom-Json
+
+# Set the launch size and position
+$json.initialCols = 190
+$json.initialRows = 60
+$json.initialPosition = "22,22"
+
+# Save the changes
+$json | ConvertTo-Json -Depth 32 | Set-Content -Path $settingsPath -Encoding UTF8
+
+Write-Host "✅ Windows Terminal launch size and position updated successfully."
+
 Write-Host "`n✅ All installations and configurations completed." -ForegroundColor Green
