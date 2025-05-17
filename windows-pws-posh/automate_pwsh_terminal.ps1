@@ -115,7 +115,7 @@ Install-ChocoPackages @(
     "brave", "cpu-z", "file-converter", "flowlauncher", "monitorian", "notepadplusplus", "obs-studio",
     "putty", "winscp", "quicklook", "translucenttb", "warp", "bat", "fzf", "curl", "audacity",
     "ffmpeg", "vlc", "yt-dlp", "bcuninstaller", "crystaldiskinfo", "crystalmark", "google-drive",
-    "virtualbox", "teracopy", "treesizefree", "unigetui", "sumatrapdf"
+    "virtualbox", "teracopy", "treesizefree", "pdfarranger", "unigetui", "sumatrapdf"
 )
 
 # --- PowerShell modules ---
