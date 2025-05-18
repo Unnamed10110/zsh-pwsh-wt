@@ -120,10 +120,10 @@ if (Test-Path $wtSettings) {
 Install-ChocoPackages @(
     "meld", "screentogif", "autohotkey", "python", "libreoffice-fresh", "shotcut", "sharex",
     "postman", "vscode", "onecommander", "dbeaver", "github-desktop", "gh", "7zip", "anydesk",
-    "brave", "cpu-z", "file-converter", "flowlauncher", "monitorian", "notepadplusplus", "obs-studio",
+    "brave", "cpu-z", "file-converter", "flow-launcher", "monitorian", "notepadplusplus", "obs-studio",
     "putty", "winscp", "quicklook", "translucenttb", "warp", "bat", "fzf", "curl", "audacity",
-    "ffmpeg", "vlc", "yt-dlp", "bcuninstaller", "crystaldiskinfo", "crystalmark", "google-drive",
-    "virtualbox", "teracopy", "treesizefree", "corretto21jdk 21.0.7.61", "corretto17jdk 17.0.15.61", "pdfarranger", "unigetui", "sumatrapdf","trilium-notes 0.59.4"
+    "ffmpeg", "vlc", "yt-dlp", "bulk-crap-uninstaller", "crystaldiskinfo", "crystaldiskmark.install", "googledrive","google-drive-file-stream","google-drive-add-to-explorer",
+    "virtualbox", "teracopy", "treesizefree", "corretto21jdk", "corretto17jdk", "pdfarranger", "wingetui", "sumatrapdf","trilium-notes","lossless-cut"
 )
 
 # --- PowerShell modules ---
