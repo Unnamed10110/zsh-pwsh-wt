@@ -6,6 +6,17 @@ $global:ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $global:TempDir = "$env:TEMP\PortableWinSetup"
 New-Item -ItemType Directory -Force -Path $TempDir | Out-Null
 
+Install-Module -Name PSReadLine -Force -SkipPublisherCheck
+#Save-Module -Name PSReadLine -Path "D:\repos\zsh-pwsh-wt\windows-pws-posh\auto_suggestions_packages" -Force
+#cd D:/repos/zsh-pwsh-wt/windows-pws-posh/auto_suggestions_packages/PSReadLine/*
+# Make sure the destination is a directory
+#$destination = "C:\Users\$env:USERNAME\Documents\PowerShell\Modules\PSReadLine\2.3.6"
+#if (-Not (Test-Path $destination)) {
+#    New-Item -ItemType Directory -Path $destination
+#}
+#Copy-Item -Recurse -Force * -Destination $destination
+
+
 # --- Ensure Elevated Privileges ---
 If (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
     Write-Warning "Restarting script as Administrator..."
