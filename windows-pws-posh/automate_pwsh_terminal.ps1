@@ -39,7 +39,15 @@ if ($PSCommandPath -and $PSVersionTable.PSEdition -ne 'Core') {
 # --- Utility Functions ---
 function Install-ChocoPackages {
     param ([string[]]$Packages)
-    choco install $Packages -y
+
+    $result = choco install $Packages -y 2>&1
+    foreach ($line in $result) {
+        if ($line -match '^\s*ERROR|^Chocolatey.*failed|^\s*- ') {
+            Write-Host $line -ForegroundColor Red
+        } else {
+            Write-Host $line
+        }
+    }
 }
 
 function Download-And-Install {
@@ -115,7 +123,7 @@ Install-ChocoPackages @(
     "brave", "cpu-z", "file-converter", "flowlauncher", "monitorian", "notepadplusplus", "obs-studio",
     "putty", "winscp", "quicklook", "translucenttb", "warp", "bat", "fzf", "curl", "audacity",
     "ffmpeg", "vlc", "yt-dlp", "bcuninstaller", "crystaldiskinfo", "crystalmark", "google-drive",
-    "virtualbox", "teracopy", "treesizefree", "corretto21jdk 21.0.7.61", "corretto17jdk 17.0.15.61", "pdfarranger", "unigetui", "sumatrapdf"
+    "virtualbox", "teracopy", "treesizefree", "corretto21jdk 21.0.7.61", "corretto17jdk 17.0.15.61", "pdfarranger", "unigetui", "sumatrapdf","trilium-notes 0.59.4"
 )
 
 # --- PowerShell modules ---
