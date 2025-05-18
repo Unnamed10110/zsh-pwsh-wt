@@ -134,7 +134,7 @@ Install-ChocoPackages @(
     "brave", "cpu-z", "file-converter", "flow-launcher", "monitorian", "notepadplusplus", "obs-studio",
     "putty", "winscp", "quicklook", "translucenttb", "warp", "bat", "fzf", "curl", "audacity",
     "ffmpeg", "vlc", "yt-dlp", "bulk-crap-uninstaller", "crystaldiskinfo", "crystaldiskmark.install", "googledrive","google-drive-file-stream","google-drive-add-to-explorer",
-    "virtualbox", "teracopy", "treesizefree", "corretto21jdk", "corretto17jdk", "pdfarranger", "wingetui", "sumatrapdf","trilium-notes","lossless-cut"
+    "virtualbox", "teracopy", "treesizefree", "corretto21jdk", "corretto17jdk", "pdfarranger", "wingetui", "sumatrapdf","trilium-notes","lossless-cut","captura"
 )
 
 # --- PowerShell modules ---
