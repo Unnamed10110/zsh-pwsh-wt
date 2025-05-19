@@ -82,7 +82,7 @@ function k8sdev {
     kubectl --kubeconfig "C:\Users\sbritos\OneDrive - BEPSA DEL PARAGUAY SAECA\workspace_sbritos\HUs\kubeconfigk8sdev" config use-context kubernetes-admin@kubernetes
 }
 function k3sdev {
-    kubectl --kubeconfig "C:\Users\sbritos\OneDrive - BEPSA DEL PARAGUAY SAECA\workspace_sbritos\HUs\kubeconfigk3dev" config use-context default
+    kubectl --kubeconfig "C:\Users\sbritos\OneDrive - BEPSA DEL PARAGUAY SAECA\workspace_sbritos\HUs\kubeconfigk3sdev" config use-context default
 }
 
 
