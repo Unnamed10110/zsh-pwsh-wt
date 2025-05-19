@@ -73,16 +73,16 @@ function fzfcat {
 Set-PSReadLineOption –HistoryNoDuplicates:$True
 
 function k8sqa {
-    kubectl config use-context k8sqa
+    kubectl --kubeconfig "C:\Users\sbritos\OneDrive - BEPSA DEL PARAGUAY SAECA\workspace_sbritos\HUs\kubeconfigk8sqa" config use-context k8sqa
 }
 function k3sqa {
-    kubectl config use-context k3sqa
-}
-function k3sdev {
-    kubectl config use-context default
+    kubectl --kubeconfig "C:\Users\sbritos\OneDrive - BEPSA DEL PARAGUAY SAECA\workspace_sbritos\HUs\kubeconfigk3sqa" config use-context k3sqa
 }
 function k8sdev {
-    kubectl config use-context kubernetes-admin@kubernetes
+    kubectl --kubeconfig "C:\Users\sbritos\OneDrive - BEPSA DEL PARAGUAY SAECA\workspace_sbritos\HUs\kubeconfigk8sdev" config use-context kubernetes-admin@kubernetes
+}
+function k3sdev {
+    kubectl --kubeconfig "C:\Users\sbritos\OneDrive - BEPSA DEL PARAGUAY SAECA\workspace_sbritos\HUs\kubeconfigk3dev" config use-context default
 }
 
 
