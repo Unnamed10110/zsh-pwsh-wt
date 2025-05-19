@@ -3,7 +3,7 @@
 
 # Initialize Oh My Posh once at startup, not on idle
 if (-not $global:OhMyPoshInitialized) {
-    oh-my-posh init pwsh --config 'D:\repos\zsh-pwsh-wt\windows-pws-posh\kalimod.omp.json' | Invoke-Expression
+    oh-my-posh init pwsh --config 'C:\Users\sbritos\Downloads\kalimod.omp.json' | Invoke-Expression
     $global:OhMyPoshInitialized = $true
 }
 
@@ -69,16 +69,25 @@ function fzfcat {
 }
 
 
-function lldate {
-    Get-ChildItem | Sort-Object CreationTime
-}
-
-
-Get-ChildItem | Sort-Object Extension
-
-function lltype {
-    Get-ChildItem | Sort-Object Extension
-}
 
 Set-PSReadLineOption –HistoryNoDuplicates:$True
+
+function k8sqa {
+    kubectl config use-context k8sqa
+}
+function k3sqa {
+    kubectl config use-context k3sqa
+}
+function k3sdev {
+    kubectl config use-context default
+}
+function k8sdev {
+    kubectl config use-context kubernetes-admin@kubernetes
+}
+
+
+
+
+
+
 
