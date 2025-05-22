@@ -252,11 +252,25 @@ Stop-Process -Name explorer -Force
 Start-Process explorer.exe
 
 Write-Host "Task View button enabled on taskbar."
-
-
 Write-Host "Accent color on taskbar disabled."
-Write-Host "`n✅ All installations and configurations completed." -ForegroundColor Green
 
+# Run as current user
+
+# Set title bar to pure black (BGR format = 0x00000000)
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\DWM" -Name "ColorizationColor" -Type DWord -Value 0x00000000
+
+# Ensure Windows uses accent color for title bars
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" -Name "ColorPrevalence" -Type DWord -Value 1
+
+# Set theme mode to dark
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" -Name "AppsUseLightTheme" -Type DWord -Value 0
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" -Name "SystemUsesLightTheme" -Type DWord -Value 0
+
+# Restart Explorer to apply
+Stop-Process -Name explorer -Force
+Start-Process explorer.exe
+
+Write-Host "Title bar set to pure black."
 
 
 Write-Host "`n✅ All installations and configurations completed." -ForegroundColor Green
