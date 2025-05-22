@@ -232,8 +232,6 @@ Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer
 # Set AccentColorInactive (optional, for inactive windows)
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" -Name "AccentColorInactive" -Value $accentColorBGR -Type DWord
 
-# Ensure Windows uses accent color on title bars and borders
-Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" -Name "ColorPrevalence" -Value 1 -Type DWord
 
 Write-Host "Accent color set to green (#00FF44). Changes take effect after sign out/in or restart Explorer."
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" -Name "ColorPrevalence" -Value 0 -Type DWord
