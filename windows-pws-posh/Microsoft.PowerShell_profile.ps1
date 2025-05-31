@@ -36,7 +36,27 @@ Register-EngineEvent -SourceIdentifier PowerShell.OnIdle -Action {
     [System.Environment]::SetEnvironmentVariable("PROMPT_LINE", $result, [System.EnvironmentVariableTarget]::Process)
 }
 
-Import-Module Terminal-Icons
+# Check if Terminal-Icons module is available
+if (-not (Get-Module -ListAvailable -Name Terminal-Icons)) {
+    Write-Host "Terminal-Icons module not found. Installing..." -ForegroundColor Yellow
+    try {
+        Install-Module -Name Terminal-Icons -Scope CurrentUser -Force -AllowClobber
+        Write-Host "Terminal-Icons installed successfully." -ForegroundColor Green
+    } catch {
+        Write-Error "Failed to install Terminal-Icons: $_"
+        return
+    }
+} else {
+    Write-Host "Terminal-Icons module is already installed." -ForegroundColor Green
+}
+
+# Import the module
+try {
+    Import-Module Terminal-Icons -Force
+    Write-Host "Terminal-Icons module imported." -ForegroundColor Cyan
+} catch {
+    Write-Error "Failed to import Terminal-Icons: $_"
+}
 
 # Set PSReadLine options
 set-psreadlineoption -predictionviewstyle listview
