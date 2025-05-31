@@ -3,7 +3,7 @@
 
 # Initialize Oh My Posh once at startup, not on idle
 if (-not $global:OhMyPoshInitialized) {
-    oh-my-posh init pwsh --config 'C:\Users\sbritos\Downloads\kalimod.omp.json' | Invoke-Expression
+    oh-my-posh init pwsh --config 'D:\repos\zsh-pwsh-wt\windows-pws-posh\kalimod.omp.json' | Invoke-Expression
     $global:OhMyPoshInitialized = $true
 }
 
@@ -47,13 +47,13 @@ if (-not (Get-Module -ListAvailable -Name Terminal-Icons)) {
         return
     }
 } else {
-    Write-Host "Terminal-Icons module is already installed." -ForegroundColor Green
+    Write-Host "" -ForegroundColor Green
 }
 
 # Import the module
 try {
     Import-Module Terminal-Icons -Force
-    Write-Host "Terminal-Icons module imported." -ForegroundColor Cyan
+    #Write-Host "Terminal-Icons module imported." -ForegroundColor Cyan
 } catch {
     Write-Error "Failed to import Terminal-Icons: $_"
 }
@@ -77,7 +77,6 @@ function Kill-Proc {
 
     if ($procs) {
         $procs | Stop-Process -Force -ErrorAction SilentlyContinue
-        Write-Host "✅ Killed process(es) matching: $Name"
     } else {
         Write-Host "❌ No matching process found for: $Name"
     }
