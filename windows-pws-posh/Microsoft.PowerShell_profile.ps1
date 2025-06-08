@@ -110,3 +110,4 @@ function k3sdev {
 
 
 
+# last 08062025 065032
