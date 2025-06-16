@@ -43,7 +43,9 @@ if (-not (Get-Module -ListAvailable -Name Terminal-Icons)) {
         Install-Module -Name Terminal-Icons -Scope CurrentUser -Force -AllowClobber
         Write-Host "Terminal-Icons installed successfully." -ForegroundColor Green
     } catch {
-        Write-Error "Failed to install Terminal-Icons: $_"
+        Remove-Item -Recurse -Force "$HOME\Documents\PowerShell\Modules\Terminal-Icons"
+	Install-Module Terminal-Icons -Scope CurrentUser -Force
+	Write-Error "Failed to install Terminal-Icons: $_"
         return
     }
 } else {
