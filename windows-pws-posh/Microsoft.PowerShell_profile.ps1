@@ -83,6 +83,8 @@ function Kill-Proc {
 }
 Set-Alias -Name kill -Value Kill-Proc
 
+set-alias wget wget2
+
 function fzfcat {
     fzf --preview 'bat --color=always {}'
 }
