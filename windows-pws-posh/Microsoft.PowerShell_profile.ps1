@@ -109,7 +109,74 @@ function k3sdev {
 }
 
 
+##################################################################################
+##################################################################################
+##################################################################################
+##################################################################################
 
+function ai {
+    # Configuration
+    $apiKey = "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"
+    $model = "openai/gpt-4.1-nano"  # Can change to deepseek, claude, etc.
+
+    $headers = @{
+        "Authorization" = "Bearer $apiKey"
+        "Content-Type"  = "application/json"
+        "HTTP-Referer"  = "http://localhost"
+        "X-Title"       = "PowerShell Chat"
+    }
+
+    # Initialize conversation history
+    $messages = @()
+
+    Write-Host "`n🤖 Chat started. Press Ctrl+C to exit." -ForegroundColor Yellow
+
+    while ($true) {
+        try {
+            $userInput = Read-Host -Prompt "`n💬 You"
+
+            # Add user message
+            $messages += @{ role = "user"; content = $userInput }
+
+            $body = @{
+                model = $model
+                messages = $messages
+            } | ConvertTo-Json -Depth 10
+
+            $response = Invoke-RestMethod -Uri "https://openrouter.ai/api/v1/chat/completions" `
+                                          -Method Post `
+                                          -Headers $headers `
+                                          -Body $body
+
+            $reply = $response.choices[0].message.content
+
+            # Add assistant's reply to message history
+            $messages += @{ role = "assistant"; content = $reply }
+
+            Write-Host "`n🧠 AI:" -ForegroundColor Cyan
+            Write-Output $reply
+        }
+        catch {
+            $errorDetails = $_
+            $errorMessage = "❌ API request failed: $($errorDetails.Exception.Message)"
+            
+            if ($errorDetails.ErrorDetails.Message) {
+                $errorMessage += "`nAdditional details: $($errorDetails.ErrorDetails.Message)"
+            }
+
+            Write-Host $errorMessage -ForegroundColor Red
+        }
+    }
+}
+
+
+
+
+#########################################################################
+#########################################################################
+#########################################################################
+#########################################################################
+#########################################################################
 
 
 
