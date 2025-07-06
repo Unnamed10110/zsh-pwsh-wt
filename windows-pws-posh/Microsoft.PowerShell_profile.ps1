@@ -114,6 +114,11 @@ function k3sdev {
 ##################################################################################
 ##################################################################################
 
+function models {
+    (Invoke-RestMethod -Uri "https://openrouter.ai/api/v1/models" -Headers $headers).data | Sort-Object -Property name | Select-Object id, name
+}
+
+
 function ai {
     # Configuration
     $apiKey = "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"
@@ -128,7 +133,6 @@ function ai {
 
     # Initialize conversation history
     $messages = @()
-    (Invoke-RestMethod -Uri "https://openrouter.ai/api/v1/models" -Headers $headers).data | Sort-Object -Property name | Select-Object id, name
     Write-Host "`n🤖 Chat started. Press Ctrl+C to exit." -ForegroundColor Yellow
 
     while ($true) {
