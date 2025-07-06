@@ -116,8 +116,8 @@ function k3sdev {
 
 function ai {
     # Configuration
-    $apiKey = "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"
-    $model = "openai/gpt-4.1-nano"  # Can change to deepseek, claude, etc.
+    $apiKey = "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"
+    $model = "deepseek/deepseek-chat:free"  # Can change to deepseek, claude, etc.
 
     $headers = @{
         "Authorization" = "Bearer $apiKey"
@@ -128,7 +128,7 @@ function ai {
 
     # Initialize conversation history
     $messages = @()
-
+    (Invoke-RestMethod -Uri "https://openrouter.ai/api/v1/models" -Headers $headers).data | Sort-Object -Property name | Select-Object id, name
     Write-Host "`n🤖 Chat started. Press Ctrl+C to exit." -ForegroundColor Yellow
 
     while ($true) {
