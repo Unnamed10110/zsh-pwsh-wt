@@ -4,7 +4,7 @@ alias fzfcat="fzf --preview 'batcat --color=always {}'"
 alias cc="clear"
 alias py="python"
 
-
+#https://gist.github.com/n1snt/454b879b8f0b7995740ae04c5fb5b7df  plugins
 
 
 # If you come from bash you might have to change your $PATH.
