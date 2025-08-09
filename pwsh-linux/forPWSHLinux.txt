@@ -1,0 +1,134 @@
+#!/usr/bin/env pwsh-preview
+# Install-Setup.ps1 - Portable PowerShell Setup Script for Linux
+# Run this script with sudo privileges if needed
+
+# --- CONFIGURATION ---
+$global:ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
+$global:TempDir = "/tmp/PortableLinuxSetup"
+New-Item -ItemType Directory -Force -Path $TempDir | Out-Null
+
+# --- Check for sudo privileges ---
+if (-not (id -u) -eq 0) {
+    Write-Warning "Some operations may require elevated privileges"
+}
+
+# --- Install PowerShell modules ---
+Install-Module -Name PSReadLine -Force -SkipPublisherCheck -Scope CurrentUser
+Install-Module -Name Terminal-Icons -Force -Scope CurrentUser
+Install-Module -Name PSFzf -Force -Scope CurrentUser
+
+# --- Linux Package Installation Function ---
+function Install-LinuxPackages {
+    param ([string[]]$Packages)
+
+    if (Get-Command apt-get -ErrorAction SilentlyContinue) {
+        sudo apt-get update
+        sudo apt-get install -y $Packages
+    }
+    elseif (Get-Command dnf -ErrorAction SilentlyContinue) {
+        sudo dnf install -y $Packages
+    }
+    elseif (Get-Command yum -ErrorAction SilentlyContinue) {
+        sudo yum install -y $Packages
+    }
+    elseif (Get-Command pacman -ErrorAction SilentlyContinue) {
+        sudo pacman -Sy --noconfirm $Packages
+    }
+    else {
+        Write-Error "Package manager not recognized"
+    }
+}
+
+# --- Install Essential Packages ---
+Install-LinuxPackages @(
+    "python3", "python3-pip", "curl", "wget", "git", "ffmpeg",
+    "vlc", "htop", "neofetch", "bat", "fzf", "jq", "tree",
+    "unzip", "zip", "ranger", "tmux", "nano", "micro"
+)
+
+# --- Install Development Tools ---
+Install-LinuxPackages @(
+    "dotnet-sdk-6.0", "openjdk-17-jdk", "nodejs", "npm",
+    "gcc", "g++", "make", "cmake", "build-essential"
+)
+
+# --- Install Python Packages ---
+python3 -m pip install --user --upgrade pip
+python3 -m pip install --user yt-dlp
+
+# --- Install Fonts ---
+$fontsDir = "$HOME/.local/share/fonts"
+New-Item -ItemType Directory -Force -Path $fontsDir | Out-Null
+
+$cascadiaUrl = "https://github.com/microsoft/cascadia-code/releases/download/v2111.01/CascadiaCode-2111.01.zip"
+Invoke-WebRequest -Uri $cascadiaUrl -OutFile "$TempDir/CascadiaCode.zip"
+Expand-Archive -Path "$TempDir/CascadiaCode.zip" -DestinationPath "$TempDir/CascadiaCode"
+Copy-Item -Path "$TempDir/CascadiaCode/ttf/*.ttf" -Destination $fontsDir -Force
+fc-cache -f -v
+
+# --- Configure PowerShell Profile ---
+$profileContent = @'
+# Console output encoding
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+
+# Oh My Posh
+oh-my-posh init pwsh --config "$HOME/.config/oh-my-posh/theme.omp.json" | Invoke-Expression
+
+# Terminal-Icons
+Import-Module Terminal-Icons -Force
+
+# PSReadLine
+Set-PSReadLineOption -PredictionViewStyle ListView
+Set-PSReadLineOption -HistoryNoDuplicates:$true
+
+# Aliases
+Set-Alias py python3
+Set-Alias ll ls -alh
+Set-Alias grep grep --color=auto
+'@
+
+# Create profile if it doesn't exist
+if (-not (Test-Path $PROFILE)) {
+    New-Item -ItemType File -Path $PROFILE -Force | Out-Null
+}
+$profileContent | Out-File -FilePath $PROFILE -Encoding utf8 -Force
+
+# --- Install Oh My Posh ---
+if (-not (Get-Command oh-my-posh -ErrorAction SilentlyContinue)) {
+    sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
+    sudo chmod +x /usr/local/bin/oh-my-posh
+    
+    # Download theme
+    $ompConfigDir = "$HOME/.config/oh-my-posh"
+    New-Item -ItemType Directory -Force -Path $ompConfigDir | Out-Null
+    Invoke-WebRequest -Uri "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/1_shell.omp.json" -OutFile "$ompConfigDir/theme.omp.json"
+}
+
+# --- Install Useful Tools ---
+# bat (better cat)
+if (-not (Get-Command bat -ErrorAction SilentlyContinue)) {
+    sudo apt-get install -y bat
+    ln -s /usr/bin/batcat /usr/local/bin/bat
+}
+
+# exa (better ls)
+if (-not (Get-Command exa -ErrorAction SilentlyContinue)) {
+    sudo apt-get install -y exa
+}
+
+# --- Configure Shell ---
+$bashrcContent = @'
+# PowerShell as default shell
+if [ -t 0 ]; then
+    exec pwsh-preview
+fi
+'@
+
+Add-Content -Path "$HOME/.bashrc" -Value $bashrcContent
+
+# --- Finalize ---
+Write-Host "`n✅ Linux setup completed successfully!" -ForegroundColor Green
+Write-Host "Recommended next steps:" -ForegroundColor Yellow
+Write-Host "1. Log out and back in to apply all changes"
+Write-Host "2. Customize your oh-my-posh theme in ~/.config/oh-my-posh/theme.omp.json"
+Write-Host "3. Install your favorite terminal emulator (like Alacritty or Kitty)"

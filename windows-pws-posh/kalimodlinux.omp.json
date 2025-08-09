@@ -1,0 +1,149 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "command",
+          "style": "plain",
+          "foreground": "#ffffff",
+          "properties": {
+            "shell": "powershell-preview",
+            "command": "$env:PROMPT_LINE"
+          }
+        }
+      ]
+    },
+
+    {
+      "alignment": "left",
+      "segments": [
+        {
+
+          "properties": { "display_host": true },
+          "style": "plain",
+          "template": "\n<#ffffff>\u250c\u2500\u2500(</#ffffff><#00FF00>{{ .UserName }}</#00FF00>💀⌛<#ffffff><#ffffff>\u2500▶ </#ffffff><#ff0000>{{ .HostName }}</#ff0000><#ffffff><#ffffff>)</#ffffff></ffffff>",
+          "type": "session"
+        },
+        {
+          "foreground": "yellow",
+          "properties": { "fetch_version": false, "fetch_virtual_env": true },
+          "style": "plain",
+          "template": "<#2fff00>[\ue235</#2fff00> {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }}{{ end }}{{ .Full }}{{ end }}<{{ if .Root }}#ffffff{{ else }}#00FF00{{ end }}>]</>",
+          "type": "python"
+        },
+
+        {
+          "properties": {
+            "folder_separator_icon": "/",
+            "style": "full"
+          },
+          "style": "plain",
+          "template": "<#ffffff>──[</#ffffff><#00FF00>{{ .Path }}</#00FF00>",
+          "type": "path"
+        },
+        {
+          "type": "text",
+          "template": "<#ffffff>]</#ffffff>"
+        },
+        {
+          "type": "text",
+
+          "template": "<#ffffff><d></d></#ffffff>"
+        }
+      ],
+      "type": "prompt"
+    },
+
+    
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "git",
+          "style": "plain",
+          "properties": {
+            "always_enabled": true,
+            "branch_ahead_icon": "",
+            "branch_behind_icon": "",
+            "branch_gone_icon": "",
+            "branch_icon": "",
+            "branch_identical_icon": "",
+            "cherry_pick_icon": "",
+            "commit_icon": "",
+            "fetch_status": true,
+            "merge_icon": "",
+            "rebase_icon": "",
+            "revert_icon": "",
+            "tag_icon": ""
+          },
+          "template": "<#2fff00>on─►</#2fff00><#ffffff> {{ .HEAD }}─►</#FF0000> {{ .Staging.String }}{{ if .Working.Changed }}<#FF0000> \u25cf─►</#FF0000> <#00FF00>{{ .Working.String }}{{ end }}</#00FF00>\n"
+        }
+        
+      ],
+      "type": "prompt"
+
+    },
+    
+
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "text",
+          "template": "<#ffffff>\u2502</#ffffff> "
+        }
+        
+      ],
+      "type": "prompt"
+
+    },
+
+
+
+    {
+      "alignment": "right",
+      "newline": false,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "template": "<#ff0000>[</#ff0000>"
+        },
+        
+        {
+          "type": "time",
+          "style": "plain",
+          "properties": {
+            "time_format": "<#ffffff>Monday, 02-Jan-06 15:04:05</#ffffff>"
+          }
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "template": "<#ff0000>]</#ff0000>"
+        }
+      ],
+      "type": "prompt"
+    }
+
+
+
+    ,
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "style": "plain",
+          "template": "<#ffffff>\u2514\u2500▶<r> λ:</r> </#ffffff>",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 3
+}
