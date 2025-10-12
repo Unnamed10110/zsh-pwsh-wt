@@ -170,25 +170,27 @@ ZSH_THEME="jonathan"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-source .oh-my-zsh/custom/plugins/H-S-MW/H-S-MW.plugin.zsh
-
 ZSH_COLORIZE_STYLE="colorful"
+
+#source .oh-my-zsh/custom/plugins/H-S-MW/H-S-MW.plugin.zsh
+
 plugins=(
-git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete H-S-MW colored-man-pages colorize
-
-#history-search-multi-word
-
+git
+zsh-autosuggestions
+zsh-syntax-highlighting
+#fast-syntax-highlighting
+zsh-autocomplete
+#H-S-MW
+history-search-multi-word
+colored-man-pages
+colorize
 web-search
 jsontools
-
-H-S-MW
-
-
+#H-S-MW
 safe-paste
 )
-
 source $ZSH/oh-my-zsh.sh
- 
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
