@@ -6,7 +6,7 @@ alias py="python"
 
 #https://gist.github.com/n1snt/454b879b8f0b7995740ae04c5fb5b7df  plugins
 #git clone https://github.com/z-shell/H-S-MW.git \
- ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/H-S-MW
+# ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/H-S-MW
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
@@ -86,7 +86,8 @@ function print_message_before_prompt() {
     NORMAL=$(tput sgr0)
 
     # Print the message in bright bold green
-    printf '\n%*s%s%*s\n' "$padding" '' "${BRIGHT}${GREEN}${message}${NORMAL}" "$padding" ''
+    printf '\n%*s%s%*s\n' "$padding" '' "${BRIGHT}${RED}${message}${NORMAL}" "$padding" ''
+
 }
 
 # Add the function to the precmd hook
@@ -162,30 +163,32 @@ ZSH_THEME="jonathan"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-source .oh-my-zsh/custom/plugins/H-S-MW/H-S-MW.plugin.zsh
+ZSH_COLORIZE_STYLE="colorful"
 
+#source .oh-my-zsh/custom/plugins/H-S-MW/H-S-MW.plugin.zsh
 
 plugins=(
-git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete
-
-#history-search-multi-word
-
+git
+zsh-autosuggestions
+zsh-syntax-highlighting
+#fast-syntax-highlighting
+zsh-autocomplete
+#H-S-MW
+history-search-multi-word
+colored-man-pages
+colorize
 web-search
 jsontools
-
-H-S-MW
-
-
+#H-S-MW
 safe-paste
 )
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
