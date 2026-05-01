@@ -21,7 +21,7 @@
 
           "properties": { "display_host": true },
           "style": "plain",
-          "template": "\n<#ffffff>\u250c\u2500\u2500(</#ffffff><#00FF00>{{ .UserName }}</#00FF00>💀⌛<#ffffff><#ffffff>\u2500▶ </#ffffff><#ff0000>{{ .HostName }}</#ff0000><#ffffff><#ffffff>)</#ffffff></ffffff>",
+          "template": "\n<#ffffff>\u250c\u2500\u2500(</#ffffff><#00FF00>{{ .UserName }}</#00FF00>💀⌛<#ffffff><#ffffff>\u2500▶</#ffffff><#ff0000>{{ .HostName }}</#ff0000><#ffffff><#ffffff>)</#ffffff></ffffff>",
           "type": "session"
         },
         {
@@ -90,7 +90,7 @@
       "segments": [
         {
           "type": "text",
-          "template": "<#ffffff>\u2502</#ffffff> "
+          "template": "<#ffffff>\u2502</#ffffff>"
         }
         
       ],
@@ -101,7 +101,7 @@
 
 
     {
-      "alignment": "right",
+      "alignment": "left",
       "newline": false,
       "segments": [
         {
@@ -150,7 +150,7 @@
             "revert_icon": "",
             "tag_icon": ""
           },
-          "template": "<#2fff00>on─►</#2fff00><#ffffff> {{ .HEAD }}─►</#FF0000> {{ .Staging.String }}{{ if .Working.Changed }}<#FF0000> \u25cf─►</#FF0000> <#00FF00>{{ .Working.String }}{{ end }}</#00FF00>"
+          "template": "\n<#2fff00>on─►</#2fff00><#ffffff> {{ .HEAD }}─►</#FF0000> {{ .Staging.String }}{{ if .Working.Changed }}<#FF0000> \u25cf─►</#FF0000> <#00FF00>{{ .Working.String }}{{ end }}</#00FF00>"
         }
         
       ],
